@@ -21,16 +21,19 @@ title: "长大 Horizon 全栈实验室"
 
   <div class="hero__content">
     <h1 id="hero-title" class="hero__title">
-      Hor<span class="horizon-i">&#x0131;<svg class="horizon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5z"/></svg></span>zon
+      Hor<span class="horizon-i">&#x0131;<svg class="horizon-star" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5z" />
+        </svg></span>zon
     </h1>
     <p class="hero__tagline">{{ site.lab.slogan }}</p>
-    
+
     <div class="hero__actions">
       <a class="button button--primary" href="#projects">查看项目 &rarr;</a>
       <a class="button button--ghost" href="{{ site.github_url }}" target="_blank" rel="noopener">
         访问 GitHub
-        <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M6 3h7v7M13 3L3 13" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor"
+          stroke-width="1.5">
+          <path d="M6 3h7v7M13 3L3 13" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </a>
     </div>
@@ -40,17 +43,19 @@ title: "长大 Horizon 全栈实验室"
 <section class="section section--intro" id="about">
   <div class="section__heading center">
     <p class="eyebrow">实验室介绍</p>
-    <h2>从 1715 实验室出发</h2>
+    <h2>CCSU-Horizon-Lab</h2>
+    <p class="section__subtitle">开源 · 实践 · 创新</p>
     <p class="section__desc">
-      CCSU-Horizon-Lab 由长沙大学计算机科学与工程学院 1715 实验室建设与维护。<br>
-      我们专注于将开源精神与工程实践结合，用代码创造价值，用协作连接未来。
+      实验室前身为计算机学院 1715 实验室，由李少勇老师指导。
+      CCSU-Horizon-Lab 是长沙大学计算机科学与工程“文化+科技”创新实验室，致力于通过真实项目培养工程能力、协作能力与创新能力。
     </p>
   </div>
-  
+
   <div class="intro-grid">
     <article class="intro-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <polyline points="8 17 3 12 8 7"></polyline>
           <polyline points="16 17 21 12 16 7"></polyline>
         </svg>
@@ -58,10 +63,11 @@ title: "长大 Horizon 全栈实验室"
       <h3>工程实践驱动</h3>
       <p>面向真实问题，构建可用、可维护、可扩展的工程化解决方案，持续打磨高质量代码。</p>
     </article>
-    
+
     <article class="intro-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
           <circle cx="9" cy="7" r="4"></circle>
           <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -71,16 +77,17 @@ title: "长大 Horizon 全栈实验室"
       <h3>开放协作共建</h3>
       <p>拥抱开源，鼓励贡献与分享。构建透明、互信、可持续的协作生态。</p>
     </article>
-    
+
     <article class="intro-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
           <polyline points="16 7 22 7 22 13"></polyline>
         </svg>
       </div>
       <h3>长期主义成长</h3>
-      <p>关注技术长期价值与团队成长。沉淀知识与工具，助力更多优秀的想落地。</p>
+      <p>关注技术长期价值与团队成长。沉淀知识与工具，助力更多优秀的思想落地。</p>
     </article>
   </div>
 </section>
@@ -91,15 +98,23 @@ title: "长大 Horizon 全栈实验室"
     <h2>核心成员</h2>
     <p class="section__desc">代码连接未来，协作创造价值。以下是活跃在开源社区的 Horizon 成员。</p>
   </div>
-  
+
   <div class="horizontal-scroller">
-    <div class="horizontal-track" id="members-track">
+    <div class="horizontal-track" id="members-track" data-github-owner="{{ site.github_org }}">
       <!-- 骨架屏占位，JS加载完毕后会替换 -->
       <div class="member-card skeleton"></div>
       <div class="member-card skeleton"></div>
       <div class="member-card skeleton"></div>
       <div class="member-card skeleton"></div>
     </div>
+  </div>
+
+  <div class="members-action">
+    <button class="button button--ghost" type="button" id="toggle-members">展开全部成员 &rarr;</button>
+  </div>
+
+  <div class="all-members-panel" id="all-members-panel" hidden>
+    <div class="all-members-grid" id="all-members-grid"></div>
   </div>
 </section>
 
@@ -111,14 +126,14 @@ title: "长大 Horizon 全栈实验室"
   </div>
 
   <div class="horizontal-scroller">
-    <div class="horizontal-track" id="projects-track">
+    <div class="horizontal-track" id="projects-track" data-github-owner="{{ site.github_org }}">
       <!-- 动态获取的仓库会插入到这里 -->
       <div class="project-card skeleton"></div>
       <div class="project-card skeleton"></div>
       <div class="project-card skeleton"></div>
     </div>
   </div>
-  
+
   <div class="projects-action">
     <a href="{{ site.github_url }}" class="button button--ghost" target="_blank" rel="noopener">查看全部仓库 &rarr;</a>
   </div>
@@ -126,54 +141,58 @@ title: "长大 Horizon 全栈实验室"
 
 <section class="section section--focus" id="focus">
   <div class="section__heading center">
-    <p class="eyebrow">关注方向</p>
-    <h2>我们聚焦的能力</h2>
+    <p class="eyebrow">核心素养</p>
+    <h2>我们看重的成长能力</h2>
   </div>
-  
+
   <div class="focus-grid">
     <article class="focus-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <polyline points="8 17 3 12 8 7"></polyline>
           <polyline points="16 17 21 12 16 7"></polyline>
         </svg>
       </div>
       <div>
-        <h3>全栈开发</h3>
-        <p>从前端到后端，构建高质量、可维护的全栈应用与服务。</p>
+        <h3>求知欲</h3>
+        <p>对未知保持好奇，愿意主动探索和自学。持续扩展认知边界，也愿意把问题追问到底。</p>
       </div>
     </article>
-    
+
     <article class="focus-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
           <line x1="8" y1="21" x2="16" y2="21"></line>
           <line x1="12" y1="17" x2="12" y2="21"></line>
         </svg>
       </div>
       <div>
-        <h3>桌面工具</h3>
-        <p>打造高效、优雅、跨平台的桌面生产力工具。</p>
+        <h3>工程能力</h3>
+        <p>能把想法拆成清晰方案，写出可靠、可维护的代码。重视落地，也重视长期可迭代。</p>
       </div>
     </article>
-    
+
     <article class="focus-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
           <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
         </svg>
       </div>
       <div>
-        <h3>数据分析</h3>
-        <p>数据采集、处理与可视化，让数据产生洞察与价值。</p>
+        <h3>团队精神</h3>
+        <p>能和队友良好沟通，协同克服困难。让合作过程稳定、舒服，也让成果真正属于团队。</p>
       </div>
     </article>
-    
+
     <article class="focus-card">
       <div class="icon-box">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
           <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
           <line x1="6" y1="6" x2="6.01" y2="6"></line>
@@ -181,9 +200,42 @@ title: "长大 Horizon 全栈实验室"
         </svg>
       </div>
       <div>
-        <h3>基础设施</h3>
-        <p>网络、集群与自动化部署服务，支撑稳定与高效的研发。</p>
+        <h3>自驱力</h3>
+        <p>保持良好的学习习惯，用兴趣驱动自己持续前进。能在没有催促时，也稳定地向目标靠近。</p>
       </div>
     </article>
   </div>
 </section>
+
+<section class="section section--join" id="join">
+  <div class="join-panel">
+    <div>
+      <p class="eyebrow">Join Us</p>
+      <h2>加入 Horizon，一起把想法做成作品。</h2>
+      <p>
+        如果你对工程实践、开源协作和长期成长感兴趣，欢迎从一次交流、一次提交或一个小工具开始。
+        我们更看重持续学习、主动沟通和把事情落地的能力。
+      </p>
+    </div>
+    <div class="join-actions">
+      <button class="button button--primary" type="button" id="open-join-info" aria-haspopup="dialog" aria-expanded="false">了解我们 &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<div class="join-modal" id="join-modal" role="dialog" aria-modal="true" aria-labelledby="join-modal-title" hidden>
+  <div class="join-modal__backdrop" data-join-modal-close></div>
+  <div class="join-modal__panel" tabindex="-1">
+    <button class="join-modal__close" type="button" aria-label="关闭弹窗" data-join-modal-close>&times;</button>
+    <p class="eyebrow">Recruitment</p>
+    <h2 id="join-modal-title">招生提醒</h2>
+    <p>
+      Horizon 每年 9~10 月会定向招收大一新生。欢迎关注学院与实验室发布的招生信息，
+      也可以先了解我们的成员、项目和协作方式。
+    </p>
+    <div class="join-modal__actions">
+      <a class="button button--primary" href="#members" data-join-modal-close>认识成员</a>
+      <a class="button button--ghost" href="{{ site.github_url }}" target="_blank" rel="noopener">访问 GitHub &rarr;</a>
+    </div>
+  </div>
+</div>

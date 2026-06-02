@@ -1,0 +1,40 @@
+name: Update GitHub Cache
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 18 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-cache:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate cache
+        run: node scripts/update-github-cache.mjs
+        env:
+          GITHUB_OWNER: CCSU-Horizon-Lab
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit cache
+        run: |
+          if git diff --quiet -- assets/data/github.json; then
+            echo "Cache unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/github.json
+          git commit -m "Update GitHub data cache"
+          git push

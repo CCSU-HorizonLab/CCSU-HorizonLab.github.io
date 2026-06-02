@@ -13,6 +13,8 @@
     <meta property="og:image" content="https://github.com/{{ site.github_org }}.png">
 
     <title>{{ page.title | default: site.title }}</title>
+    <link rel="icon" type="image/png" href="{{ '/assets/img/CCSU.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/img/CCSU.png' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -31,6 +33,7 @@
           <a href="#about">关于我们</a>
           <a href="#members">实验室成员</a>
           <a href="#projects">开源项目</a>
+          <a href="#join">加入我们</a>
         </nav>
       </div>
     </header>
@@ -47,7 +50,7 @@
           </svg>
           <div class="footer-brand-text">
             <h3>{{ site.github_org }}</h3>
-            <p>{{ site.lab.college }} {{ site.lab.room }}</p>
+            <p>{{ site.lab.college }}“文化+科技”创新实验室</p>
           </div>
         </div>
         
@@ -60,7 +63,7 @@
         </div>
         
         <div class="footer-copyright">
-          <p>© 2024 {{ site.github_org }}. All rights reserved.</p>
+          <p>© <span data-year>2026</span> {{ site.github_org }}. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 title: "长大 Horizon 全栈实验室"
 tagline: "眼界决定方向，代码抵达远方"
-description: "Horizon 全栈实验室由长沙大学计算机科学与工程学院 1715 实验室更名而来，专注用工程实践探索更远的技术边界。"
+description: "CCSU-Horizon-Lab 是长沙大学计算机科学与工程“文化+科技”创新实验室，专注用工程实践探索更远的技术边界。"
 url: "https://CCSU-Horizon-Lab.github.io"
 baseurl: ""
 lang: "zh-CN"
@@ -12,9 +12,9 @@ lab:
   short_name: "Horizon"
   full_name: "长大 Horizon 全栈实验室"
   college: "长沙大学计算机科学与工程学院"
-  room: "1715 实验室"
+  room: "致远楼南栋 1211"
   slogan: "眼界决定方向，代码抵达远方"
-  intro: "Horizon 全栈实验室由长沙大学计算机科学与工程学院 1715 实验室更名而来。我们关注真实问题、工程质量与长期成长，把代码写进工具、系统和可验证的作品里。"
+  intro: "CCSU-Horizon-Lab 是长沙大学计算机科学与工程“文化+科技”创新实验室。我们关注真实问题、工程质量与长期成长，把代码写进工具、系统和可验证的作品里。"
 
 exclude:
   - Gemfile
