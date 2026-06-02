@@ -9,6 +9,7 @@ const MEMBER_OVERRIDES_URL = new URL("assets/data/member-overrides.json", docume
 const CURRENT_YEAR = 2026;
 let githubCachePromise;
 let memberOverridesPromise;
+const marqueeResumeTimers = new WeakMap();
 
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = navLinks
@@ -161,11 +162,48 @@ function renderTrackState(track, className, title, description, actionUrl) {
 
 function setupAutoMarquee(track, speed = 44) {
   const scroller = track?.closest(".horizontal-scroller");
-  if (!scroller) return;
+  if (!scroller || !shouldUseAutoMarquee()) return;
 
   scroller.classList.add("auto-marquee");
   track.classList.add("marquee-track");
   track.style.setProperty("--marquee-duration", `${speed}s`);
+  setupMarqueeInteraction(scroller);
+}
+
+function shouldUseAutoMarquee() {
+  return window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+}
+
+function setupMarqueeInteraction(scroller) {
+  if (scroller.dataset.marqueeInteractive === "true") return;
+
+  scroller.dataset.marqueeInteractive = "true";
+  const pause = () => pauseMarquee(scroller);
+  const resumeSoon = () => scheduleMarqueeResume(scroller);
+
+  scroller.addEventListener("pointerdown", pause);
+  scroller.addEventListener("pointerup", resumeSoon);
+  scroller.addEventListener("pointercancel", resumeSoon);
+  scroller.addEventListener("touchstart", pause, { passive: true });
+  scroller.addEventListener("touchend", resumeSoon);
+  scroller.addEventListener("wheel", resumeSoon, { passive: true });
+  scroller.addEventListener("scroll", resumeSoon, { passive: true });
+}
+
+function pauseMarquee(scroller) {
+  window.clearTimeout(marqueeResumeTimers.get(scroller));
+  scroller.classList.add("is-paused");
+}
+
+function scheduleMarqueeResume(scroller, delay = 1400) {
+  window.clearTimeout(marqueeResumeTimers.get(scroller));
+  scroller.classList.add("is-paused");
+  marqueeResumeTimers.set(
+    scroller,
+    window.setTimeout(() => {
+      scroller.classList.remove("is-paused");
+    }, delay)
+  );
 }
 
 // --- Fetch Team Members ---
@@ -464,6 +502,8 @@ function renderProjectCard(repo, language, topics) {
 function renderMarqueeCards(items, renderItem) {
   if (!items.length) return "";
   const firstSet = items.map(renderItem).join("");
+  if (!shouldUseAutoMarquee()) return firstSet;
+
   const secondSet = items.map((item) => {
     const html = renderItem(item);
     return html.replace(/<(a|article)\b/, '<$1 aria-hidden="true" tabindex="-1"');

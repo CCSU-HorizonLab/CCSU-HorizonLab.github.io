@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,11 +33,17 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
 }
 
 /* Animations */
@@ -329,11 +336,10 @@ a {
 .horizon-star {
   position: absolute;
   top: 0.23em;
-  /* perfectly overlaps the letter */
   left: 50%;
   transform: translateX(-50%);
-  width: 0.38em;
-  height: 0.38em;
+  width: 0.31em;
+  height: 0.31em;
   color: #ff9d00;
 }
 
@@ -540,10 +546,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 14px;
   font-size: 1.5rem;
   font-weight: 800;
   margin: 0 0 16px;
   color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
 .external-link {
@@ -614,6 +622,7 @@ a {
 .project-card__footer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 16px;
   font-size: 0.9rem;
   color: var(--muted);
@@ -1045,6 +1054,10 @@ body.modal-open {
   animation-play-state: paused;
 }
 
+.auto-marquee.is-paused .marquee-track {
+  animation-play-state: paused;
+}
+
 @keyframes marqueeLeft {
   from {
     transform: translateX(0);
@@ -1200,5 +1213,413 @@ body.modal-open {
 @keyframes loading {
   100% {
     left: 150%;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    transform: none;
+    padding: 8px 10px;
+    border-radius: 20px;
+    animation-name: popIn;
+  }
+
+  .header-inner {
+    gap: clamp(8px, 1.8vw, 12px);
+    min-width: 0;
+  }
+
+  .brand {
+    flex-shrink: 0;
+    gap: 8px;
+    font-size: 1rem;
+  }
+
+  .ccsu-logo {
+    height: 28px;
+  }
+
+  .site-nav {
+    flex: 1;
+    justify-content: space-between;
+    gap: clamp(2px, 0.8vw, 8px);
+    overflow: hidden;
+    padding-bottom: 1px;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 1 auto;
+    min-width: 0;
+    padding: 7px clamp(6px, 1.4vw, 10px);
+    border-radius: 999px;
+    white-space: nowrap;
+    font-size: clamp(0.74rem, 1.9vw, 0.84rem);
+    letter-spacing: -0.01em;
+  }
+
+  .site-nav a.is-active {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+}
+
+@media (max-width: 620px) {
+  .brand span {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-nav {
+    justify-content: flex-start;
+    gap: clamp(8px, 3vw, 14px);
+  }
+
+  .site-nav a {
+    font-size: 0;
+    padding-inline: clamp(7px, 2vw, 10px);
+  }
+
+  .site-nav a::after {
+    content: attr(data-short);
+    font-size: clamp(0.78rem, 3vw, 0.9rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    --mobile-horizon-y: clamp(250px, 37svh, 320px);
+    --mobile-sun-w: clamp(210px, 62vw, 300px);
+    --mobile-horizon-mask: calc(var(--mobile-sun-w) * 1.28);
+    min-height: 100svh;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 112px 18px 44px;
+  }
+
+  .hero-art {
+    height: 100%;
+  }
+
+  .art-sea-group {
+    top: var(--mobile-horizon-y);
+    left: 50%;
+    width: 210vw;
+    height: 118svh;
+    transform: translateX(-50%);
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg,
+        transparent calc(50% - var(--mobile-horizon-mask) / 2),
+        black calc(50% - var(--mobile-horizon-mask) / 2 + 24px),
+        black calc(50% + var(--mobile-horizon-mask) / 2 - 24px),
+        transparent calc(50% + var(--mobile-horizon-mask) / 2));
+    mask-image: linear-gradient(90deg,
+        transparent calc(50% - var(--mobile-horizon-mask) / 2),
+        black calc(50% - var(--mobile-horizon-mask) / 2 + 24px),
+        black calc(50% + var(--mobile-horizon-mask) / 2 - 24px),
+        transparent calc(50% + var(--mobile-horizon-mask) / 2));
+  }
+
+  .art-sea-back {
+    border-width: 6px;
+  }
+
+  .art-sun {
+    top: var(--mobile-horizon-y);
+    left: 50%;
+    width: var(--mobile-sun-w);
+    max-width: none;
+    height: calc(var(--mobile-sun-w) / 2);
+    max-height: none;
+    transform: translate(-50%, calc(-100% + 20px));
+  }
+
+  .art-reflection {
+    top: calc(var(--mobile-horizon-y) + clamp(22px, 3.5svh, 32px));
+    left: 50%;
+    gap: clamp(10px, 2svh, 15px);
+  }
+
+  .art-reflection::before {
+    width: calc(var(--mobile-sun-w) * 0.68);
+    height: clamp(10px, 2.6vw, 14px);
+  }
+
+  .art-reflection::after {
+    width: calc(var(--mobile-sun-w) * 0.48);
+    height: clamp(8px, 2.1vw, 11px);
+  }
+
+  .art-reflection-inner {
+    width: calc(var(--mobile-sun-w) * 0.28);
+    height: clamp(7px, 1.8vw, 9px);
+  }
+
+  .hero__content {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 460px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero__title {
+    justify-content: center;
+    font-size: clamp(3rem, 15.8vw, 4.45rem);
+    line-height: 0.95;
+    margin-bottom: 18px;
+  }
+
+  .horizon-star {
+    top: -0.16em;
+    width: 0.32em;
+    height: 0.32em;
+  }
+
+  .hero__tagline {
+    margin-bottom: 28px;
+    font-size: clamp(1rem, 4vw, 1.12rem);
+    letter-spacing: 0.08em;
+  }
+
+  .hero__actions {
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .button {
+    width: min(100%, 320px);
+    min-width: 0;
+    height: 50px;
+    padding: 0 22px;
+    font-size: 0.98rem;
+  }
+
+  .section {
+    width: 100%;
+    max-width: none;
+    padding: 72px 18px;
+  }
+
+  .section__heading.center {
+    margin-bottom: 34px;
+  }
+
+  .section__heading h2 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+    line-height: 1.18;
+  }
+
+  .section__desc,
+  .intro-card p,
+  .focus-card p,
+  .join-panel p,
+  .footer-brand p {
+    font-size: 1rem;
+  }
+
+  .section__subtitle {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 1.02rem;
+    letter-spacing: 0.04em;
+  }
+
+  .intro-grid,
+  .focus-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .intro-card,
+  .focus-card {
+    padding: 28px 22px;
+  }
+
+  .focus-card {
+    min-height: 0;
+    gap: 18px;
+  }
+
+  .section--focus {
+    border-radius: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 72px;
+    box-shadow: none;
+  }
+
+  .horizontal-scroller {
+    width: calc(100% + 36px);
+    margin-inline: -18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0 34px;
+    mask-image: none;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .horizontal-track,
+  #projects-track {
+    gap: 16px;
+    width: max-content;
+    min-width: 0;
+    padding: 0 18px;
+  }
+
+  .member-card {
+    width: min(78vw, 280px);
+    min-height: 300px;
+    padding: 28px 20px;
+  }
+
+  .all-members-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .all-members-grid .member-card {
+    width: 100%;
+  }
+
+  .horizontal-track .project-card {
+    width: min(86vw, 340px);
+    min-height: 0;
+    padding: 28px 22px;
+  }
+
+  .project-card__title {
+    align-items: flex-start;
+    font-size: 1.22rem;
+    line-height: 1.25;
+  }
+
+  .project-card__footer {
+    gap: 10px 14px;
+    padding-top: 20px;
+  }
+
+  .members-action {
+    margin: -14px 0 34px;
+  }
+
+  .join-panel {
+    gap: 26px;
+    padding: 30px 22px;
+  }
+
+  .join-panel h2 {
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+  }
+
+  .join-actions,
+  .join-modal__actions {
+    align-items: stretch;
+  }
+
+  .join-actions .button,
+  .join-modal__actions .button,
+  .projects-action .button,
+  .members-action .button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .join-modal {
+    padding: 16px;
+  }
+
+  .join-modal__panel {
+    max-height: calc(100svh - 32px);
+    overflow-y: auto;
+    padding: 34px 24px 28px;
+  }
+
+  .site-footer {
+    padding: 58px 18px 44px;
+  }
+
+  .footer-content {
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    padding: 7px 8px;
+  }
+
+  .header-inner {
+    gap: 6px;
+  }
+
+  .ccsu-logo {
+    height: 26px;
+  }
+
+  .site-nav a {
+    padding: 6px 5px;
+  }
+
+  .site-nav a::after {
+    font-size: clamp(0.74rem, 3.35vw, 0.82rem);
+  }
+
+  .hero {
+    --mobile-horizon-y: clamp(235px, 36svh, 285px);
+    --mobile-sun-w: clamp(200px, 66vw, 250px);
+    --mobile-horizon-mask: calc(var(--mobile-sun-w) * 1.3);
+    padding-inline: 14px;
+    padding-bottom: 36px;
+  }
+
+  .art-sea-group {
+    width: 220vw;
+    height: 112svh;
+  }
+
+  .hero__title {
+    font-size: clamp(2.65rem, 13vw, 3.15rem);
+  }
+
+  .hero__tagline {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+
+  .section {
+    padding-inline: 16px;
+  }
+
+  .horizontal-scroller {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+  }
+
+  .horizontal-track,
+  #projects-track {
+    padding-inline: 16px;
   }
 }
