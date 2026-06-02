@@ -41,34 +41,79 @@ a {
 
 /* Animations */
 @keyframes slideUpSea {
-  0% { transform: translateY(100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes riseSun {
-  0% { transform: translate(-50%, calc(-100% + 50px)); opacity: 0; }
-  100% { transform: translate(-50%, calc(-100% + 5px)); opacity: 1; }
+  0% {
+    transform: translate(-50%, calc(-100% + 50px));
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, calc(-100% + 5px));
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInRipple {
-  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
-  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 @keyframes fadeUpText {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeUpHeader {
-  0% { opacity: 0; transform: translate(-50%, -20px); }
-  100% { opacity: 1; transform: translate(-50%, 0); }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes popIn {
-  0% { opacity: 0; transform: translateY(15px) scale(0.95); }
-  70% { transform: translateY(-3px) scale(1.02); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.95);
+  }
+
+  70% {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .skip-link {
@@ -136,8 +181,10 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* 内容靠右 */
-  padding-right: 8%; /* 右侧留白 */
+  justify-content: flex-end;
+  /* 内容靠右 */
+  padding-right: 4%;
+  /* 右侧留白适当缩小，内容向左靠拢 */
   overflow: hidden;
   background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
 }
@@ -156,18 +203,24 @@ a {
 /* Horizon Arc - Pure Stroke Line without rendering bugs */
 .art-sea-group {
   position: absolute;
-  top: 25vh; /* Move down slightly so the sun has room to breathe */
-  left: -80vw; /* Center peak exactly at 20vw where the sun is */
+  top: 50vh;
+  /* 地平线顶点与 Horizon 文字垂直中心对齐 */
+  left: -72vw;
+  /* 弧线中心右移至 28vw（原 20vw） */
   width: 200vw;
-  height: 200vh; /* Massive height to push the bottom border out of view */
+  height: 200vh;
   z-index: 3;
+  /* 弧线向右渐隐，进入右侧内容区前淡出 */
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 55%, transparent 63%);
+  mask-image: linear-gradient(to right, black 0%, black 55%, transparent 63%);
 }
 
 .art-sea-back {
   width: 100%;
   height: 100%;
   background: transparent;
-  border: 10px solid #001a4d; /* Use full border instead of border-top to prevent solid-block rendering bugs */
+  border: 10px solid #001a4d;
+  /* Use full border instead of border-top to prevent solid-block rendering bugs */
   border-radius: 50%;
   opacity: 0;
   animation: slideUpSea 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -176,17 +229,21 @@ a {
 /* Sun - Sitting ABOVE the horizon, slightly covered by the line */
 .art-sun {
   position: absolute;
-  top: 25vh; /* Same Y as the peak of the sea curve */
-  left: 20vw; 
+  top: 50vh;
+  /* 与地平线顶点同 Y，使太阳圆心与 Horizon 文字垂直对齐 */
+  left: 28vw;
+  /* 右移 8vw，与弧线中心保持一致 */
   /* translate Y by -100% moves the sun ABOVE the line. Add 5px so it dips behind the 10px line */
-  transform: translate(-50%, calc(-100% + 5px)); 
+  transform: translate(-50%, calc(-100% + 5px));
   width: 30vw;
   max-width: 380px;
-  height: 15vw; /* Semi-circle */
+  height: 15vw;
+  /* Semi-circle */
   max-height: 190px;
   border-radius: 250px 250px 0 0;
   background: linear-gradient(180deg, #ff9d00 0%, #ffb347 100%);
-  z-index: 2; /* Behind the horizon line */
+  z-index: 2;
+  /* Behind the horizon line */
   box-shadow: 0 -20px 80px rgba(255, 157, 0, 0.2);
   opacity: 0;
   /* Animate rising from below the line */
@@ -196,8 +253,10 @@ a {
 /* Light Blue Ripples floating below the line */
 .art-reflection {
   position: absolute;
-  top: calc(25vh + 30px); /* Positioned cleanly below the line */
-  left: 20vw;
+  top: calc(50vh + 30px);
+  /* 水波纹在地平线下方 */
+  left: 28vw;
+  /* 与太阳保持同一水平中心 */
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -235,17 +294,22 @@ a {
 
 /* Hero Content - Placed on the Right */
 .hero__content {
-  position: relative;
+  position: absolute;
+  /* 精确定位到右侧，不依赖 flex 对齐 */
+  right: -2%;
+  /* 允许略微突破常规边界进一步靠右 */
+  top: 50vh;
+  transform: translateY(-50%);
+  /* 垂直居中于 50vh 处 */
   z-index: 10;
-  width: 45%; 
-  text-align: left; 
-  margin-top: -5vh; /* Adjust vertical alignment with sun */
+  width: 40%;
+  text-align: left;
 }
 
 .hero__title {
   font-size: clamp(4rem, 6.5vw, 6.5rem);
   font-weight: 900;
-  color: #001a4d; 
+  color: #001a4d;
   margin: 0 0 20px;
   letter-spacing: -0.02em;
   display: flex;
@@ -264,7 +328,8 @@ a {
 
 .horizon-star {
   position: absolute;
-  top: 0.1em; /* perfectly overlaps the letter */
+  top: 0.23em;
+  /* perfectly overlaps the letter */
   left: 50%;
   transform: translateX(-50%);
   width: 0.38em;
@@ -274,9 +339,9 @@ a {
 
 .hero__tagline {
   font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-  color: #4a5568; 
+  color: #4a5568;
   margin: 0 0 48px;
-  letter-spacing: 0.25em; 
+  letter-spacing: 0.25em;
   font-weight: 600;
   opacity: 0;
   animation: fadeUpText 0.8s ease-out 1.9s forwards;
@@ -284,7 +349,7 @@ a {
 
 .hero__actions {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   gap: 20px;
   opacity: 0;
   animation: popIn 0.8s ease-out 2.2s forwards;
@@ -590,7 +655,7 @@ a {
   background: var(--white);
   border-radius: 48px;
   margin-bottom: 80px;
-  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
   padding-bottom: 100px;
 }
 
@@ -709,11 +774,13 @@ a {
     flex-direction: column;
     justify-content: flex-end;
   }
+
   .hero__content {
     width: 100%;
     padding: 0 20px 60px;
     text-align: center;
   }
+
   .art-sun {
     top: 30%;
     left: 50%;
@@ -721,20 +788,25 @@ a {
     width: 250px;
     height: 250px;
   }
+
   .art-reflection {
     left: 50%;
   }
+
   .hero__title {
     font-size: 3rem;
   }
+
   .hero__tagline {
     font-size: 1.1rem;
     letter-spacing: 0.1em;
   }
+
   .hero__actions {
     flex-direction: column;
     justify-content: center;
   }
+
   .section {
     padding: 80px 20px;
   }
@@ -758,7 +830,7 @@ a {
 .horizontal-track {
   display: flex;
   gap: 24px;
-  padding: 0 40px; 
+  padding: 0 40px;
   width: max-content;
 }
 
@@ -816,13 +888,14 @@ a {
   color: var(--muted);
   transition: color 0.2s;
 }
+
 .member-card:hover .member-github {
   color: var(--ink);
 }
 
 /* Dynamic Project Card */
 .horizontal-track .project-card {
-  width: 400px; 
+  width: 400px;
   height: 280px;
   scroll-snap-align: start;
   flex-shrink: 0;
@@ -840,13 +913,16 @@ a {
 .skeleton::before {
   content: "";
   position: absolute;
-  top: 0; left: -150%;
-  width: 50%; height: 100%;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
   animation: loading 1.5s infinite;
 }
 
 @keyframes loading {
-  100% { left: 150%; }
+  100% {
+    left: 150%;
+  }
 }
-
