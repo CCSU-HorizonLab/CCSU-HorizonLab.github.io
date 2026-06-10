@@ -1,17 +1,7 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-06-09T20:21:03.814Z",
+  "generated_at": "2026-06-10T20:46:26.174Z",
   "repos": [
-    {
-      "name": "Chrono_Trace",
-      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
-      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "updated_at": "2026-06-07T06:49:33Z"
-    },
     {
       "name": "class-assitant-robot",
       "description": null,
@@ -20,7 +10,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-03T14:24:14Z"
+      "updated_at": "2026-06-10T03:59:22Z"
     },
     {
       "name": "tinc-ruoyi-manager",
@@ -30,17 +20,17 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-02T13:12:01Z"
+      "updated_at": "2026-06-10T03:59:20Z"
     },
     {
-      "name": "tinc-cluster-manager",
-      "description": null,
-      "html_url": "https://github.com/CCSU-HorizonLab/tinc-cluster-manager",
-      "language": "PHP",
+      "name": "Chrono_Trace",
+      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
+      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
+      "language": "Python",
       "topics": [],
       "stargazers_count": 1,
       "forks_count": 0,
-      "updated_at": "2025-09-06T08:12:51Z"
+      "updated_at": "2026-06-10T03:59:18Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -50,7 +40,17 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2025-06-27T05:47:07Z"
+      "updated_at": "2026-06-10T03:59:14Z"
+    },
+    {
+      "name": "tinc-cluster-manager",
+      "description": null,
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-cluster-manager",
+      "language": "PHP",
+      "topics": [],
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "updated_at": "2026-06-10T03:59:12Z"
     }
   ],
   "members": [
@@ -110,17 +110,6 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
-    },
-    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -143,48 +132,26 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "Swittzzued",
-      "name": "Swittzzued",
-      "class_name": "25计科02",
-      "bio": "",
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
       "location": "",
-      "html_url": "https://github.com/Swittzzued",
-      "avatar_url": "https://avatars.githubusercontent.com/u/237461362?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/Swittzzued.png"
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
+      "login": "vegePeapa",
+      "name": "vegePeapa",
+      "class_name": "24网络01",
+      "bio": "vege不语，只是一味地被bug攻击",
       "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "html_url": "https://github.com/vegePeapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
-    },
-    {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
-    },
-    {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
+      "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
       "login": "parrowormsby720-beep",
@@ -198,15 +165,48 @@
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
-      "login": "vegePeapa",
-      "name": "vegePeapa",
-      "class_name": "24网络01",
-      "bio": "vege不语，只是一味地被bug攻击",
+      "login": "Swittzzued",
+      "name": "Swittzzued",
+      "class_name": "25计科02",
+      "bio": "",
       "location": "",
-      "html_url": "https://github.com/vegePeapa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "html_url": "https://github.com/Swittzzued",
+      "avatar_url": "https://avatars.githubusercontent.com/u/237461362?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/vegePeapa.png"
+      "avatar_path": "assets/data/avatars/Swittzzued.png"
+    },
+    {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/smiling005.png"
+    },
+    {
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
+      "location": "",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     }
   ]
 }
