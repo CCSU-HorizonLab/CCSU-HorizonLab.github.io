@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-06-13T19:55:14.924Z",
+  "generated_at": "2026-06-14T19:59:18.716Z",
   "repos": [
     {
       "name": "class-assitant-robot",
@@ -143,28 +143,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
-      "login": "Swittzzued",
-      "name": "Swittzzued",
-      "class_name": "25计科02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/Swittzzued",
-      "avatar_url": "https://avatars.githubusercontent.com/u/237461362?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/Swittzzued.png"
-    },
-    {
       "login": "parrowormsby720-beep",
       "name": "parrowormsby720-beep",
       "class_name": "25网安02",
@@ -187,6 +165,17 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
       "login": "vegePeapa",
       "name": "vegePeapa",
       "class_name": "24网络01",
@@ -196,6 +185,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
+    },
+    {
+      "login": "Swittzzued",
+      "name": "Swittzzued",
+      "class_name": "25计科02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/Swittzzued",
+      "avatar_url": "https://avatars.githubusercontent.com/u/237461362?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/Swittzzued.png"
     },
     {
       "login": "smiling005",
