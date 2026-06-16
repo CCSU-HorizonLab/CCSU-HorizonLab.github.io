@@ -40,7 +40,8 @@
   },
   "Swittzzued": {
     "display_name": "Swittzzued",
-    "class_name": "25计科02"
+    "class_name": "25计科02",
+    "exclude": true
   },
   "zzhaoos": {
     "display_name": "wy",

@@ -38,6 +38,9 @@ async function fetchFirstAvailable(urls) {
       if (data) return data;
     } catch (error) {
       lastError = error;
+      if (String(error.message || "").startsWith("403")) {
+        throw error;
+      }
     }
   }
 
@@ -54,7 +57,7 @@ async function fetchPublicRepos() {
       `${apiBase}/users/${owner}/repos?type=owner&sort=updated&direction=desc&per_page=100`,
     ]);
   } catch (error) {
-    if (!String(error.message || "").startsWith("403")) throw error;
+    console.warn("Failed to fetch repos from GitHub API. Falling back to existing cache.", error.message);
     repos = existingCache.repos || [];
   }
 
@@ -72,41 +75,48 @@ function isSiteRepository(repo) {
 
 async function fetchMembers(repos) {
   const overrides = await readMemberOverrides();
-  const orgMembers = await fetchJson(`${apiBase}/orgs/${owner}/members?per_page=100`, [403, 404, 422]);
   let members;
 
-  if (Array.isArray(orgMembers) && orgMembers.length > 0) {
-    members = await hydrateUsers(orgMembers, overrides);
-  } else {
-    const contributorsByLogin = new Map();
+  try {
+    const orgMembers = await fetchJson(`${apiBase}/orgs/${owner}/members?per_page=100`, [403, 404, 422]);
 
-    await Promise.all(
-      repos.slice(0, 20).map(async (repo) => {
-        if (!repo.contributors_url) return;
+    if (Array.isArray(orgMembers) && orgMembers.length > 0) {
+      members = await hydrateUsers(orgMembers, overrides);
+    } else {
+      const contributorsByLogin = new Map();
 
-        const contributors = await fetchJson(`${repo.contributors_url}?per_page=50`, [403, 404, 409]);
-        if (!Array.isArray(contributors)) return;
+      await Promise.all(
+        repos.slice(0, 20).map(async (repo) => {
+          if (!repo.contributors_url) return;
 
-        contributors.forEach((contributor) => {
-          if (!contributor?.login || contributor.type === "Bot") return;
+          const contributors = await fetchJson(`${repo.contributors_url}?per_page=50`, [403, 404, 409]);
+          if (!Array.isArray(contributors)) return;
 
-          const existing = contributorsByLogin.get(contributor.login);
-          contributorsByLogin.set(contributor.login, {
-            ...contributor,
-            contributions: Number(existing?.contributions || 0) + Number(contributor.contributions || 0),
+          contributors.forEach((contributor) => {
+            if (!contributor?.login || contributor.type === "Bot") return;
+
+            const existing = contributorsByLogin.get(contributor.login);
+            contributorsByLogin.set(contributor.login, {
+              ...contributor,
+              contributions: Number(existing?.contributions || 0) + Number(contributor.contributions || 0),
+            });
           });
-        });
-      })
-    );
+        })
+      );
 
-    const contributors = [...contributorsByLogin.values()]
-      .sort((a, b) => Number(b.contributions || 0) - Number(a.contributions || 0))
-      .slice(0, 30);
+      const contributors = [...contributorsByLogin.values()]
+        .sort((a, b) => Number(b.contributions || 0) - Number(a.contributions || 0))
+        .slice(0, 30);
 
-    members = await hydrateUsers(contributors, overrides);
+      members = await hydrateUsers(contributors, overrides);
+    }
+  } catch (error) {
+    console.warn("Failed to fetch members from GitHub API. Falling back to existing cache.", error.message);
+    members = existingCache.members || [];
   }
 
-  return includeOverrideOnlyMembers(members, overrides);
+  const allMembers = await includeOverrideOnlyMembers(members, overrides);
+  return allMembers.filter((member) => !overrides[member.login]?.exclude);
 }
 
 async function hydrateUsers(users, overrides) {
@@ -142,10 +152,16 @@ async function includeOverrideOnlyMembers(members, overrides) {
 
   await Promise.all(
     Object.keys(overrides).map(async (login) => {
+      if (overrides[login]?.exclude) return;
       if (byLogin.has(login.toLowerCase())) return;
 
       const existing = existingMembersByLogin.get(login.toLowerCase());
-      const profile = await fetchJson(`${apiBase}/users/${login}`, [403, 404]);
+      let profile = null;
+      try {
+        profile = await fetchJson(`${apiBase}/users/${login}`, [403, 404]);
+      } catch (error) {
+        console.warn(`Failed to fetch user profile for ${login}. Using fallback.`, error.message);
+      }
       const fallback = existing || {
         login,
         name: login,

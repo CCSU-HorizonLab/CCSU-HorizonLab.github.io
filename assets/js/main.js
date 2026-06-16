@@ -274,7 +274,7 @@ async function loadMembers() {
 async function renderMembers(members, owner) {
   const overrides = await fetchMemberOverrides();
   const allMembers = members
-    .filter((user) => user?.login)
+    .filter((user) => user?.login && !overrides[user.login]?.exclude)
     .map((user) => applyMemberOverride(user, overrides))
     .sort(compareMembersByGrade);
 
