@@ -1,7 +1,17 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-06-27T19:46:06.488Z",
+  "generated_at": "2026-06-28T19:46:57.456Z",
   "repos": [
+    {
+      "name": "tinc-ruoyi-manager",
+      "description": "Tinc内网穿透（若依框架）",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager",
+      "language": "Java",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-06-28T11:24:34Z"
+    },
     {
       "name": "Chrono_Trace",
       "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
@@ -11,16 +21,6 @@
       "stargazers_count": 1,
       "forks_count": 0,
       "updated_at": "2026-06-26T10:03:57Z"
-    },
-    {
-      "name": "tinc-ruoyi-manager",
-      "description": "Tinc内网穿透（若依框架）",
-      "html_url": "https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager",
-      "language": "Java",
-      "topics": [],
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "updated_at": "2026-06-21T08:54:39Z"
     },
     {
       "name": "class-assitant-robot",
@@ -84,7 +84,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 9,
+      "contributions": 10,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -154,15 +154,15 @@
       "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
       "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "vegePeapa",
@@ -176,6 +176,17 @@
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -185,17 +196,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
-    },
-    {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     }
   ]
 }
