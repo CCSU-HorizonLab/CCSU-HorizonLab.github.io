@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-03T19:50:26.145Z",
+  "generated_at": "2026-07-04T19:38:20.269Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -10,7 +10,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-28T11:24:34Z"
+      "updated_at": "2026-07-04T09:12:48Z"
     },
     {
       "name": "Chrono_Trace",
@@ -84,7 +84,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 10,
+      "contributions": 11,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -143,26 +143,15 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "vegePeapa",
-      "name": "vegePeapa",
-      "class_name": "24网络01",
-      "bio": "vege不语，只是一味地被bug攻击",
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
       "location": "",
-      "html_url": "https://github.com/vegePeapa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/vegePeapa.png"
-    },
-    {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
       "login": "parrowormsby720-beep",
@@ -176,15 +165,15 @@
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
+      "login": "vegePeapa",
+      "name": "vegePeapa",
+      "class_name": "24网络01",
+      "bio": "vege不语，只是一味地被bug攻击",
       "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "html_url": "https://github.com/vegePeapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+      "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
       "login": "hcc-112",
@@ -196,6 +185,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/smiling005.png"
     }
   ]
 }
