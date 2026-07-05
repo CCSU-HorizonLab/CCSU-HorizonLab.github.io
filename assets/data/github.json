@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-04T19:38:20.269Z",
+  "generated_at": "2026-07-05T19:42:47.085Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -110,6 +110,17 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -132,15 +143,15 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
+      "login": "vegePeapa",
+      "name": "vegePeapa",
+      "class_name": "24网络01",
+      "bio": "vege不语，只是一味地被bug攻击",
       "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
+      "html_url": "https://github.com/vegePeapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
       "login": "seven006gogogo",
@@ -163,17 +174,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
-      "login": "vegePeapa",
-      "name": "vegePeapa",
-      "class_name": "24网络01",
-      "bio": "vege不语，只是一味地被bug攻击",
-      "location": "",
-      "html_url": "https://github.com/vegePeapa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
       "login": "hcc-112",
