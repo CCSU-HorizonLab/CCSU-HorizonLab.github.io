@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-06T20:14:56.659Z",
+  "generated_at": "2026-07-07T20:16:09.688Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -143,15 +143,15 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
       "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "parrowormsby720-beep",
@@ -176,6 +176,17 @@
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
+      "location": "",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -185,17 +196,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
     }
   ]
 }
