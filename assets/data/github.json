@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-14T19:44:15.337Z",
+  "generated_at": "2026-07-15T19:37:29.811Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -110,17 +110,6 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
-    },
-    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -141,6 +130,28 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/144028872?v=4",
       "contributions": 1,
       "avatar_path": "assets/data/avatars/kaihuang614.png"
+    },
+    {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "vegePeapa",
@@ -165,15 +176,15 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
       "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "smiling005",
@@ -185,17 +196,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/smiling005.png"
-    },
-    {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
     }
   ]
 }
