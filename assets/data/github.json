@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-17T19:34:04.698Z",
+  "generated_at": "2026-07-18T19:32:56.299Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -143,15 +143,15 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
       "bio": "",
       "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "vegePeapa",
@@ -187,15 +187,15 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
       "bio": "",
       "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     }
   ]
 }
