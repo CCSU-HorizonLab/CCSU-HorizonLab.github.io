@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-18T19:32:56.299Z",
+  "generated_at": "2026-07-19T19:32:56.447Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -143,17 +143,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
-    },
-    {
       "login": "vegePeapa",
       "name": "vegePeapa",
       "class_name": "24网络01",
@@ -174,6 +163,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "seven006gogogo",
