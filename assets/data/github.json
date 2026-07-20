@@ -1,7 +1,17 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-19T19:32:56.447Z",
+  "generated_at": "2026-07-20T19:57:10.733Z",
   "repos": [
+    {
+      "name": "class-assitant-robot",
+      "description": null,
+      "html_url": "https://github.com/CCSU-HorizonLab/class-assitant-robot",
+      "language": "Python",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-07-20T13:37:55Z"
+    },
     {
       "name": "tinc-ruoyi-manager",
       "description": "Tinc内网穿透（若依框架）",
@@ -21,16 +31,6 @@
       "stargazers_count": 1,
       "forks_count": 0,
       "updated_at": "2026-06-26T10:03:57Z"
-    },
-    {
-      "name": "class-assitant-robot",
-      "description": null,
-      "html_url": "https://github.com/CCSU-HorizonLab/class-assitant-robot",
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "updated_at": "2026-06-10T03:59:22Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -84,7 +84,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 11,
+      "contributions": 15,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -143,28 +143,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "vegePeapa",
-      "name": "vegePeapa",
-      "class_name": "24网络01",
-      "bio": "vege不语，只是一味地被bug攻击",
-      "location": "",
-      "html_url": "https://github.com/vegePeapa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/vegePeapa.png"
-    },
-    {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
       "login": "smiling005",
       "name": "smiling005",
       "class_name": "25计科02",
@@ -176,6 +154,17 @@
       "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
+      "login": "vegePeapa",
+      "name": "vegePeapa",
+      "class_name": "24网络01",
+      "bio": "vege不语，只是一味地被bug攻击",
+      "location": "",
+      "html_url": "https://github.com/vegePeapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/vegePeapa.png"
+    },
+    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -185,6 +174,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "parrowormsby720-beep",
