@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-07-20T19:57:10.733Z",
+  "generated_at": "2026-07-21T19:52:11.904Z",
   "repos": [
     {
       "name": "class-assitant-robot",
@@ -10,7 +10,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-07-20T13:37:55Z"
+      "updated_at": "2026-07-21T11:29:38Z"
     },
     {
       "name": "tinc-ruoyi-manager",
@@ -84,7 +84,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 15,
+      "contributions": 16,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -143,15 +143,15 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
-      "bio": "",
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
       "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "vegePeapa",
@@ -176,15 +176,15 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "我是来自长沙学院的计算机科学与技术专业学生。我热衷于全栈开发、人工智能应用。我喜欢构建具有现实意义的产品。",
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
       "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
+      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "parrowormsby720-beep",
