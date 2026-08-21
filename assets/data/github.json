@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-08-20T19:01:04.210Z",
+  "generated_at": "2026-08-21T18:56:53.983Z",
   "repos": [
     {
       "name": "class-assitant-robot",
@@ -154,17 +154,6 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
-      "login": "vegePeapa",
-      "name": "vegePeapa",
-      "class_name": "24网络01",
-      "bio": "vege不语，只是一味地被bug攻击",
-      "location": "",
-      "html_url": "https://github.com/vegePeapa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/vegePeapa.png"
-    },
-    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -185,6 +174,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/smiling005.png"
+    },
+    {
+      "login": "vegePeapa",
+      "name": "vegePeapa",
+      "class_name": "24网络01",
+      "bio": "vege不语，只是一味地被bug攻击",
+      "location": "",
+      "html_url": "https://github.com/vegePeapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
       "login": "parrowormsby720-beep",
