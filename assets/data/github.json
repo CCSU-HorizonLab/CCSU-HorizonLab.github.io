@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-09-02T21:04:52.604Z",
+  "generated_at": "2026-09-03T21:03:44.732Z",
   "repos": [
     {
       "name": "class-assitant-robot",
@@ -143,17 +143,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -196,6 +185,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     }
   ]
 }
