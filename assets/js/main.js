@@ -453,28 +453,27 @@ async function loadProjects() {
 }
 
 function renderProjects(repos, owner) {
-  const cards = repos
-    .map((repo) => {
-      const language = repo.language || "Repository";
-      const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 3) : [];
-
-      return renderProjectCard(repo, language, topics);
-    });
-  const html = renderMarqueeCards(cards, (card) => card);
-
-  if (html) {
-    projectsTrack.innerHTML = html;
-    setupAutoMarquee(projectsTrack, Math.max(38, repos.length * 12));
+  if (!Array.isArray(repos) || repos.length === 0) {
+    renderTrackState(
+      projectsTrack,
+      "project-card project-card--empty",
+      "暂无公开仓库",
+      "当账号下出现新的公开仓库时，这里会自动显示。",
+      `https://github.com/${owner}?tab=repositories`
+    );
     return;
   }
 
-  renderTrackState(
-    projectsTrack,
-    "project-card project-card--empty",
-    "暂无公开仓库",
-    "当账号下出现新的公开仓库时，这里会自动显示。",
-    `https://github.com/${owner}?tab=repositories`
-  );
+  const cardsHtml = repos
+    .map((repo) => {
+      const language = repo.language || "Repository";
+      const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 3) : [];
+      return renderProjectCard(repo, language, topics);
+    })
+    .join("");
+
+  projectsTrack.innerHTML = cardsHtml;
+  setupProjectsCarousel(repos.length);
 }
 
 function renderProjectCard(repo, language, topics) {
@@ -513,6 +512,153 @@ function renderProjectCard(repo, language, topics) {
       </div>
     </article>
   `;
+}
+
+function setupProjectsCarousel(itemCount) {
+  const viewport = document.getElementById("projects-viewport");
+  const track = document.getElementById("projects-track");
+  const prevBtn = document.getElementById("projects-prev");
+  const nextBtn = document.getElementById("projects-next");
+  const dotsContainer = document.getElementById("projects-dots");
+
+  if (!viewport || !track) return;
+
+  let autoPlayTimer = null;
+  const AUTO_PLAY_INTERVAL = 4000;
+
+  function buildDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = "";
+    if (itemCount <= 1) return;
+
+    for (let i = 0; i < itemCount; i++) {
+      const dot = document.createElement("button");
+      dot.className = `carousel-dot${i === 0 ? " is-active" : ""}`;
+      dot.setAttribute("type", "button");
+      dot.setAttribute("aria-label", `跳转至项目 ${i + 1}`);
+      dot.addEventListener("click", () => {
+        scrollToIndex(i);
+        resetAutoPlay();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function getCardStep() {
+    const card = track.querySelector(".project-card");
+    if (!card) return 340;
+    const style = window.getComputedStyle(track);
+    const gap = parseFloat(style.gap || "24");
+    return card.offsetWidth + gap;
+  }
+
+  function getCurrentIndex() {
+    const step = getCardStep();
+    if (step <= 0) return 0;
+    return Math.round(viewport.scrollLeft / step);
+  }
+
+  function scrollToIndex(index) {
+    const clampedIndex = Math.max(0, Math.min(index, itemCount - 1));
+    const step = getCardStep();
+    viewport.scrollTo({
+      left: clampedIndex * step,
+      behavior: "smooth",
+    });
+    updateUI(clampedIndex);
+  }
+
+  function updateUI(activeIndex) {
+    const idx = activeIndex ?? getCurrentIndex();
+
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll(".carousel-dot");
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === idx);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.disabled = idx <= 0;
+    }
+    if (nextBtn) {
+      const isEnd = viewport.scrollLeft + viewport.clientWidth >= track.scrollWidth - 10 || idx >= itemCount - 1;
+      nextBtn.disabled = isEnd;
+    }
+  }
+
+  function nextSlide() {
+    const current = getCurrentIndex();
+    const isEnd = viewport.scrollLeft + viewport.clientWidth >= track.scrollWidth - 10 || current >= itemCount - 1;
+    if (isEnd) {
+      scrollToIndex(0);
+    } else {
+      scrollToIndex(current + 1);
+    }
+  }
+
+  function prevSlide() {
+    const current = getCurrentIndex();
+    if (current <= 0) {
+      scrollToIndex(itemCount - 1);
+    } else {
+      scrollToIndex(current - 1);
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.onclick = () => {
+      prevSlide();
+      resetAutoPlay();
+    };
+  }
+
+  if (nextBtn) {
+    nextBtn.onclick = () => {
+      nextSlide();
+      resetAutoPlay();
+    };
+  }
+
+  let scrollTimeout;
+  viewport.onscroll = () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      updateUI();
+    }, 80);
+  };
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    if (itemCount > 1 && window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+      autoPlayTimer = setInterval(nextSlide, AUTO_PLAY_INTERVAL);
+    }
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  viewport.addEventListener("mouseenter", stopAutoPlay);
+  viewport.addEventListener("mouseleave", startAutoPlay);
+  viewport.addEventListener("touchstart", stopAutoPlay, { passive: true });
+  viewport.addEventListener("touchend", startAutoPlay);
+
+  window.addEventListener("resize", () => {
+    updateUI();
+  });
+
+  buildDots();
+  updateUI(0);
+  startAutoPlay();
 }
 
 function renderMarqueeCards(items, renderItem) {

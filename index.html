@@ -125,14 +125,26 @@ title: "长大 Horizon 全栈实验室"
     <p class="section__desc">聚焦实用工具与基础设施。持续迭代，开放协作。</p>
   </div>
 
-  <div class="horizontal-scroller">
-    <div class="horizontal-track" id="projects-track" data-github-owner="{{ site.github_org }}">
-      <!-- 动态获取的仓库会插入到这里 -->
-      <div class="project-card skeleton"></div>
-      <div class="project-card skeleton"></div>
-      <div class="project-card skeleton"></div>
+  <div class="projects-carousel-wrapper">
+    <button class="carousel-btn carousel-btn--prev" id="projects-prev" aria-label="上一个项目" type="button">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+
+    <div class="projects-carousel-viewport" id="projects-viewport">
+      <div class="projects-carousel-track" id="projects-track" data-github-owner="{{ site.github_org }}">
+        <!-- 动态获取的仓库会插入到这里 -->
+        <div class="project-card skeleton"></div>
+        <div class="project-card skeleton"></div>
+        <div class="project-card skeleton"></div>
+      </div>
     </div>
+
+    <button class="carousel-btn carousel-btn--next" id="projects-next" aria-label="下一个项目" type="button">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
   </div>
+
+  <div class="carousel-dots" id="projects-dots" aria-label="项目轮播页码"></div>
 
   <div class="projects-action">
     <a href="{{ site.github_url }}" class="button button--ghost" target="_blank" rel="noopener">查看全部仓库 &rarr;</a>
