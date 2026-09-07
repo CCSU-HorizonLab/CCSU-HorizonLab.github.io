@@ -1146,7 +1146,7 @@ body.modal-open {
 .horizontal-scroller {
   width: 100%;
   overflow: hidden;
-  padding: 20px 0 60px 0;
+  padding: 20px 0 24px 0;
   mask-image: linear-gradient(90deg, transparent 0, black 7%, black 93%, transparent 100%);
 }
 
@@ -1188,7 +1188,7 @@ body.modal-open {
 
 .members-action {
   text-align: center;
-  margin: -22px 0 48px;
+  margin: 24px 0 48px;
 }
 
 .all-members-panel {
@@ -1630,7 +1630,7 @@ body.modal-open {
     margin-inline: -18px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 10px 0 34px;
+    padding: 10px 0 20px;
     mask-image: none;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -1691,7 +1691,7 @@ body.modal-open {
   }
 
   .members-action {
-    margin: -14px 0 34px;
+    margin: 20px 0 34px;
   }
 
   .join-panel {
