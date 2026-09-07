@@ -1188,7 +1188,7 @@ body.modal-open {
 
 .members-action {
   text-align: center;
-  margin: 24px 0 48px;
+  margin: 40px 0 48px;
 }
 
 .all-members-panel {
@@ -1691,7 +1691,7 @@ body.modal-open {
   }
 
   .members-action {
-    margin: 20px 0 34px;
+    margin: 32px 0 34px;
   }
 
   .join-panel {
