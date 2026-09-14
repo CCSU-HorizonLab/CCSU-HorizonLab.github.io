@@ -199,6 +199,26 @@ const PROJECT_EXTRA_DATA = {
     ],
     techStack: ["Python", "FastAPI", "APScheduler", "Bot Protocol"],
     cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/class-assitant-robot.git\ncd class-assitant-robot\n\n# 启动助教机器人\npip install -r requirements.txt\npython app.py`
+  },
+  "tinc-cluster-manager": {
+    slogan: "基于 PHP 打造的 Tinc 内网穿透集群管理系统，支持多节点管理与自动化集中调度。",
+    lang: "PHP",
+    features: [
+      { title: "集群调度管理", desc: "高效管理分布于不同网段的 Tinc 节点集群，实时监控网络拓扑。", icon: "desktop" },
+      { title: "自动化配置下发", desc: "在线集中管理节点密钥与路由规则，实现配置一键分发与上线。", icon: "shield" }
+    ],
+    techStack: ["PHP 8.x", "ThinkPHP / Laravel", "Tinc VPN", "MySQL", "Bootstrap"],
+    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/tinc-cluster-manager.git\ncd tinc-cluster-manager\n\n# 安装依赖并启动本地服务\ncomposer install\nphp -S localhost:8000 -t public`
+  },
+  "tinc-cli-gui": {
+    slogan: "Tinc 内网穿透客户端 GUI 图形界面工具，简化跨平台节点连接与网络管理。",
+    lang: "C++ / Go",
+    features: [
+      { title: "图形化快速连接", desc: "为 Tinc CLI 提供直观轻量的图形用户界面，免去繁琐命令行。", icon: "desktop" },
+      { title: "实时状态监控", desc: "展示节点连通状态与实时网络质量，快速诊断网络故障。", icon: "activity" }
+    ],
+    techStack: ["C++ / Go", "Tinc Daemon", "GUI Shell", "Cross-Platform"],
+    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/tinc-cli-gui.git\ncd tinc-cli-gui`
   }
 };
 
@@ -219,13 +239,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.info("Cache lookup failed", e);
   }
 
-  const extra = PROJECT_EXTRA_DATA[repoName] || PROJECT_EXTRA_DATA["Chrono_Trace"];
   const name = repoInfo?.name || repoName;
+  const matchedLang = repoInfo?.language || (PROJECT_EXTRA_DATA[repoName] ? PROJECT_EXTRA_DATA[repoName].lang : "Open Source");
+
+  // Build dynamic default data if project not explicitly configured
+  const extra = PROJECT_EXTRA_DATA[repoName] || {
+    slogan: repoInfo?.description || `${name} 开源项目，由长大 Horizon 全栈实验室成员共同维护与迭代。`,
+    lang: matchedLang,
+    features: [
+      { title: "开源透明", desc: `${name} 遵循开源协议，代码规范，方便社区共同维护与二次开发。`, icon: "shield" },
+      { title: "高效实用", desc: "针对实际应用场景优化设计，提供稳定可靠的功能支持与扩展性。", icon: "activity" }
+    ],
+    techStack: [matchedLang, "Git", "GitHub Actions"],
+    cmd: `# 克隆项目仓库\ngit clone https://github.com/${owner}/${name}.git\ncd ${name}`
+  };
 
   document.title = `${name} - 项目详情 | 长大 Horizon 全栈实验室`;
   document.getElementById("project-breadcrumb-name").textContent = name;
   document.getElementById("project-title").textContent = name;
-  document.getElementById("project-lang").textContent = repoInfo?.language || extra.lang || "Repository";
+  document.getElementById("project-lang").textContent = repoInfo?.language || extra.lang || "Open Source";
   document.getElementById("project-slogan").textContent = repoInfo?.description || extra.slogan;
   document.getElementById("window-title-text").textContent = `${name} — Dashboard Preview`;
   document.getElementById("project-stars").textContent = repoInfo?.stargazers_count ?? 0;
