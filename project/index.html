@@ -213,8 +213,8 @@ const PROJECT_EXTRA_DATA = {
     slogan: "面向课堂场景的智能化助教机器人，辅助考勤、通知提醒与自动化交互。",
     lang: "Python",
     contributors: [
-      { login: "shuguang-cmd", role: "项目发起人 & 机器人研发", avatar: "assets/data/avatars/shuguang-cmd.png" },
-      { login: "lyy169", role: "核心代码贡献者", avatar: "assets/data/avatars/lyy169.png" }
+      { login: "lyy169", role: "项目发起人 & 机器人研发", avatar: "assets/data/avatars/lyy169.png" },
+      { login: "shuguang-cmd", role: "核心代码贡献者", avatar: "assets/data/avatars/shuguang-cmd.png" }
     ],
     features: [
       { title: "智能考勤与交互", desc: "结合自动化脚本与消息机器人，快速响应课堂考勤与通知。", icon: "activity" },
@@ -333,20 +333,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (apiRes.ok) {
       const data = await apiRes.json();
       if (Array.isArray(data) && data.length > 0) {
-        liveContributors = data.map((c, idx) => {
+        const extraContribs = extra.contributors || [];
+        liveContributors = data.map((c) => {
           const matchedMember = cacheMembers.find(m => m.login.toLowerCase() === c.login.toLowerCase());
-          let role = idx === 0 ? "项目发起人 / Core Maintainer" : "代码贡献者";
+          const matchedExtra = extraContribs.find(ec => ec.login.toLowerCase() === c.login.toLowerCase());
+          
+          let role = matchedExtra?.role || "核心代码贡献者";
           if (c.contributions) {
             role += ` (${c.contributions} Commits)`;
           }
+
           return {
             login: c.login,
-            avatar: matchedMember?.avatar_path || c.avatar_url,
+            avatar: matchedExtra?.avatar || matchedMember?.avatar_path || c.avatar_url,
             githubUrl: c.html_url || `https://github.com/${c.login}`,
             role: role,
             className: matchedMember?.class_name || ""
           };
         });
+
+        // Order contributors according to extra.contributors if configured
+        if (extraContribs.length > 0) {
+          liveContributors.sort((a, b) => {
+            const idxA = extraContribs.findIndex(ec => ec.login.toLowerCase() === a.login.toLowerCase());
+            const idxB = extraContribs.findIndex(ec => ec.login.toLowerCase() === b.login.toLowerCase());
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+          });
+        }
       }
     }
   } catch (e) {
