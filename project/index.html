@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const owner = "CCSU-HorizonLab";
 
   try {
-    const cacheRes = await fetch(new URL("assets/data/github.json", document.baseURI).toString());
+    const cacheRes = await fetch(resolveSiteUrl("assets/data/github.json"));
     if (cacheRes.ok) {
       const cacheData = await cacheRes.json();
       repoInfo = (cacheData?.repos || []).find(r => r.name.toLowerCase() === repoName.toLowerCase());
@@ -376,12 +376,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const contributorsGrid = document.getElementById("project-contributors-grid");
   if (contributorsGrid) {
+    const fallbackAvatar = resolveSiteUrl('assets/data/avatars/shuguang-cmd.png');
     contributorsGrid.innerHTML = liveContributors.map(c => {
-      const avatarPath = c.avatar.startsWith("http") ? c.avatar : new URL(c.avatar, document.baseURI).toString();
+      const avatarPath = resolveSiteUrl(c.avatar);
       const metaText = c.className ? `<span class="contributor-class">${escapeHtml(c.className)}</span>` : '';
       return `
         <div class="contributor-card">
-          <img src="${escapeHtml(avatarPath)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.src='assets/data/avatars/shuguang-cmd.png'">
+          <img src="${escapeHtml(avatarPath)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.onerror=null; this.src='${escapeHtml(fallbackAvatar)}';">
           <div class="contributor-info">
             <a href="${escapeHtml(c.githubUrl)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
             <span class="contributor-role">${escapeHtml(c.role)}</span>
@@ -408,6 +409,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 });
+
+function resolveSiteUrl(path) {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path;
+  const siteRoot = "{{ '/' | relative_url }}";
+  const base = new URL(siteRoot, window.location.origin);
+  return new URL(path.replace(/^\//, ''), base).toString();
+}
 
 function escapeHtml(str) {
   return String(str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
