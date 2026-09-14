@@ -485,11 +485,13 @@ function renderAllProjects(repos) {
 }
 
 function renderProjectCard(repo, language, topics) {
+  const detailUrl = new URL(`project/?id=${encodeURIComponent(repo.name)}`, document.baseURI).toString();
+
   return `
     <article class="project-card" style="--project-accent: ${escapeHtml(getLangColor(repo.language))}">
       <div class="project-card__header">
         <h3 class="project-card__title">
-          ${escapeHtml(repo.name)}
+          <a href="${escapeHtml(detailUrl)}" class="project-title-link">${escapeHtml(repo.name)}</a>
           <a href="${escapeHtml(repo.html_url)}" class="external-link" target="_blank" rel="noopener" aria-label="打开 ${escapeHtml(repo.name)} 仓库">
             <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M6 3h7v7M13 3L3 13" stroke-linecap="round" stroke-linejoin="round"/>
@@ -516,7 +518,7 @@ function renderProjectCard(repo, language, topics) {
           ${Number(repo.stargazers_count || 0)}
         </span>
         <span class="star-count">Fork ${Number(repo.forks_count || 0)}</span>
-        <span class="update-time">${formatDate(repo.updated_at)}</span>
+        <a href="${escapeHtml(detailUrl)}" class="view-detail-btn" style="margin-left: auto; color: var(--blue-bright); font-weight: 700;">查看详情 &rarr;</a>
       </div>
     </article>
   `;

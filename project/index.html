@@ -1,0 +1,290 @@
+---
+layout: default
+title: "项目详情 - 长大 Horizon 全栈实验室"
+permalink: /project/
+---
+
+<div class="project-detail-page">
+  <div class="project-hero-section">
+    <div class="project-hero-container">
+      <nav class="breadcrumb-nav" aria-label="面包屑导航">
+        <a href="{{ '/' | relative_url }}">首页</a>
+        <span class="sep">/</span>
+        <a href="{{ '/' | relative_url }}#projects">开源项目</a>
+        <span class="sep">/</span>
+        <span class="current" id="project-breadcrumb-name">Chrono_Trace</span>
+      </nav>
+
+      <div class="project-header-main">
+        <h1 id="project-title">Chrono_Trace</h1>
+        <div class="project-badges-wrapper">
+          <span class="project-lang-badge" id="project-lang">Python</span>
+          <span class="project-status-badge">开源公开</span>
+        </div>
+        <p class="project-slogan" id="project-slogan">源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。</p>
+
+        <div class="project-meta-bar" id="project-meta-bar">
+          <div class="meta-item">
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 2l2 4.5h4.5l-3.5 3.5 1 4.5-4-2.5-4 2.5 1-4.5L1.5 6.5H6z"/>
+            </svg>
+            <span>Star <strong id="project-stars">0</strong></span>
+          </div>
+          <div class="meta-item">
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="5" cy="4" r="2"/><circle cx="11" cy="4" r="2"/><circle cx="8" cy="12" r="2"/>
+              <path d="M5 6v1a2 2 0 002 2h2a2 2 0 002-2V6M8 9v1"/>
+            </svg>
+            <span>Fork <strong id="project-forks">0</strong></span>
+          </div>
+          <div class="meta-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span id="project-update-time">最近更新</span>
+          </div>
+        </div>
+
+        <div class="project-cta-group">
+          <a href="{{ site.github_url }}" class="button button--primary" id="project-github-link" target="_blank" rel="noopener">
+            访问 GitHub 仓库 ↗
+          </a>
+          <a href="#quick-start" class="button button--ghost">
+            快速开始 &darr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section--project-features">
+    <div class="section__heading center">
+      <span class="eyebrow">Key Features</span>
+      <h2>核心亮点与特性</h2>
+      <p class="section__desc">聚焦真实场景需求，兼顾性能、隐私与易用性。</p>
+    </div>
+
+    <div class="features-grid" id="project-features-grid">
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h3>隐私优先</h3>
+        <p>所有聊天数据分析均在本地完全离线进行，不上传任何云端服务器，保障隐私安全。</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </div>
+        <h3>深度沟通洞察</h3>
+        <p>自动提取聊天频次、高频词云、情绪趋势与对话节律，生成多维度可视化图表。</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </div>
+        <h3>开箱即用桌面端</h3>
+        <p>提供极简桌面图形界面，无需复杂环境配置，一键导入并开启洞察报告。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--project-showcase">
+    <div class="window-mockup">
+      <div class="window-header">
+        <div class="window-controls">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="window-title" id="window-title-text">Chrono_Trace — Dashboard Preview</span>
+      </div>
+      <div class="window-body" id="window-body-content">
+        <div class="demo-showcase-box">
+          <div class="demo-metric">
+            <span class="label">分析记录</span>
+            <span class="value">100,000+ 条</span>
+          </div>
+          <div class="demo-metric">
+            <span class="label">处理时间</span>
+            <span class="value">&lt; 1.2 秒</span>
+          </div>
+          <div class="demo-metric">
+            <span class="label">隐私级别</span>
+            <span class="value highlight">完全本地离线</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--project-tech">
+    <div class="section__heading center">
+      <span class="eyebrow">Technologies</span>
+      <h2>技术栈与工具链</h2>
+    </div>
+    <div class="tech-pills" id="project-tech-pills">
+      <span class="tech-pill">Python 3.10</span>
+      <span class="tech-pill">PyQt6 / PySide6</span>
+      <span class="tech-pill">SQLite 3</span>
+      <span class="tech-pill">Pandas / NumPy</span>
+      <span class="tech-pill">ECharts</span>
+    </div>
+  </section>
+
+  <section class="section section--quick-start" id="quick-start">
+    <div class="section__heading center">
+      <span class="eyebrow">Get Started</span>
+      <h2>快速开始与使用指南</h2>
+      <p class="section__desc">简单的几步，即可在本地运行该项目。</p>
+    </div>
+
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="terminal-title">Terminal</span>
+        <button class="copy-btn" id="copy-cmd-btn" type="button">复制命令</button>
+      </div>
+      <pre class="terminal-code"><code id="terminal-cmd-text"># 克隆项目仓库
+git clone https://github.com/CCSU-HorizonLab/Chrono_Trace.git
+cd Chrono_Trace
+
+# 安装依赖并启动
+pip install -r requirements.txt
+python main.py</code></pre>
+    </div>
+  </section>
+
+  <section class="section section--project-nav">
+    <div class="project-nav-bar">
+      <a href="{{ '/' | relative_url }}#projects" class="button button--ghost">&larr; 返回开源项目列表</a>
+      <a href="{{ site.github_url }}" class="button button--primary" target="_blank" rel="noopener">探索更多 GitHub 仓库 &rarr;</a>
+    </div>
+  </section>
+</div>
+
+<script>
+// Project Detail Dynamic Loader Data Source
+const PROJECT_EXTRA_DATA = {
+  "Chrono_Trace": {
+    slogan: "源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。",
+    lang: "Python",
+    features: [
+      { title: "隐私优先", desc: "所有聊天数据分析均在本地完全离线进行，不上传任何云端服务器，保障隐私安全。", icon: "shield" },
+      { title: "深度沟通洞察", desc: "自动提取聊天频次、高频词云、情绪趋势与对话节律，生成多维度可视化图表。", icon: "activity" },
+      { title: "开箱即用桌面端", desc: "提供极简桌面图形界面，无需复杂环境配置，一键导入并开启洞察报告。", icon: "desktop" }
+    ],
+    techStack: ["Python 3.10", "PyQt6", "SQLite 3", "Pandas", "ECharts"],
+    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/Chrono_Trace.git\ncd Chrono_Trace\n\n# 安装依赖并启动\npip install -r requirements.txt\npython main.py`
+  },
+  "tinc-ruoyi-manager": {
+    slogan: "基于若依框架打造的 Tinc 内网穿透可视化管理系统，轻松管理分布式节点与网络拓扑。",
+    lang: "Java",
+    features: [
+      { title: "可视化拓扑", desc: "直观图形化展示 Tinc 节点连接状态与网络拓扑结构。", icon: "desktop" },
+      { title: "若依全栈集成", desc: "基于经典若依后台管理框架，提供完善的权限管理与节点监控。", icon: "shield" },
+      { title: "一键配置导出", desc: "自动生成节点配置文件与密钥对，大幅降低内网穿透组网门槛。", icon: "activity" }
+    ],
+    techStack: ["Java", "Spring Boot", "RuoYi", "Tinc VPN", "Vue.js"],
+    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager.git\ncd tinc-ruoyi-manager\n\n# 编译并运行\nmvn clean package\njava -jar target/tinc-ruoyi-manager.jar`
+  },
+  "class-assitant-robot": {
+    slogan: "面向课堂场景的智能化助教机器人，辅助考勤、通知提醒与自动化交互。",
+    lang: "Python",
+    features: [
+      { title: "智能考勤与交互", desc: "结合自动化脚本与消息机器人，快速响应课堂考勤与通知。", icon: "activity" },
+      { title: "多平台消息接入", desc: "支持对接主流即时通讯平台，实现自动化通知下发。", icon: "desktop" }
+    ],
+    techStack: ["Python", "FastAPI", "APScheduler", "Bot Protocol"],
+    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/class-assitant-robot.git\ncd class-assitant-robot\n\n# 启动助教机器人\npip install -r requirements.txt\npython app.py`
+  }
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const repoName = urlParams.get("id") || "Chrono_Trace";
+
+  let repoInfo = null;
+  const owner = "CCSU-HorizonLab";
+
+  try {
+    const cacheRes = await fetch(new URL("assets/data/github.json", document.baseURI).toString());
+    if (cacheRes.ok) {
+      const cacheData = await cacheRes.json();
+      repoInfo = (cacheData?.repos || []).find(r => r.name.toLowerCase() === repoName.toLowerCase());
+    }
+  } catch (e) {
+    console.info("Cache lookup failed", e);
+  }
+
+  const extra = PROJECT_EXTRA_DATA[repoName] || PROJECT_EXTRA_DATA["Chrono_Trace"];
+  const name = repoInfo?.name || repoName;
+
+  document.title = `${name} - 项目详情 | 长大 Horizon 全栈实验室`;
+  document.getElementById("project-breadcrumb-name").textContent = name;
+  document.getElementById("project-title").textContent = name;
+  document.getElementById("project-lang").textContent = repoInfo?.language || extra.lang || "Repository";
+  document.getElementById("project-slogan").textContent = repoInfo?.description || extra.slogan;
+  document.getElementById("window-title-text").textContent = `${name} — Dashboard Preview`;
+  document.getElementById("project-stars").textContent = repoInfo?.stargazers_count ?? 0;
+  document.getElementById("project-forks").textContent = repoInfo?.forks_count ?? 0;
+  
+  if (repoInfo?.updated_at) {
+    const d = new Date(repoInfo.updated_at);
+    document.getElementById("project-update-time").textContent = `最近更新 ${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
+
+  const ghLink = document.getElementById("project-github-link");
+  if (ghLink) {
+    ghLink.href = repoInfo?.html_url || `https://github.com/${owner}/${name}`;
+  }
+
+  const featuresGrid = document.getElementById("project-features-grid");
+  if (featuresGrid && extra.features) {
+    featuresGrid.innerHTML = extra.features.map(f => `
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            ${getIconSvg(f.icon)}
+          </svg>
+        </div>
+        <h3>${escapeHtml(f.title)}</h3>
+        <p>${escapeHtml(f.desc)}</p>
+      </article>
+    `).join("");
+  }
+
+  const techPills = document.getElementById("project-tech-pills");
+  if (techPills && extra.techStack) {
+    techPills.innerHTML = extra.techStack.map(t => `<span class="tech-pill">${escapeHtml(t)}</span>`).join("");
+  }
+
+  const terminalCmd = document.getElementById("terminal-cmd-text");
+  if (terminalCmd && extra.cmd) {
+    terminalCmd.textContent = extra.cmd;
+  }
+
+  const copyBtn = document.getElementById("copy-cmd-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      const codeText = terminalCmd.textContent;
+      navigator.clipboard.writeText(codeText).then(() => {
+        copyBtn.textContent = "已复制！";
+        setTimeout(() => copyBtn.textContent = "复制命令", 2000);
+      });
+    });
+  }
+});
+
+function escapeHtml(str) {
+  return String(str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function getIconSvg(type) {
+  if (type === "shield") return '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>';
+  if (type === "activity") return '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>';
+  return '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>';
+}
+</script>
