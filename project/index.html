@@ -135,6 +135,18 @@ permalink: /project/
     </div>
   </section>
 
+  <section class="section section--project-contributors">
+    <div class="section__heading center">
+      <span class="eyebrow">Contributors & Team</span>
+      <h2>项目贡献者团队</h2>
+      <p class="section__desc">感谢 Horizon 实验室成员为该开源项目作出的代码贡献与协同维护。</p>
+    </div>
+
+    <div class="contributors-grid" id="project-contributors-grid">
+      <!-- Dynamically populated -->
+    </div>
+  </section>
+
   <section class="section section--quick-start" id="quick-start">
     <div class="section__heading center">
       <span class="eyebrow">Get Started</span>
@@ -171,6 +183,10 @@ const PROJECT_EXTRA_DATA = {
   "Chrono_Trace": {
     slogan: "源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。",
     lang: "Python",
+    contributors: [
+      { login: "Juitar", role: "项目发起人 & 架构设计", avatar: "assets/data/avatars/Juitar.png" },
+      { login: "shuguang-cmd", role: "全栈核心贡献者", avatar: "assets/data/avatars/shuguang-cmd.png" }
+    ],
     features: [
       { title: "隐私优先", desc: "所有聊天数据分析均在本地完全离线进行，不上传任何云端服务器，保障隐私安全。", icon: "shield" },
       { title: "深度沟通洞察", desc: "自动提取聊天频次、高频词云、情绪趋势与对话节律，生成多维度可视化图表。", icon: "activity" },
@@ -182,6 +198,10 @@ const PROJECT_EXTRA_DATA = {
   "tinc-ruoyi-manager": {
     slogan: "基于若依框架打造的 Tinc 内网穿透可视化管理系统，轻松管理分布式节点与网络拓扑。",
     lang: "Java",
+    contributors: [
+      { login: "kevinfvcdsaf", role: "项目发起人 & Java后端", avatar: "assets/data/avatars/kevinfvcdsaf.png" },
+      { login: "lyy169", role: "系统架构与工程化", avatar: "assets/data/avatars/lyy169.png" }
+    ],
     features: [
       { title: "可视化拓扑", desc: "直观图形化展示 Tinc 节点连接状态与网络拓扑结构。", icon: "desktop" },
       { title: "若依全栈集成", desc: "基于经典若依后台管理框架，提供完善的权限管理与节点监控。", icon: "shield" },
@@ -193,6 +213,10 @@ const PROJECT_EXTRA_DATA = {
   "class-assitant-robot": {
     slogan: "面向课堂场景的智能化助教机器人，辅助考勤、通知提醒与自动化交互。",
     lang: "Python",
+    contributors: [
+      { login: "shuguang-cmd", role: "项目发起人 & 机器人研发", avatar: "assets/data/avatars/shuguang-cmd.png" },
+      { login: "hcc-112", role: "AI 算法与功能集成", avatar: "assets/data/avatars/hcc-112.png" }
+    ],
     features: [
       { title: "智能考勤与交互", desc: "结合自动化脚本与消息机器人，快速响应课堂考勤与通知。", icon: "activity" },
       { title: "多平台消息接入", desc: "支持对接主流即时通讯平台，实现自动化通知下发。", icon: "desktop" }
@@ -203,6 +227,10 @@ const PROJECT_EXTRA_DATA = {
   "tinc-cluster-manager": {
     slogan: "基于 PHP 打造的 Tinc 内网穿透集群管理系统，支持多节点管理与自动化集中调度。",
     lang: "PHP",
+    contributors: [
+      { login: "Juitar", role: "项目发起人 & PHP后端", avatar: "assets/data/avatars/Juitar.png" },
+      { login: "zzhaoos", role: "Web前端贡献者", avatar: "assets/data/avatars/zzhaoos.png" }
+    ],
     features: [
       { title: "集群调度管理", desc: "高效管理分布于不同网段的 Tinc 节点集群，实时监控网络拓扑。", icon: "desktop" },
       { title: "自动化配置下发", desc: "在线集中管理节点密钥与路由规则，实现配置一键分发与上线。", icon: "shield" }
@@ -213,6 +241,10 @@ const PROJECT_EXTRA_DATA = {
   "tinc-cli-gui": {
     slogan: "Tinc 内网穿透客户端 GUI 图形界面工具，简化跨平台节点连接与网络管理。",
     lang: "C++ / Go",
+    contributors: [
+      { login: "Juitar", role: "项目发起人 & CLI核心", avatar: "assets/data/avatars/Juitar.png" },
+      { login: "shuguang-cmd", role: "GUI界面贡献者", avatar: "assets/data/avatars/shuguang-cmd.png" }
+    ],
     features: [
       { title: "图形化快速连接", desc: "为 Tinc CLI 提供直观轻量的图形用户界面，免去繁琐命令行。", icon: "desktop" },
       { title: "实时状态监控", desc: "展示节点连通状态与实时网络质量，快速诊断网络故障。", icon: "activity" }
@@ -246,6 +278,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const extra = PROJECT_EXTRA_DATA[repoName] || {
     slogan: repoInfo?.description || `${name} 开源项目，由长大 Horizon 全栈实验室成员共同维护与迭代。`,
     lang: matchedLang,
+    contributors: [
+      { login: "Juitar", role: "实验室核心成员", avatar: "assets/data/avatars/Juitar.png" },
+      { login: "shuguang-cmd", role: "全栈开发者", avatar: "assets/data/avatars/shuguang-cmd.png" }
+    ],
     features: [
       { title: "开源透明", desc: `${name} 遵循开源协议，代码规范，方便社区共同维护与二次开发。`, icon: "shield" },
       { title: "高效实用", desc: "针对实际应用场景优化设计，提供稳定可靠的功能支持与扩展性。", icon: "activity" }
@@ -291,6 +327,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   const techPills = document.getElementById("project-tech-pills");
   if (techPills && extra.techStack) {
     techPills.innerHTML = extra.techStack.map(t => `<span class="tech-pill">${escapeHtml(t)}</span>`).join("");
+  }
+
+  const contributorsGrid = document.getElementById("project-contributors-grid");
+  const contributorsList = extra.contributors || [
+    { login: "Juitar", role: "实验室核心成员", avatar: "assets/data/avatars/Juitar.png" },
+    { login: "shuguang-cmd", role: "全栈开发者", avatar: "assets/data/avatars/shuguang-cmd.png" }
+  ];
+
+  if (contributorsGrid) {
+    contributorsGrid.innerHTML = contributorsList.map(c => {
+      const avatarPath = c.avatar ? new URL(c.avatar, document.baseURI).toString() : `assets/data/avatars/${c.login}.png`;
+      const githubUrl = `https://github.com/${encodeURIComponent(c.login)}`;
+      return `
+        <div class="contributor-card">
+          <img src="${escapeHtml(avatarPath)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.src='assets/data/avatars/shuguang-cmd.png'">
+          <div class="contributor-info">
+            <a href="${escapeHtml(githubUrl)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
+            <span class="contributor-role">${escapeHtml(c.role)}</span>
+          </div>
+        </div>
+      `;
+    }).join("");
   }
 
   const terminalCmd = document.getElementById("terminal-cmd-text");

@@ -2247,3 +2247,81 @@ body.modal-open {
   gap: 20px;
   margin-top: 40px;
 }
+
+/* Project Contributors Section */
+.contributors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.contributor-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  min-width: 260px;
+  flex: 0 1 calc(33.333% - 24px);
+}
+
+.contributor-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 12px 28px -6px rgba(59, 130, 246, 0.15);
+}
+
+.contributor-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--blue-light);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.contributor-card:hover .contributor-avatar {
+  transform: scale(1.08);
+  border-color: var(--blue-bright);
+}
+
+.contributor-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contributor-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contributor-name:hover {
+  color: var(--blue-bright);
+}
+
+.contributor-role {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-bright);
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .contributor-card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
