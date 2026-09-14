@@ -259,6 +259,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const repoName = urlParams.get("id") || "Chrono_Trace";
 
   let repoInfo = null;
+  let cacheMembers = [];
   const owner = "CCSU-HorizonLab";
 
   try {
@@ -266,6 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (cacheRes.ok) {
       const cacheData = await cacheRes.json();
       repoInfo = (cacheData?.repos || []).find(r => r.name.toLowerCase() === repoName.toLowerCase());
+      cacheMembers = cacheData?.members || [];
     }
   } catch (e) {
     console.info("Cache lookup failed", e);
@@ -278,10 +280,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const extra = PROJECT_EXTRA_DATA[repoName] || {
     slogan: repoInfo?.description || `${name} 开源项目，由长大 Horizon 全栈实验室成员共同维护与迭代。`,
     lang: matchedLang,
-    contributors: [
-      { login: "Juitar", role: "实验室核心成员", avatar: "assets/data/avatars/Juitar.png" },
-      { login: "shuguang-cmd", role: "全栈开发者", avatar: "assets/data/avatars/shuguang-cmd.png" }
-    ],
     features: [
       { title: "开源透明", desc: `${name} 遵循开源协议，代码规范，方便社区共同维护与二次开发。`, icon: "shield" },
       { title: "高效实用", desc: "针对实际应用场景优化设计，提供稳定可靠的功能支持与扩展性。", icon: "activity" }
@@ -329,22 +327,66 @@ document.addEventListener("DOMContentLoaded", async () => {
     techPills.innerHTML = extra.techStack.map(t => `<span class="tech-pill">${escapeHtml(t)}</span>`).join("");
   }
 
-  const contributorsGrid = document.getElementById("project-contributors-grid");
-  const contributorsList = extra.contributors || [
-    { login: "Juitar", role: "实验室核心成员", avatar: "assets/data/avatars/Juitar.png" },
-    { login: "shuguang-cmd", role: "全栈开发者", avatar: "assets/data/avatars/shuguang-cmd.png" }
-  ];
+  // Fetch real GitHub contributors dynamically for this repository
+  let liveContributors = [];
+  try {
+    const apiRes = await fetch(`https://api.github.com/repos/${owner}/${encodeURIComponent(name)}/contributors?per_page=10`);
+    if (apiRes.ok) {
+      const data = await apiRes.json();
+      if (Array.isArray(data) && data.length > 0) {
+        liveContributors = data.map((c, idx) => {
+          const matchedMember = cacheMembers.find(m => m.login.toLowerCase() === c.login.toLowerCase());
+          let role = idx === 0 ? "项目发起人 / Core Maintainer" : "代码贡献者";
+          if (c.contributions) {
+            role += ` (${c.contributions} Commits)`;
+          }
+          return {
+            login: c.login,
+            avatar: matchedMember?.avatar_path || c.avatar_url,
+            githubUrl: c.html_url || `https://github.com/${c.login}`,
+            role: role,
+            className: matchedMember?.class_name || ""
+          };
+        });
+      }
+    }
+  } catch (e) {
+    console.info("GitHub API contributors fetch failed/rate-limited, using fallback", e);
+  }
 
+  // Fallback if live fetch returned empty array or rate limited
+  if (liveContributors.length === 0) {
+    if (extra.contributors && extra.contributors.length > 0) {
+      liveContributors = extra.contributors.map((c, idx) => {
+        const matchedMember = cacheMembers.find(m => m.login.toLowerCase() === c.login.toLowerCase());
+        return {
+          login: c.login,
+          avatar: c.avatar || matchedMember?.avatar_path || `assets/data/avatars/${c.login}.png`,
+          githubUrl: `https://github.com/${c.login}`,
+          role: c.role || (idx === 0 ? "项目发起人" : "核心贡献者"),
+          className: matchedMember?.class_name || ""
+        };
+      });
+    } else {
+      liveContributors = [
+        { login: "Juitar", avatar: "assets/data/avatars/Juitar.png", githubUrl: "https://github.com/Juitar", role: "实验室核心成员", className: "23计科03" },
+        { login: "shuguang-cmd", avatar: "assets/data/avatars/shuguang-cmd.png", githubUrl: "https://github.com/shuguang-cmd", role: "全栈开发者", className: "24软件03" }
+      ];
+    }
+  }
+
+  const contributorsGrid = document.getElementById("project-contributors-grid");
   if (contributorsGrid) {
-    contributorsGrid.innerHTML = contributorsList.map(c => {
-      const avatarPath = c.avatar ? new URL(c.avatar, document.baseURI).toString() : `assets/data/avatars/${c.login}.png`;
-      const githubUrl = `https://github.com/${encodeURIComponent(c.login)}`;
+    contributorsGrid.innerHTML = liveContributors.map(c => {
+      const avatarPath = c.avatar.startsWith("http") ? c.avatar : new URL(c.avatar, document.baseURI).toString();
+      const metaText = c.className ? `<span class="contributor-class">${escapeHtml(c.className)}</span>` : '';
       return `
         <div class="contributor-card">
           <img src="${escapeHtml(avatarPath)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.src='assets/data/avatars/shuguang-cmd.png'">
           <div class="contributor-info">
-            <a href="${escapeHtml(githubUrl)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
+            <a href="${escapeHtml(c.githubUrl)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
             <span class="contributor-role">${escapeHtml(c.role)}</span>
+            ${metaText}
           </div>
         </div>
       `;
