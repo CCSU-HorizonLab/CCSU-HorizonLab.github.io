@@ -176,18 +176,19 @@ function renderTrackState(track, className, title, description, actionUrl) {
   `;
 }
 
-function setupAutoMarquee(track, speed = 44) {
+function setupAutoMarquee(track, speed = 35) {
   const scroller = track?.closest(".horizontal-scroller");
-  if (!scroller || !shouldUseAutoMarquee()) return;
+  if (!scroller) return;
 
   scroller.classList.add("auto-marquee");
   track.classList.add("marquee-track");
   track.style.setProperty("--marquee-duration", `${speed}s`);
+
   setupMarqueeInteraction(scroller);
 }
 
 function shouldUseAutoMarquee() {
-  return window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  return true;
 }
 
 function setupMarqueeInteraction(scroller) {
@@ -195,15 +196,12 @@ function setupMarqueeInteraction(scroller) {
 
   scroller.dataset.marqueeInteractive = "true";
   const pause = () => pauseMarquee(scroller);
-  const resumeSoon = () => scheduleMarqueeResume(scroller);
+  const resumeSoon = () => scheduleMarqueeResume(scroller, 1200);
 
-  scroller.addEventListener("pointerdown", pause);
-  scroller.addEventListener("pointerup", resumeSoon);
-  scroller.addEventListener("pointercancel", resumeSoon);
+  scroller.addEventListener("mouseenter", pause);
+  scroller.addEventListener("mouseleave", () => scroller.classList.remove("is-paused"));
   scroller.addEventListener("touchstart", pause, { passive: true });
   scroller.addEventListener("touchend", resumeSoon);
-  scroller.addEventListener("wheel", resumeSoon, { passive: true });
-  scroller.addEventListener("scroll", resumeSoon, { passive: true });
 }
 
 function pauseMarquee(scroller) {
@@ -211,9 +209,8 @@ function pauseMarquee(scroller) {
   scroller.classList.add("is-paused");
 }
 
-function scheduleMarqueeResume(scroller, delay = 1400) {
+function scheduleMarqueeResume(scroller, delay = 1200) {
   window.clearTimeout(marqueeResumeTimers.get(scroller));
-  scroller.classList.add("is-paused");
   marqueeResumeTimers.set(
     scroller,
     window.setTimeout(() => {
@@ -223,17 +220,10 @@ function scheduleMarqueeResume(scroller, delay = 1400) {
 }
 
 // --- Fetch Team Members ---
-const membersTrack = document.getElementById('members-track');
-const allMembersPanel = document.getElementById("all-members-panel");
-const allMembersGrid = document.getElementById("all-members-grid");
-const toggleMembersButton = document.getElementById("toggle-members");
-const openJoinInfoButton = document.getElementById("open-join-info");
-const joinModal = document.getElementById("join-modal");
-const joinModalPanel = joinModal?.querySelector(".join-modal__panel");
-const joinModalCloseTargets = [...document.querySelectorAll("[data-join-modal-close]")];
 let lastFocusedElement;
 
 async function loadMembers() {
+  const membersTrack = document.getElementById('members-track');
   if (!membersTrack) return;
 
   const owner = getOwnerFrom(membersTrack);
@@ -272,6 +262,9 @@ async function loadMembers() {
 }
 
 async function renderMembers(members, owner) {
+  const membersTrack = document.getElementById('members-track');
+  if (!membersTrack) return;
+
   const overrides = await fetchMemberOverrides();
   const allMembers = members
     .filter((user) => user?.login && !overrides[user.login]?.exclude)
@@ -286,21 +279,14 @@ async function renderMembers(members, owner) {
 
   if (html) {
     membersTrack.innerHTML = html;
-    setupAutoMarquee(membersTrack, Math.max(34, activeMembers.length * 8));
+    setupAutoMarquee(membersTrack, 35);
     renderAllMembers(allMembers);
     return;
   }
-
-  renderTrackState(
-    membersTrack,
-    "member-card",
-    "暂无成员资料",
-    "当成员参与账号下公开仓库贡献，或公开组织成员身份后，这里会自动显示。",
-    `https://github.com/${owner}`
-  );
 }
 
 function renderAllMembers(members) {
+  const allMembersGrid = document.getElementById("all-members-grid");
   if (!allMembersGrid) return;
 
   allMembersGrid.innerHTML = members.map(renderMemberCard).join("");
@@ -308,15 +294,20 @@ function renderAllMembers(members) {
 
 function renderMemberCard(user) {
   const avatarSrc = user.avatar_path || user.avatar_url || `https://github.com/${user.login}.png`;
+  const graduated = isGraduated(user);
+  const metaText = graduated ? "已毕业成员" : "GitHub Member";
 
   return `
-    <a href="${escapeHtml(user.html_url)}" class="member-card" target="_blank" rel="noopener">
-      <img src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(user.login)}" class="member-avatar" loading="lazy" onerror="this.src='https://github.com/${escapeHtml(user.login)}.png'">
+    <a href="${escapeHtml(user.html_url)}" class="member-card ${graduated ? 'member-card--graduated' : ''}" target="_blank" rel="noopener">
+      <div class="member-avatar-wrapper">
+        <img src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(user.login)}" class="member-avatar" loading="lazy" onerror="this.src='https://github.com/${escapeHtml(user.login)}.png'">
+        ${graduated ? '<span class="graduated-badge" title="已毕业成员">🎓</span>' : ''}
+      </div>
       <h3 class="member-name">${escapeHtml(user.name || user.login)}</h3>
       ${user.class_name ? `<span class="member-class">${escapeHtml(user.class_name)}</span>` : ""}
       <p class="member-bio">${escapeHtml(user.bio || '保持好奇，持续探索。')}</p>
       <span class="member-github">@${escapeHtml(user.login)}</span>
-      <span class="member-meta">${escapeHtml(getMemberMeta(user))}</span>
+      <span class="member-meta ${graduated ? 'is-graduated' : ''}">${escapeHtml(metaText)}</span>
     </a>
   `;
 }
@@ -329,6 +320,7 @@ function applyMemberOverride(user, overrides) {
     name: override.display_name || user.name,
     class_name: override.class_name || user.class_name || "",
     bio: getDisplayBio(user, override),
+    is_graduated: override.is_graduated,
   };
 }
 
@@ -359,6 +351,7 @@ function getGradeYear(member) {
 }
 
 function isGraduated(member) {
+  if (typeof member.is_graduated === "boolean") return member.is_graduated;
   const gradeYear = getGradeYear(member);
   return gradeYear !== 9999 && CURRENT_YEAR - gradeYear >= 5;
 }
@@ -412,9 +405,8 @@ async function fetchMembers(owner) {
 }
 
 // --- Fetch Open Source Projects ---
-const projectsTrack = document.getElementById('projects-track');
-
 async function loadProjects() {
+  const projectsTrack = document.getElementById('projects-track');
   if (!projectsTrack) return;
 
   const owner = getOwnerFrom(projectsTrack);
@@ -453,6 +445,9 @@ async function loadProjects() {
 }
 
 function renderProjects(repos, owner) {
+  const projectsTrack = document.getElementById('projects-track');
+  if (!projectsTrack) return;
+
   if (!Array.isArray(repos) || repos.length === 0) {
     renderTrackState(
       projectsTrack,
@@ -464,16 +459,29 @@ function renderProjects(repos, owner) {
     return;
   }
 
-  const cardsHtml = repos
-    .map((repo) => {
-      const language = repo.language || "Repository";
-      const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 3) : [];
-      return renderProjectCard(repo, language, topics);
-    })
-    .join("");
+  const activeRepos = repos.slice(0, 15);
+  const html = renderMarqueeCards(activeRepos, (repo) => {
+    const language = repo.language || "Repository";
+    const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 3) : [];
+    return renderProjectCard(repo, language, topics);
+  });
 
-  projectsTrack.innerHTML = cardsHtml;
-  setupProjectsCarousel(repos.length);
+  if (html) {
+    projectsTrack.innerHTML = html;
+    setupAutoMarquee(projectsTrack, 35);
+    renderAllProjects(repos);
+    return;
+  }
+}
+
+function renderAllProjects(repos) {
+  const allProjectsGrid = document.getElementById("all-projects-grid");
+  if (!allProjectsGrid) return;
+  allProjectsGrid.innerHTML = repos.map((repo) => {
+    const language = repo.language || 'Repository';
+    const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 3) : [];
+    return renderProjectCard(repo, language, topics);
+  }).join('');
 }
 
 function renderProjectCard(repo, language, topics) {
@@ -519,7 +527,6 @@ function setupProjectsCarousel(itemCount) {
   const track = document.getElementById("projects-track");
   const prevBtn = document.getElementById("projects-prev");
   const nextBtn = document.getElementById("projects-next");
-  const dotsContainer = document.getElementById("projects-dots");
 
   if (!viewport || !track) return;
 
@@ -527,21 +534,7 @@ function setupProjectsCarousel(itemCount) {
   const AUTO_PLAY_INTERVAL = 4000;
 
   function buildDots() {
-    if (!dotsContainer) return;
-    dotsContainer.innerHTML = "";
-    if (itemCount <= 1) return;
-
-    for (let i = 0; i < itemCount; i++) {
-      const dot = document.createElement("button");
-      dot.className = `carousel-dot${i === 0 ? " is-active" : ""}`;
-      dot.setAttribute("type", "button");
-      dot.setAttribute("aria-label", `跳转至项目 ${i + 1}`);
-      dot.addEventListener("click", () => {
-        scrollToIndex(i);
-        resetAutoPlay();
-      });
-      dotsContainer.appendChild(dot);
-    }
+    // dots removed — using expandable panel instead
   }
 
   function getCardStep() {
@@ -570,13 +563,6 @@ function setupProjectsCarousel(itemCount) {
 
   function updateUI(activeIndex) {
     const idx = activeIndex ?? getCurrentIndex();
-
-    if (dotsContainer) {
-      const dots = dotsContainer.querySelectorAll(".carousel-dot");
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("is-active", i === idx);
-      });
-    }
 
     if (prevBtn) {
       prevBtn.disabled = idx <= 0;
@@ -662,11 +648,15 @@ function setupProjectsCarousel(itemCount) {
 }
 
 function renderMarqueeCards(items, renderItem) {
-  if (!items.length) return "";
-  const firstSet = items.map(renderItem).join("");
-  if (!shouldUseAutoMarquee()) return firstSet;
+  if (!items || !items.length) return "";
 
-  const secondSet = items.map((item) => {
+  let singleList = [...items];
+  while (singleList.length < 7) {
+    singleList = singleList.concat(items);
+  }
+
+  const firstSet = singleList.map(renderItem).join("");
+  const secondSet = singleList.map((item) => {
     const html = renderItem(item);
     return html.replace(/<(a|article)\b/, '<$1 aria-hidden="true" tabindex="-1"');
   }).join("");
@@ -699,7 +689,19 @@ document.addEventListener('DOMContentLoaded', () => {
   loadMembers();
   loadProjects();
 
+  const toggleProjectsButton = document.getElementById("toggle-projects");
+  toggleProjectsButton?.addEventListener("click", () => {
+    const allProjectsPanel = document.getElementById("all-projects-panel");
+    if (!allProjectsPanel) return;
+
+    const willOpen = allProjectsPanel.hidden;
+    allProjectsPanel.hidden = !willOpen;
+    toggleProjectsButton.textContent = willOpen ? "收起全部项目 ↑" : "展开全部项目 →";
+  });
+
+  const toggleMembersButton = document.getElementById("toggle-members");
   toggleMembersButton?.addEventListener("click", () => {
+    const allMembersPanel = document.getElementById("all-members-panel");
     if (!allMembersPanel) return;
 
     const willOpen = allMembersPanel.hidden;
@@ -707,21 +709,40 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleMembersButton.textContent = willOpen ? "收起全部成员 ↑" : "展开全部成员 →";
   });
 
-  openJoinInfoButton?.addEventListener("click", openJoinModal);
+  const openJoinInfoButton = document.getElementById("open-join-info");
+  const joinModal = document.getElementById("join-modal");
+  const joinModalCloseTargets = [...document.querySelectorAll("[data-join-modal-close]")];
+
+  openJoinInfoButton?.addEventListener("click", () => openJoinModal(joinModal, openJoinInfoButton));
   joinModalCloseTargets.forEach((target) => {
-    target.addEventListener("click", closeJoinModal);
+    target.addEventListener("click", (e) => {
+      const href = target.getAttribute("href");
+      const isAnchor = href && href.startsWith("#");
+      closeJoinModal(joinModal, openJoinInfoButton, isAnchor);
+
+      if (isAnchor) {
+        e.preventDefault();
+        const targetEl = document.querySelector(href);
+        if (targetEl) {
+          setTimeout(() => {
+            targetEl.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
+      }
+    });
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && joinModal && !joinModal.hidden) {
-      closeJoinModal();
+      closeJoinModal(joinModal, openJoinInfoButton);
     }
   });
 });
 
-function openJoinModal() {
+function openJoinModal(joinModal, openJoinInfoButton) {
   if (!joinModal) return;
 
+  const joinModalPanel = joinModal.querySelector(".join-modal__panel");
   lastFocusedElement = document.activeElement;
   joinModal.hidden = false;
   openJoinInfoButton?.setAttribute("aria-expanded", "true");
@@ -733,7 +754,7 @@ function openJoinModal() {
   });
 }
 
-function closeJoinModal() {
+function closeJoinModal(joinModal, openJoinInfoButton, skipFocusRestore = false) {
   if (!joinModal || joinModal.hidden) return;
 
   joinModal.classList.remove("is-open");
@@ -742,7 +763,7 @@ function closeJoinModal() {
 
   window.setTimeout(() => {
     joinModal.hidden = true;
-    if (lastFocusedElement instanceof HTMLElement) {
+    if (!skipFocusRestore && lastFocusedElement instanceof HTMLElement) {
       lastFocusedElement.focus();
     }
   }, 180);

@@ -1,11 +1,13 @@
 {
   "hcc-112": {
     "display_name": "hcc",
-    "class_name": "22计科01"
+    "class_name": "22计科01",
+    "is_graduated": true
   },
   "lyy169": {
     "display_name": "lyy169",
-    "class_name": "22物联01"
+    "class_name": "22物联01",
+    "is_graduated": true
   },
   "Juitar": {
     "display_name": "juitar",

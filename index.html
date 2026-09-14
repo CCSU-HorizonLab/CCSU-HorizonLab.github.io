@@ -101,7 +101,6 @@ title: "长大 Horizon 全栈实验室"
 
   <div class="horizontal-scroller">
     <div class="horizontal-track" id="members-track" data-github-owner="{{ site.github_org }}">
-      <!-- 骨架屏占位，JS加载完毕后会替换 -->
       <div class="member-card skeleton"></div>
       <div class="member-card skeleton"></div>
       <div class="member-card skeleton"></div>
@@ -125,29 +124,23 @@ title: "长大 Horizon 全栈实验室"
     <p class="section__desc">聚焦实用工具与基础设施。持续迭代，开放协作。</p>
   </div>
 
-  <div class="projects-carousel-wrapper">
-    <button class="carousel-btn carousel-btn--prev" id="projects-prev" aria-label="上一个项目" type="button">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-    </button>
-
-    <div class="projects-carousel-viewport" id="projects-viewport">
-      <div class="projects-carousel-track" id="projects-track" data-github-owner="{{ site.github_org }}">
-        <!-- 动态获取的仓库会插入到这里 -->
-        <div class="project-card skeleton"></div>
-        <div class="project-card skeleton"></div>
-        <div class="project-card skeleton"></div>
-      </div>
+  <div class="horizontal-scroller">
+    <div class="horizontal-track" id="projects-track" data-github-owner="{{ site.github_org }}">
+      <div class="project-card skeleton"></div>
+      <div class="project-card skeleton"></div>
+      <div class="project-card skeleton"></div>
     </div>
-
-    <button class="carousel-btn carousel-btn--next" id="projects-next" aria-label="下一个项目" type="button">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-    </button>
   </div>
 
-  <div class="carousel-dots" id="projects-dots" aria-label="项目轮播页码"></div>
-
   <div class="projects-action">
-    <a href="{{ site.github_url }}" class="button button--ghost" target="_blank" rel="noopener">查看全部仓库 &rarr;</a>
+    <button class="button button--ghost" type="button" id="toggle-projects">展开全部项目 &rarr;</button>
+  </div>
+
+  <div class="all-projects-panel" id="all-projects-panel" hidden>
+    <div class="all-projects-grid" id="all-projects-grid"></div>
+    <div class="all-projects-footer">
+      <a href="{{ site.github_url }}" class="button button--ghost" target="_blank" rel="noopener">查看全部仓库 &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -240,15 +233,34 @@ title: "长大 Horizon 全栈实验室"
   <div class="join-modal__backdrop" data-join-modal-close></div>
   <div class="join-modal__panel" tabindex="-1">
     <button class="join-modal__close" type="button" aria-label="关闭弹窗" data-join-modal-close>&times;</button>
-    <p class="eyebrow">Recruitment</p>
-    <h2 id="join-modal-title">招生提醒</h2>
-    <p>
-      Horizon 每年 9~10 月会定向招收大一新生。欢迎关注学院与实验室发布的招生信息，
-      也可以先了解我们的成员、项目和协作方式。
-    </p>
-    <div class="join-modal__actions">
-      <a class="button button--primary" href="#members" data-join-modal-close>认识成员</a>
-      <a class="button button--ghost" href="{{ site.github_url }}" target="_blank" rel="noopener">访问 GitHub &rarr;</a>
+    
+    <div class="join-modal__body">
+      <div class="join-modal__content">
+        <p class="eyebrow">Recruitment</p>
+        <h2 id="join-modal-title">招生提醒</h2>
+        <p>
+          Horizon 每年 9~10 月定向招收新生。欢迎关注学院与实验室发布的招生信息。
+        </p>
+        <div class="join-modal__notice">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span><strong>请扫码加入新生考核 QQ 群</strong>，实验室将在群内发布任务安排与考核要求。</span>
+        </div>
+        <div class="join-modal__actions">
+          <a class="button button--primary" href="#members" data-join-modal-close>认识成员</a>
+          <a class="button button--ghost" href="{{ site.github_url }}" target="_blank" rel="noopener">访问 GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="join-modal__qrcode">
+        <div class="qrcode-box">
+          <img src="{{ '/assets/img/Join.png' | relative_url }}" alt="扫码加入新生 QQ 群" loading="lazy">
+          <span class="qrcode-label">扫码加入新生 QQ 群</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
