@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-09-15T21:23:13.526Z",
+  "generated_at": "2026-09-16T21:19:41.806Z",
   "repos": [
     {
       "name": "tinc-ruoyi-manager",
@@ -10,7 +10,17 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-09-15T09:04:33Z"
+      "updated_at": "2026-09-16T14:44:50Z"
+    },
+    {
+      "name": "enPromote",
+      "description": "i wanna create a english training project like BaiCi, i also wanna be familiar  with creating a project . ",
+      "html_url": "https://github.com/CCSU-HorizonLab/enPromote",
+      "language": "Vue",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-09-16T03:54:47Z"
     },
     {
       "name": "class-assitant-robot",
@@ -66,6 +76,17 @@
       "avatar_path": "assets/data/avatars/Juitar.png"
     },
     {
+      "login": "vegePeapa",
+      "name": "vegePeapa",
+      "class_name": "24网络01",
+      "bio": "vege不语，只是一味地被bug攻击",
+      "location": "",
+      "html_url": "https://github.com/vegePeapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "contributions": 111,
+      "avatar_path": "assets/data/avatars/vegePeapa.png"
+    },
+    {
       "login": "shuguang-cmd",
       "name": "sun -wer",
       "class_name": "24软件03",
@@ -73,7 +94,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 26,
+      "contributions": 29,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -110,17 +131,6 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
-    },
-    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -143,15 +153,37 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "vegePeapa",
-      "name": "vegePeapa",
-      "class_name": "24网络01",
-      "bio": "vege不语，只是一味地被bug攻击",
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
       "location": "",
-      "html_url": "https://github.com/vegePeapa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
+      "location": "",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/vegePeapa.png"
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "parrowormsby720-beep",
@@ -176,26 +208,26 @@
       "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
-      "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
-    },
-    {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
+      "login": "hjfoerg235094",
+      "name": "hjfoerg235094",
+      "class_name": "",
       "bio": "",
       "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
+      "html_url": "https://github.com/hjfoerg235094",
+      "avatar_url": "https://avatars.githubusercontent.com/u/152071831?v=4",
+      "contributions": 17,
+      "avatar_path": "assets/data/avatars/hjfoerg235094.png"
+    },
+    {
+      "login": "VgetAble",
+      "name": "VgetAble",
+      "class_name": "",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/VgetAble",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185523514?v=4",
+      "contributions": 3,
+      "avatar_path": "assets/data/avatars/VgetAble.png"
     }
   ]
 }
