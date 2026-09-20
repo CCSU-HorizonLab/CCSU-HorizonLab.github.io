@@ -1,12 +1,13 @@
 - name: "Chrono_Trace"
-  language: "Python"
+  language: "Python / Vue"
   accent: "#4f9bd8"
   url: "https://github.com/CCSU-HorizonLab/Chrono_Trace"
-  description: "源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。"
+  description: "镌刻对话年轮，丈量心动间距。面向微信聊天数据的本地深度分析与实时辅助桌面工具。"
   tags:
-    - "数据分析"
-    - "隐私优先"
+    - "情感计算"
+    - "本地离线"
     - "桌面工具"
+    - "大模型辅助"
 
 - name: "tinc-cluster-manager"
   language: "PHP"

@@ -5,8 +5,9 @@ permalink: /project/
 ---
 
 <div class="project-detail-page">
-  <div class="project-hero-section">
-    <div class="project-hero-container">
+  <!-- 1. Hero & Showcase Window (一体化首屏) -->
+  <section class="project-hero-clean">
+    <div class="container-narrow">
       <nav class="breadcrumb-nav" aria-label="面包屑导航">
         <a href="{{ '/' | relative_url }}">首页</a>
         <span class="sep">/</span>
@@ -15,38 +16,14 @@ permalink: /project/
         <span class="current" id="project-breadcrumb-name">Chrono_Trace</span>
       </nav>
 
-      <div class="project-header-main">
-        <h1 id="project-title">Chrono_Trace</h1>
-        <div class="project-badges-wrapper">
-          <span class="project-lang-badge" id="project-lang">Python</span>
-          <span class="project-status-badge">开源公开</span>
-        </div>
-        <p class="project-slogan" id="project-slogan">源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。</p>
+      <div class="hero-text-center">
+        <div class="hero-badge-pill" id="hero-badge-pill">Python 3.8+ · Vue 3 · 桌面端</div>
+        <h1 class="hero-main-title" id="project-title">Chrono_Trace</h1>
+        <p class="hero-sub-slogan" id="project-slogan">
+          镌刻对话年轮，丈量心动间距。面向微信聊天数据的本地深度分析与实时辅助桌面工具。
+        </p>
 
-        <div class="project-meta-bar" id="project-meta-bar">
-          <div class="meta-item">
-            <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M8 2l2 4.5h4.5l-3.5 3.5 1 4.5-4-2.5-4 2.5 1-4.5L1.5 6.5H6z"/>
-            </svg>
-            <span>Star <strong id="project-stars">0</strong></span>
-          </div>
-          <div class="meta-item">
-            <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="5" cy="4" r="2"/><circle cx="11" cy="4" r="2"/><circle cx="8" cy="12" r="2"/>
-              <path d="M5 6v1a2 2 0 002 2h2a2 2 0 002-2V6M8 9v1"/>
-            </svg>
-            <span>Fork <strong id="project-forks">0</strong></span>
-          </div>
-          <div class="meta-item">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            <span id="project-update-time">最近更新</span>
-          </div>
-        </div>
-
-        <div class="project-cta-group">
+        <div class="hero-actions-row">
           <a href="{{ site.github_url }}" class="button button--primary" id="project-github-link" target="_blank" rel="noopener">
             访问 GitHub 仓库 ↗
           </a>
@@ -55,201 +32,386 @@ permalink: /project/
           </a>
         </div>
       </div>
-    </div>
-  </div>
 
-  <section class="section section--project-features">
-    <div class="section__heading center">
-      <span class="eyebrow">Key Features</span>
-      <h2>核心亮点与特性</h2>
-      <p class="section__desc">聚焦真实场景需求，兼顾性能、隐私与易用性。</p>
-    </div>
-
-    <div class="features-grid" id="project-features-grid">
-      <article class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <!-- Project Intro & Core Scenarios (直观阐述项目是干什么的) -->
+      <div class="project-intro-overview">
+        <div class="intro-headline-wrap">
+          <span class="intro-eyebrow">Project Overview</span>
+          <h2 class="intro-title" id="intro-title-text">它是做什么的？</h2>
+          <p class="intro-lead" id="intro-lead-text">
+            无需繁琐的聊天记录手动导出与格式转换。Chrono Trace 是专为 Windows 微信用户打造的本地沟通助手，主要解决两类核心需求：
+          </p>
         </div>
-        <h3>隐私优先</h3>
-        <p>所有聊天数据分析均在本地完全离线进行，不上传任何云端服务器，保障隐私安全。</p>
-      </article>
 
-      <article class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        <div class="intro-scenarios-grid" id="intro-scenarios-grid">
+          <!-- Populated by JS -->
         </div>
-        <h3>深度沟通洞察</h3>
-        <p>自动提取聊天频次、高频词云、情绪趋势与对话节律，生成多维度可视化图表。</p>
-      </article>
-
-      <article class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-        </div>
-        <h3>开箱即用桌面端</h3>
-        <p>提供极简桌面图形界面，无需复杂环境配置，一键导入并开启洞察报告。</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section--project-showcase">
-    <div class="window-mockup">
-      <div class="window-header">
-        <div class="window-controls">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-        </div>
-        <span class="window-title" id="window-title-text">Chrono_Trace — Dashboard Preview</span>
       </div>
-      <div class="window-body" id="window-body-content">
-        <div class="demo-showcase-box">
-          <div class="demo-metric">
-            <span class="label">分析记录</span>
-            <span class="value">100,000+ 条</span>
+
+      <!-- Clean Showcase Window with Tabs -->
+      <div class="showcase-window-wrapper">
+        <div class="showcase-tab-bar" id="showcase-tabs-nav">
+          <!-- 3 Clean Tabs -->
+        </div>
+
+        <div class="clean-window-mockup">
+          <div class="clean-window-header">
+            <div class="window-controls">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="clean-window-title" id="window-title-text">Chrono_Trace — 核心界面预览</span>
+            <div style="width: 52px;"></div>
           </div>
-          <div class="demo-metric">
-            <span class="label">处理时间</span>
-            <span class="value">&lt; 1.2 秒</span>
-          </div>
-          <div class="demo-metric">
-            <span class="label">隐私级别</span>
-            <span class="value highlight">完全本地离线</span>
+          <div class="clean-window-body" id="showcase-panels-wrap">
+            <!-- Populated by renderImageSlot -->
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--project-tech">
-    <div class="section__heading center">
-      <span class="eyebrow">Technologies</span>
-      <h2>技术栈与工具链</h2>
-    </div>
-    <div class="tech-pills" id="project-tech-pills">
-      <span class="tech-pill">Python 3.10</span>
-      <span class="tech-pill">PyQt6 / PySide6</span>
-      <span class="tech-pill">SQLite 3</span>
-      <span class="tech-pill">Pandas / NumPy</span>
-      <span class="tech-pill">ECharts</span>
-    </div>
-  </section>
-
-  <section class="section section--project-contributors">
-    <div class="section__heading center">
-      <span class="eyebrow">Contributors & Team</span>
-      <h2>项目贡献者团队</h2>
-      <p class="section__desc">感谢 Horizon 实验室成员为该开源项目作出的代码贡献与协同维护。</p>
-    </div>
-
-    <div class="contributors-grid" id="project-contributors-grid">
-      <!-- Dynamically populated -->
-    </div>
-  </section>
-
-  <section class="section section--quick-start" id="quick-start">
-    <div class="section__heading center">
-      <span class="eyebrow">Get Started</span>
-      <h2>快速开始与使用指南</h2>
-      <p class="section__desc">简单的几步，即可在本地运行该项目。</p>
-    </div>
-
-    <div class="terminal-card">
-      <div class="terminal-header">
-        <span class="terminal-title">Terminal</span>
-        <button class="copy-btn" id="copy-cmd-btn" type="button">复制命令</button>
+  <!-- 2. Core Highlights (三大核心亮点 - 清爽并排) -->
+  <section class="section section--highlights">
+    <div class="container-narrow">
+      <div class="section__heading center">
+        <span class="eyebrow">Key Features</span>
+        <h2>核心亮点</h2>
       </div>
-      <pre class="terminal-code"><code id="terminal-cmd-text"># 克隆项目仓库
+
+      <div class="highlights-three-grid" id="highlights-grid">
+        <!-- 3 clean, airy cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Architecture & Tech Stack (简洁双栏卡片) -->
+  <section class="section section--architecture">
+    <div class="container-narrow">
+      <div class="section__heading center">
+        <span class="eyebrow">Architecture & Stack</span>
+        <h2>技术架构与生态</h2>
+      </div>
+
+      <div class="compact-arch-card">
+        <!-- Left: Data & Process Flow -->
+        <div class="arch-col-flow">
+          <h3 class="arch-col-title">系统调用与数据流向</h3>
+          <div class="flow-step-list" id="flow-steps-wrap">
+            <!-- 3 clean steps -->
+          </div>
+        </div>
+
+        <!-- Right: Technology & Models -->
+        <div class="arch-col-stack">
+          <h3 class="arch-col-title">技术选型与生态</h3>
+          <div class="stack-block">
+            <span class="stack-label">核心组件</span>
+            <div class="clean-tag-pills" id="core-tech-pills">
+              <!-- Tech tags -->
+            </div>
+          </div>
+
+          <div class="stack-block" style="margin-top: 24px;">
+            <span class="stack-label">支持的 AI 推理后端</span>
+            <div class="clean-tag-pills" id="model-eco-pills">
+              <!-- Model tags -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Quick Start & Team (快速开始与团队) -->
+  <section class="section section--get-started" id="quick-start">
+    <div class="container-narrow">
+      <div class="section__heading center">
+        <span class="eyebrow">Get Started</span>
+        <h2>快速开始</h2>
+        <p class="section__desc" id="platform-env-text">支持 Windows 10/11 x64 · 微信 PC 4.x</p>
+      </div>
+
+      <div class="clean-terminal-box">
+        <div class="terminal-bar">
+          <span>终端运行</span>
+          <button class="copy-btn" id="copy-cmd-btn" type="button">复制命令</button>
+        </div>
+        <pre class="terminal-code"><code id="terminal-cmd-text"># 1. 克隆项目
 git clone https://github.com/CCSU-HorizonLab/Chrono_Trace.git
 cd Chrono_Trace
 
-# 安装依赖并启动
+# 2. 安装依赖并启动
 pip install -r requirements.txt
-python main.py</code></pre>
-    </div>
-  </section>
+python app_dev.py</code></pre>
+      </div>
 
-  <section class="section section--project-nav">
-    <div class="project-nav-bar">
-      <a href="{{ '/' | relative_url }}#projects" class="button button--ghost">&larr; 返回开源项目列表</a>
-      <a href="{{ site.github_url }}" class="button button--primary" target="_blank" rel="noopener">探索更多 GitHub 仓库 &rarr;</a>
+      <!-- Contributors & License -->
+      <div class="clean-footer-team">
+        <div class="contributors-grid" id="project-contributors-grid">
+          <!-- Dynamic Contributors -->
+        </div>
+
+        <p class="quiet-license-note" id="license-quiet-text">
+          遵循 PolyForm Noncommercial 1.0.0 开源协议 · 限非商业科研与学习使用
+        </p>
+
+        <div class="project-nav-bar" style="margin-top: 36px;">
+          <a href="{{ '/' | relative_url }}#projects" class="button button--ghost">&larr; 返回开源项目列表</a>
+        </div>
+      </div>
     </div>
   </section>
 </div>
 
 <script>
-// Project Detail Dynamic Loader Data Source
+// Project Detail Streamlined Data
 const PROJECT_EXTRA_DATA = {
   "Chrono_Trace": {
-    slogan: "源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。",
-    lang: "Python",
+    badge: "Python 3.8+ · Vue 3 · 桌面工具",
+    slogan: "镌刻对话年轮，丈量心动间距。面向微信聊天数据的本地深度分析与实时辅助桌面工具。",
+    envText: "支持 Windows 10/11 x64 · 微信 PC 4.x · Python 3.8+",
+    licenseText: "遵循 PolyForm Noncommercial 1.0.0 开源协议 · 限非商业科研与学习交流",
+
+    introTitle: "它是做什么的？",
+    introLead: "无需任何繁琐的聊天记录手动导出与格式转换。Chrono Trace 是专为 Windows 微信用户打造的本地沟通助手，主要解决两类核心使用需求：",
+    scenarios: [
+      {
+        tag: "场景一：历史复盘与沟通洞察",
+        title: "深度复盘双方的沟通轨迹与默契",
+        desc: "一键本地安全读取微信数据，全自动生成聊天频次日历、活跃时段分布、情绪走向趋势与高频词云；通过科学的四维加权算法量化打出双方的“好感度”与默契评分，看清关系发展变化。"
+      },
+      {
+        tag: "场景二：实时桌面辅助与话术参考",
+        title: "边聊边参考的 AI 悬浮辅助窗",
+        desc: "在与重要联系人聊天时，开启桌面无侵入悬浮窗。系统无感感知最新对话上下文，通过大模型即时为你推送多条高情商回复话术与沟通策略建议，告别冷场与回话焦虑。"
+      }
+    ],
+
+    // 3 Showcase Screens
+    gallery: [
+      {
+        id: "hero",
+        title: "综合主看板",
+        image: "assets/img/projects/chrono-trace-hero.png",
+        tip: "推荐尺寸 1920×1080。展示软件启动后的数据总览与综合看板。"
+      },
+      {
+        id: "eval",
+        title: "四维好感度评估",
+        image: "assets/img/projects/chrono-trace-eval.png",
+        tip: "展示情感共振率、积极度与态度倾向的多维评分雷达图。"
+      },
+      {
+        id: "analytics",
+        title: "历史分析工作台",
+        image: "assets/img/projects/chrono-trace-analytics.png",
+        tip: "展示情绪走势折线图、活跃时段热力图与词云分布。"
+      }
+    ],
+
+    // 3 Crisp Highlights (No cluttered bullet walls)
+    highlights: [
+      {
+        icon: "shield",
+        title: "纯本地离线与隐私底线",
+        desc: "数据解密、本地存储（%LOCALAPPDATA%）与分析全在用户本机完成，断网全功能正常运作，绝不擅自上传云端。"
+      },
+      {
+        icon: "sliders",
+        title: "四维量化好感度模型",
+        desc: "加权结合情感共振率 (40%)、聊天积极度 (35%) 与态度倾向 (25%)，告别无意义打分，真实还原沟通默契。"
+      },
+      {
+        icon: "desktop",
+        title: "无侵入桌面实时辅助",
+        desc: "轻量独立桌面悬浮窗边聊边给建议，内置启动基线过滤与会话隔离保护，确保大模型上下文连续纯净。"
+      }
+    ],
+
+    // 3-step Clean Flow
+    flow: [
+      {
+        step: 1,
+        title: "前端交互与高保真视图",
+        desc: "基于 Vue 3 + Vite + ECharts，通过 PyWebView 桥接原生系统调用与动态图表。"
+      },
+      {
+        step: 2,
+        title: "Python 核心服务与算法",
+        desc: "常驻原生后台，承载微信数据解密校验、四维评估引擎与实时增量去重调度。"
+      },
+      {
+        step: 3,
+        title: "端侧持久化与系统级交互",
+        desc: "本地 SQLite 3 独立存储，集成 wx_key 密钥校验与 native_uia 自动化屏幕捕获。"
+      }
+    ],
+
+    techStack: ["Python 3.8+", "Vue 3", "Vite", "PyWebView", "SQLite 3", "native_uia"],
+    models: ["DeepSeek", "OpenAI (GPT-4o)", "智谱 GLM", "Kimi", "MiniMax", "Ollama (本地离线)", "LM Studio"],
+    cmd: `# 1. 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/Chrono_Trace.git\ncd Chrono_Trace\n\n# 2. 安装依赖并启动\npip install -r requirements.txt\npython app_dev.py`,
     contributors: [
-      { login: "Juitar", role: "项目发起人 & 核心贡献者", avatar: "assets/data/avatars/Juitar.png" },
-      { login: "ting0514", role: "核心代码贡献者", avatar: "assets/data/avatars/ting0514.png" }
-    ],
-    features: [
-      { title: "隐私优先", desc: "所有聊天数据分析均在本地完全离线进行，不上传任何云端服务器，保障隐私安全。", icon: "shield" },
-      { title: "深度沟通洞察", desc: "自动提取聊天频次、高频词云、情绪趋势与对话节律，生成多维度可视化图表。", icon: "activity" },
-      { title: "开箱即用桌面端", desc: "提供极简桌面图形界面，无需复杂环境配置，一键导入并开启洞察报告。", icon: "desktop" }
-    ],
-    techStack: ["Python 3.10", "PyQt6", "SQLite 3", "Pandas", "ECharts"],
-    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/Chrono_Trace.git\ncd Chrono_Trace\n\n# 安装依赖并启动\npip install -r requirements.txt\npython main.py`
+      { login: "Juitar", role: "项目发起人 & 核心架构", avatar: "assets/data/avatars/Juitar.png", className: "23计科03" },
+      { login: "ting0514", role: "核心代码贡献者", avatar: "assets/data/avatars/ting0514.png", className: "23计科03" }
+    ]
   },
+
   "tinc-ruoyi-manager": {
+    badge: "Java · Spring Boot · 若依",
     slogan: "基于若依框架打造的 Tinc 内网穿透可视化管理系统，轻松管理分布式节点与网络拓扑。",
-    lang: "Java",
+    envText: "支持 Linux / Windows · JDK 1.8+ · MySQL 5.7+",
+    licenseText: "开源项目 · 由长大 Horizon 全栈实验室成员共同维护",
+    introTitle: "它是做什么的？",
+    introLead: "基于若依企业级框架打造的 Tinc 内网穿透可视化管理平台，解决复杂网络组网中的配置与运维痛点：",
+    scenarios: [
+      {
+        tag: "场景一：拓扑监控与可视化",
+        title: "直观掌握分布式节点连接状态",
+        desc: "跨地域监控所有接入节点的在线状态、网络拓扑与通信延迟，秒级发现离线节点与异常链路。"
+      },
+      {
+        tag: "场景二：配置与密钥集中下发",
+        title: "一键生成并导出组网配置",
+        desc: "在线生成节点公私钥与路由规则，免去人工繁琐修改配置文件的繁重运维流程。"
+      }
+    ],
+    gallery: [
+      {
+        id: "hero",
+        title: "节点拓扑图谱",
+        image: "assets/img/projects/tinc-ruoyi-hero.png",
+        tip: "若依后台 Tinc 拓扑管理与节点监控主界面截图。"
+      }
+    ],
+    highlights: [
+      {
+        icon: "network",
+        title: "网络拓扑图形化管理",
+        desc: "直观监控跨地域分布式 Tinc 节点的互联状态，支持实时心跳检查与连通度看板。"
+      },
+      {
+        icon: "key",
+        title: "企业级权限与配置下发",
+        desc: "基于经典若依 RBAC 权限体系，支持多角色访问控制与节点公私钥一键导出。"
+      }
+    ],
+    flow: [
+      { step: 1, title: "Web 前端控制台", desc: "基于 Vue.js 与 Element UI，提供直观的节点配置与拓扑看板。" },
+      { step: 2, title: "Spring Boot 核心后端", desc: "负责节点配置集中管理、密钥派发与权限审计。" },
+      { step: 3, title: "Tinc 底层网络守护进程", desc: "管理多网段点对点穿透通道与自动化组网。" }
+    ],
+    techStack: ["Java 8", "Spring Boot", "RuoYi", "Tinc VPN", "MySQL", "Vue.js"],
+    models: ["不涉及大模型调用"],
+    cmd: `# 克隆并编译运行\ngit clone https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager.git\ncd tinc-ruoyi-manager\nmvn clean package\njava -jar target/tinc-ruoyi-manager.jar`,
     contributors: [
-      { login: "shuguang-cmd", role: "项目发起人 & 架构维护", avatar: "assets/data/avatars/shuguang-cmd.png" }
-    ],
-    features: [
-      { title: "可视化拓扑", desc: "直观图形化展示 Tinc 节点连接状态与网络拓扑结构。", icon: "desktop" },
-      { title: "若依全栈集成", desc: "基于经典若依后台管理框架，提供完善的权限管理与节点监控。", icon: "shield" },
-      { title: "一键配置导出", desc: "自动生成节点配置文件与密钥对，大幅降低内网穿透组网门槛。", icon: "activity" }
-    ],
-    techStack: ["Java", "Spring Boot", "RuoYi", "Tinc VPN", "Vue.js"],
-    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager.git\ncd tinc-ruoyi-manager\n\n# 编译并运行\nmvn clean package\njava -jar target/tinc-ruoyi-manager.jar`
+      { login: "shuguang-cmd", role: "项目发起人 & 架构研发", avatar: "assets/data/avatars/shuguang-cmd.png", className: "24软件03" }
+    ]
   },
-  "class-assitant-robot": {
-    slogan: "面向课堂场景的智能化助教机器人，辅助考勤、通知提醒与自动化交互。",
-    lang: "Python",
-    contributors: [
-      { login: "lyy169", role: "项目发起人 & 机器人研发", avatar: "assets/data/avatars/lyy169.png" },
-      { login: "shuguang-cmd", role: "核心代码贡献者", avatar: "assets/data/avatars/shuguang-cmd.png" }
-    ],
-    features: [
-      { title: "智能考勤与交互", desc: "结合自动化脚本与消息机器人，快速响应课堂考勤与通知。", icon: "activity" },
-      { title: "多平台消息接入", desc: "支持对接主流即时通讯平台，实现自动化通知下发。", icon: "desktop" }
-    ],
-    techStack: ["Python", "FastAPI", "APScheduler", "Bot Protocol"],
-    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/class-assitant-robot.git\ncd class-assitant-robot\n\n# 启动助教机器人\npip install -r requirements.txt\npython app.py`
-  },
+
   "tinc-cluster-manager": {
+    badge: "PHP 8.x · MySQL · 集群调度",
     slogan: "基于 PHP 打造的 Tinc 内网穿透集群管理系统，支持多节点管理与自动化集中调度。",
-    lang: "PHP",
+    envText: "支持 Linux · PHP 8.0+ · Composer · MySQL",
+    licenseText: "开源项目 · 由长大 Horizon 全栈实验室成员共同维护",
+    introTitle: "它是做什么的？",
+    introLead: "基于 PHP 开发的轻量级 Tinc 内网穿透集群管理系统，面向跨网段设备实现集中化调度：",
+    scenarios: [
+      {
+        tag: "场景一：多节点集群调度",
+        title: "跨网段设备一站式集中管控",
+        desc: "在线管理分布在不同内网网段的 Tinc 节点，实时检测链路健康度与节点连通情况。"
+      },
+      {
+        tag: "场景二：自动化密钥配对",
+        title: "自动化配置分发与组网",
+        desc: "集中化管理与自动下发密钥对，轻松实现跨物理网段的轻量内网穿透组网。"
+      }
+    ],
+    gallery: [
+      {
+        id: "hero",
+        title: "集群管理控制台",
+        image: "assets/img/projects/tinc-cluster-hero.png",
+        tip: "集群节点管理面板截图。"
+      }
+    ],
+    highlights: [
+      {
+        icon: "server",
+        title: "分布式集群集中调度",
+        desc: "高效管理分布在不同物理网段的 Tinc 节点集群，实时监控网络拓扑与通道延迟。"
+      },
+      {
+        icon: "key",
+        title: "自动化密钥配置下发",
+        desc: "在线生成并分发节点公私钥，简化内网穿透组网流程。"
+      }
+    ],
+    flow: [
+      { step: 1, title: "Web 控制台", desc: "提供轻量直观的集群节点管理视图与操作入口。" },
+      { step: 2, title: "PHP 业务中枢", desc: "集中管理节点元数据、拓扑关系与路由下发。" },
+      { step: 3, title: "Tinc 组网服务", desc: "跨网段打通点对点 VPN 隧道。" }
+    ],
+    techStack: ["PHP 8.x", "ThinkPHP", "Tinc VPN", "MySQL"],
+    models: ["不涉及大模型调用"],
+    cmd: `# 安装依赖并启动\ngit clone https://github.com/CCSU-HorizonLab/tinc-cluster-manager.git\ncd tinc-cluster-manager\ncomposer install\nphp -S localhost:8000 -t public`,
     contributors: [
-      { login: "kevinfvcdsaf", role: "项目发起人 & PHP后端", avatar: "assets/data/avatars/kevinfvcdsaf.png" },
-      { login: "94jiuyang", role: "核心代码贡献者", avatar: "assets/data/avatars/94jiuyang.png" },
-      { login: "kaihuang614", role: "核心代码贡献者", avatar: "assets/data/avatars/kaihuang614.png" }
-    ],
-    features: [
-      { title: "集群调度管理", desc: "高效管理分布于不同网段的 Tinc 节点集群，实时监控网络拓扑。", icon: "desktop" },
-      { title: "自动化配置下发", desc: "在线集中管理节点密钥与路由规则，实现配置一键分发与上线。", icon: "shield" }
-    ],
-    techStack: ["PHP 8.x", "ThinkPHP / Laravel", "Tinc VPN", "MySQL", "Bootstrap"],
-    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/tinc-cluster-manager.git\ncd tinc-cluster-manager\n\n# 安装依赖并启动本地服务\ncomposer install\nphp -S localhost:8000 -t public`
+      { login: "kevinfvcdsaf", role: "项目发起人 & 后端开发", avatar: "assets/data/avatars/kevinfvcdsaf.png", className: "24软件03" },
+      { login: "94jiuyang", role: "核心代码贡献者", avatar: "assets/data/avatars/94jiuyang.png", className: "24软件03" }
+    ]
   },
+
   "tinc-cli-gui": {
-    slogan: "Tinc 内网穿透客户端 GUI 图形界面工具，简化跨平台节点连接与网络管理。",
-    lang: "C++ / Go",
+    badge: "C++ · Qt · GUI 工具",
+    slogan: "为 Tinc 内网穿透提供直观图形界面，简化跨平台节点连接与网络管理。",
+    envText: "支持 Windows 10/11 · Linux · macOS",
+    licenseText: "开源项目 · 由长大 Horizon 全栈实验室成员共同维护",
+    introTitle: "它是做什么的？",
+    introLead: "为 Tinc 命令行穿透工具量身定制的跨平台轻量 GUI 客户端，大幅降低命令行使用门槛：",
+    scenarios: [
+      {
+        tag: "场景一：图形化一键连断",
+        title: "告别黑底命令行终端",
+        desc: "系统托盘常驻，一键开启、暂停或切换节点连接，普通用户也能轻松上手。"
+      },
+      {
+        tag: "场景二：网络状态即时诊断",
+        title: "实时通道延迟与连通性监视",
+        desc: "直观展示当前穿透链路的握手状态与实时网络质量，快速定位网络连接问题。"
+      }
+    ],
+    gallery: [
+      {
+        id: "hero",
+        title: "客户端连接主界面",
+        image: "assets/img/projects/tinc-gui-hero.png",
+        tip: "GUI 托盘与连接窗口截图。"
+      }
+    ],
+    highlights: [
+      {
+        icon: "desktop",
+        title: "一键连接与托盘常驻",
+        desc: "免去复杂命令行记忆，点击即可快速启动与断开网络节点。"
+      },
+      {
+        icon: "pulse",
+        title: "实时网络质量监控",
+        desc: "图形化呈现当前通道延迟与丢包率，方便排查连接故障。"
+      }
+    ],
+    flow: [
+      { step: 1, title: "GUI 客户端外壳", desc: "轻量跨平台界面，提供直观的状态指示与托盘常驻。" },
+      { step: 2, title: "Native 进程守护", desc: "调用系统底层接口安全调起与管控 Tinc 核心。" }
+    ],
+    techStack: ["C++", "Qt / CMake", "Tinc Daemon"],
+    models: ["不涉及大模型调用"],
+    cmd: `# 克隆并构建\ngit clone https://github.com/CCSU-HorizonLab/tinc-cli-gui.git\ncd tinc-cli-gui\ncmake -B build && cmake --build build --config Release`,
     contributors: [
-      { login: "zzhaoos", role: "项目发起人 & GUI开发者", avatar: "assets/data/avatars/zzhaoos.png" }
-    ],
-    features: [
-      { title: "图形化快速连接", desc: "为 Tinc CLI 提供直观轻量的图形用户界面，免去繁琐命令行。", icon: "desktop" },
-      { title: "实时状态监控", desc: "展示节点连通状态与实时网络质量，快速诊断网络故障。", icon: "activity" }
-    ],
-    techStack: ["C++ / Go", "Tinc Daemon", "GUI Shell", "Cross-Platform"],
-    cmd: `# 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/tinc-cli-gui.git\ncd tinc-cli-gui`
+      { login: "zzhaoos", role: "项目发起人 & GUI研发", avatar: "assets/data/avatars/zzhaoos.png", className: "24软件03" }
+    ]
   }
 };
 
@@ -273,134 +435,197 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const name = repoInfo?.name || repoName;
-  const matchedLang = repoInfo?.language || (PROJECT_EXTRA_DATA[repoName] ? PROJECT_EXTRA_DATA[repoName].lang : "Open Source");
-
-  // Build dynamic default data if project not explicitly configured
-  const extra = PROJECT_EXTRA_DATA[repoName] || {
-    slogan: repoInfo?.description || `${name} 开源项目，由长大 Horizon 全栈实验室成员共同维护与迭代。`,
-    lang: matchedLang,
-    features: [
-      { title: "开源透明", desc: `${name} 遵循开源协议，代码规范，方便社区共同维护与二次开发。`, icon: "shield" },
-      { title: "高效实用", desc: "针对实际应用场景优化设计，提供稳定可靠的功能支持与扩展性。", icon: "activity" }
+  const extra = PROJECT_EXTRA_DATA[name] || PROJECT_EXTRA_DATA[repoName] || {
+    badge: `${repoInfo?.language || '开源'} 项目`,
+    slogan: repoInfo?.description || `${name} 开源项目，由长大 Horizon 全栈实验室成员维护。`,
+    envText: "跨平台支持 · 标准开源规范",
+    licenseText: "开源项目 · 由长大 Horizon 全栈实验室成员共同维护",
+    introTitle: "它是做什么的？",
+    introLead: `${name} 是由长大 Horizon 全栈实验室成员维护与迭代的开源项目。`,
+    scenarios: [
+      { tag: "核心能力", title: "针对实际场景设计", desc: "聚焦工程落地与实际使用需求，提供稳定可靠的功能支持。" }
     ],
-    techStack: [matchedLang, "Git", "GitHub Actions"],
-    cmd: `# 克隆项目仓库\ngit clone https://github.com/${owner}/${name}.git\ncd ${name}`
+    gallery: [
+      {
+        id: "hero",
+        title: "界面预览",
+        image: `assets/img/projects/${name.toLowerCase()}-hero.png`,
+        tip: "推荐尺寸 1920×1080。"
+      }
+    ],
+    highlights: [
+      {
+        icon: "shield",
+        title: "规范架构与开源",
+        desc: "结构清晰解耦，方便社区协同维护与持续演化。"
+      },
+      {
+        icon: "sliders",
+        title: "聚焦真实应用场景",
+        desc: "源自实验室成员实践，提供稳定可靠的功能支持。"
+      }
+    ],
+    flow: [
+      { step: 1, title: "核心业务逻辑", desc: "高内聚低耦合的代码组织。" },
+      { step: 2, title: "底层环境支撑", desc: "稳定高效的运行基础。" }
+    ],
+    techStack: [repoInfo?.language || "Multi-Language", "Git"],
+    models: ["通用环境支持"],
+    cmd: `git clone https://github.com/${owner}/${name}.git\ncd ${name}`,
+    contributors: [
+      { login: "Juitar", role: "实验室核心成员", avatar: "assets/data/avatars/Juitar.png" }
+    ]
   };
 
+  // 1. Meta & Title
   document.title = `${name} - 项目详情 | 长大 Horizon 全栈实验室`;
   document.getElementById("project-breadcrumb-name").textContent = name;
   document.getElementById("project-title").textContent = name;
-  document.getElementById("project-lang").textContent = repoInfo?.language || extra.lang || "Open Source";
-  document.getElementById("project-slogan").textContent = repoInfo?.description || extra.slogan;
-  document.getElementById("window-title-text").textContent = `${name} — Dashboard Preview`;
-  document.getElementById("project-stars").textContent = repoInfo?.stargazers_count ?? 0;
-  document.getElementById("project-forks").textContent = repoInfo?.forks_count ?? 0;
-  
-  if (repoInfo?.updated_at) {
-    const d = new Date(repoInfo.updated_at);
-    document.getElementById("project-update-time").textContent = `最近更新 ${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-  }
+  document.getElementById("hero-badge-pill").textContent = extra.badge;
+  document.getElementById("project-slogan").textContent = extra.slogan;
+  document.getElementById("window-title-text").textContent = `${name} — 核心界面预览`;
+  document.getElementById("platform-env-text").textContent = extra.envText;
+  document.getElementById("license-quiet-text").textContent = extra.licenseText;
 
-  const ghLink = document.getElementById("project-github-link");
-  if (ghLink) {
-    ghLink.href = repoInfo?.html_url || `https://github.com/${owner}/${name}`;
-  }
+  // Render Concrete Scenarios & Overview
+  const introTitle = document.getElementById("intro-title-text");
+  const introLead = document.getElementById("intro-lead-text");
+  const scenariosGrid = document.getElementById("intro-scenarios-grid");
 
-  const featuresGrid = document.getElementById("project-features-grid");
-  if (featuresGrid && extra.features) {
-    featuresGrid.innerHTML = extra.features.map(f => `
-      <article class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-            ${getIconSvg(f.icon)}
-          </svg>
-        </div>
-        <h3>${escapeHtml(f.title)}</h3>
-        <p>${escapeHtml(f.desc)}</p>
+  if (introTitle && extra.introTitle) introTitle.textContent = extra.introTitle;
+  if (introLead && extra.introLead) introLead.textContent = extra.introLead;
+
+  if (scenariosGrid && extra.scenarios && extra.scenarios.length > 0) {
+    scenariosGrid.innerHTML = extra.scenarios.map(sc => `
+      <article class="scenario-card">
+        <span class="scenario-tag">${escapeHtml(sc.tag)}</span>
+        <h3>${escapeHtml(sc.title)}</h3>
+        <p>${escapeHtml(sc.desc)}</p>
       </article>
     `).join("");
   }
 
-  const techPills = document.getElementById("project-tech-pills");
-  if (techPills && extra.techStack) {
-    techPills.innerHTML = extra.techStack.map(t => `<span class="tech-pill">${escapeHtml(t)}</span>`).join("");
-  }
+  const ghLink = document.getElementById("project-github-link");
+  if (ghLink) ghLink.href = repoInfo?.html_url || `https://github.com/${owner}/${name}`;
 
-  // Fetch real GitHub contributors dynamically for this repository
-  let liveContributors = [];
-  try {
-    const apiRes = await fetch(`https://api.github.com/repos/${owner}/${encodeURIComponent(name)}/contributors?per_page=10`);
-    if (apiRes.ok) {
-      const data = await apiRes.json();
-      if (Array.isArray(data) && data.length > 0) {
-        const extraContribs = extra.contributors || [];
-        liveContributors = data.map((c) => {
-          const matchedMember = cacheMembers.find(m => m.login.toLowerCase() === c.login.toLowerCase());
-          const matchedExtra = extraContribs.find(ec => ec.login.toLowerCase() === c.login.toLowerCase());
-          
-          let role = matchedExtra?.role || "核心代码贡献者";
-          if (c.contributions) {
-            role += ` (${c.contributions} Commits)`;
-          }
+  // 2. Showcase Window Tabs & Image Slots
+  const tabsNav = document.getElementById("showcase-tabs-nav");
+  const panelsWrap = document.getElementById("showcase-panels-wrap");
 
-          return {
-            login: c.login,
-            avatar: matchedExtra?.avatar || matchedMember?.avatar_path || c.avatar_url,
-            githubUrl: c.html_url || `https://github.com/${c.login}`,
-            role: role,
-            className: matchedMember?.class_name || ""
-          };
-        });
-
-        // Order contributors according to extra.contributors if configured
-        if (extraContribs.length > 0) {
-          liveContributors.sort((a, b) => {
-            const idxA = extraContribs.findIndex(ec => ec.login.toLowerCase() === a.login.toLowerCase());
-            const idxB = extraContribs.findIndex(ec => ec.login.toLowerCase() === b.login.toLowerCase());
-            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-            if (idxA !== -1) return -1;
-            if (idxB !== -1) return 1;
-            return 0;
-          });
-        }
-      }
-    }
-  } catch (e) {
-    console.info("GitHub API contributors fetch failed/rate-limited, using fallback", e);
-  }
-
-  // Fallback if live fetch returned empty array or rate limited
-  if (liveContributors.length === 0) {
-    if (extra.contributors && extra.contributors.length > 0) {
-      liveContributors = extra.contributors.map((c, idx) => {
-        const matchedMember = cacheMembers.find(m => m.login.toLowerCase() === c.login.toLowerCase());
-        return {
-          login: c.login,
-          avatar: c.avatar || matchedMember?.avatar_path || `assets/data/avatars/${c.login}.png`,
-          githubUrl: `https://github.com/${c.login}`,
-          role: c.role || (idx === 0 ? "项目发起人" : "核心贡献者"),
-          className: matchedMember?.class_name || ""
-        };
-      });
+  if (tabsNav && panelsWrap && extra.gallery && extra.gallery.length > 0) {
+    if (extra.gallery.length === 1) {
+      tabsNav.style.display = "none";
     } else {
-      liveContributors = [
-        { login: "Juitar", avatar: "assets/data/avatars/Juitar.png", githubUrl: "https://github.com/Juitar", role: "实验室核心成员", className: "23计科03" },
-        { login: "shuguang-cmd", avatar: "assets/data/avatars/shuguang-cmd.png", githubUrl: "https://github.com/shuguang-cmd", role: "全栈开发者", className: "24软件03" }
-      ];
+      tabsNav.style.display = "flex";
+      tabsNav.innerHTML = extra.gallery.map((g, idx) => `
+        <button class="showcase-tab-btn ${idx === 0 ? 'active' : ''}" data-target="${escapeHtml(g.id)}" type="button">
+          ${escapeHtml(g.title)}
+        </button>
+      `).join("");
     }
+
+    panelsWrap.innerHTML = extra.gallery.map((g, idx) => `
+      <div class="showcase-panel-item ${idx === 0 ? 'active' : ''}" id="panel-${escapeHtml(g.id)}">
+        <div class="image-slot-container" id="slot-${escapeHtml(g.id)}">
+          <!-- Populated by renderImageSlot -->
+        </div>
+      </div>
+    `).join("");
+
+    extra.gallery.forEach(g => {
+      renderImageSlot(`slot-${g.id}`, g.image, g.title, g.tip);
+    });
+
+    tabsNav.addEventListener("click", (e) => {
+      const btn = e.target.closest(".showcase-tab-btn");
+      if (!btn) return;
+      const targetId = btn.getAttribute("data-target");
+
+      tabsNav.querySelectorAll(".showcase-tab-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      panelsWrap.querySelectorAll(".showcase-panel-item").forEach(p => p.classList.remove("active"));
+      const activePanel = document.getElementById(`panel-${targetId}`);
+      if (activePanel) activePanel.classList.add("active");
+    });
   }
 
+  // 3. Highlights (3 Clean Cards)
+  const highlightsGrid = document.getElementById("highlights-grid");
+  if (highlightsGrid && extra.highlights) {
+    highlightsGrid.innerHTML = extra.highlights.map((h, idx) => `
+      <article class="highlight-clean-card">
+        <div class="highlight-card-top">
+          <div class="highlight-icon-box">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              ${getIconSvg(h.icon)}
+            </svg>
+          </div>
+          <span class="highlight-num">0${idx + 1}</span>
+        </div>
+        <h3>${escapeHtml(h.title)}</h3>
+        <p>${escapeHtml(h.desc)}</p>
+      </article>
+    `).join("");
+  }
+
+  // 4. Architecture Flow Steps
+  const flowWrap = document.getElementById("flow-steps-wrap");
+  if (flowWrap && extra.flow) {
+    flowWrap.innerHTML = extra.flow.map(s => `
+      <div class="flow-step-item">
+        <span class="step-badge">${s.step}</span>
+        <div>
+          <strong>${escapeHtml(s.title)}</strong>
+          <p>${escapeHtml(s.desc)}</p>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // 5. Tech Stack & Model Pills
+  const techWrap = document.getElementById("core-tech-pills");
+  if (techWrap && extra.techStack) {
+    techWrap.innerHTML = extra.techStack.map(t => `<span>${escapeHtml(t)}</span>`).join("");
+  }
+
+  const modelWrap = document.getElementById("model-eco-pills");
+  if (modelWrap && extra.models) {
+    modelWrap.innerHTML = extra.models.map(m => {
+      const isLocal = m.includes("本地") || m.includes("离线");
+      return `<span class="${isLocal ? 'local-pill' : ''}">${escapeHtml(m)}</span>`;
+    }).join("");
+  }
+
+  // 6. Terminal Commands
+  const terminalCmd = document.getElementById("terminal-cmd-text");
+  if (terminalCmd && extra.cmd) {
+    terminalCmd.textContent = extra.cmd;
+  }
+
+  const copyBtn = document.getElementById("copy-cmd-btn");
+  if (copyBtn && terminalCmd) {
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(terminalCmd.textContent).then(() => {
+        copyBtn.textContent = "已复制！";
+        setTimeout(() => copyBtn.textContent = "复制命令", 2000);
+      });
+    });
+  }
+
+  // 7. Contributors
   const contributorsGrid = document.getElementById("project-contributors-grid");
   if (contributorsGrid) {
+    const contribs = extra.contributors || [];
     const fallbackAvatar = resolveSiteUrl('assets/data/avatars/shuguang-cmd.png');
-    contributorsGrid.innerHTML = liveContributors.map(c => {
-      const avatarPath = resolveSiteUrl(c.avatar);
+    contributorsGrid.innerHTML = contribs.map(c => {
+      const avatarPath = resolveSiteUrl(c.avatar || `assets/data/avatars/${c.login}.png`);
       const metaText = c.className ? `<span class="contributor-class">${escapeHtml(c.className)}</span>` : '';
       return `
         <div class="contributor-card">
           <img src="${escapeHtml(avatarPath)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.onerror=null; this.src='${escapeHtml(fallbackAvatar)}';">
           <div class="contributor-info">
-            <a href="${escapeHtml(c.githubUrl)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
+            <a href="https://github.com/${escapeHtml(c.login)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
             <span class="contributor-role">${escapeHtml(c.role)}</span>
             ${metaText}
           </div>
@@ -408,23 +633,37 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
     }).join("");
   }
-
-  const terminalCmd = document.getElementById("terminal-cmd-text");
-  if (terminalCmd && extra.cmd) {
-    terminalCmd.textContent = extra.cmd;
-  }
-
-  const copyBtn = document.getElementById("copy-cmd-btn");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", () => {
-      const codeText = terminalCmd.textContent;
-      navigator.clipboard.writeText(codeText).then(() => {
-        copyBtn.textContent = "已复制！";
-        setTimeout(() => copyBtn.textContent = "复制命令", 2000);
-      });
-    });
-  }
 });
+
+// Clean Fallback & Real Image Loader
+function renderImageSlot(containerId, imgPath, title, tipText) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const fullPath = resolveSiteUrl(imgPath);
+
+  const img = new Image();
+  img.onload = () => {
+    container.innerHTML = `<img src="${escapeHtml(fullPath)}" alt="${escapeHtml(title)}" class="real-screenshot" loading="lazy">`;
+  };
+  img.onerror = () => {
+    container.innerHTML = `
+      <div class="image-placeholder-box">
+        <div class="image-placeholder-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+        </div>
+        <span class="image-placeholder-badge">SCREENSHOT PREVIEW</span>
+        <h3 class="image-placeholder-title">${escapeHtml(title)}</h3>
+        <div class="image-placeholder-slot-tag">预留路径：${escapeHtml(imgPath)}</div>
+        <p class="image-placeholder-tip">${escapeHtml(tipText || '放入截图后刷新网页即可自动替换显示。')}</p>
+      </div>
+    `;
+  };
+  img.src = fullPath;
+}
 
 function resolveSiteUrl(path) {
   if (!path) return '';
@@ -439,8 +678,23 @@ function escapeHtml(str) {
 }
 
 function getIconSvg(type) {
-  if (type === "shield") return '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>';
-  if (type === "activity") return '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>';
-  return '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>';
+  switch (type) {
+    case "shield":
+      return '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>';
+    case "sliders":
+      return '<line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line>';
+    case "desktop":
+      return '<rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>';
+    case "network":
+      return '<rect x="9" y="2" width="6" height="4" rx="1"></rect><rect x="2" y="16" width="6" height="4" rx="1"></rect><rect x="16" y="16" width="6" height="4" rx="1"></rect><path d="M12 6v5"></path><path d="M5 16v-2a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v2"></path>';
+    case "server":
+      return '<rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line>';
+    case "key":
+      return '<circle cx="7.5" cy="15.5" r="4.5"></circle><path d="m21 3-9.5 9.5"></path><path d="m15.5 7.5 3 3"></path>';
+    case "pulse":
+      return '<path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>';
+    default:
+      return '<rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>';
+  }
 }
 </script>
