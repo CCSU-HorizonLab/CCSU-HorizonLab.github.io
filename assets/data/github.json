@@ -1,7 +1,17 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-09-19T20:42:49.311Z",
+  "generated_at": "2026-09-20T20:50:55.556Z",
   "repos": [
+    {
+      "name": "Chrono_Trace",
+      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
+      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
+      "language": "Python",
+      "topics": [],
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "updated_at": "2026-09-20T15:22:54Z"
+    },
     {
       "name": "enPromote",
       "description": "i wanna create a english training project like BaiCi, i also wanna be familiar  with creating a project . ",
@@ -10,7 +20,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-09-18T07:43:44Z"
+      "updated_at": "2026-09-20T13:08:08Z"
     },
     {
       "name": "tinc-ruoyi-manager",
@@ -31,16 +41,6 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "updated_at": "2026-07-25T11:11:18Z"
-    },
-    {
-      "name": "Chrono_Trace",
-      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
-      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "updated_at": "2026-06-26T10:03:57Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -72,7 +72,7 @@
       "location": "China",
       "html_url": "https://github.com/Juitar",
       "avatar_url": "https://avatars.githubusercontent.com/u/138417175?v=4",
-      "contributions": 132,
+      "contributions": 178,
       "avatar_path": "assets/data/avatars/Juitar.png"
     },
     {
@@ -83,7 +83,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 118,
+      "contributions": 121,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
