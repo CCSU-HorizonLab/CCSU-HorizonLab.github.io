@@ -444,6 +444,15 @@ async function loadProjects() {
   }
 }
 
+function sortReposByName(repos) {
+  if (!Array.isArray(repos)) return [];
+  return [...repos].sort((a, b) => {
+    const nameA = String(a?.name || "").toLowerCase();
+    const nameB = String(b?.name || "").toLowerCase();
+    return nameA.localeCompare(nameB);
+  });
+}
+
 function renderProjects(repos, owner) {
   const projectsTrack = document.getElementById('projects-track');
   if (!projectsTrack) return;
@@ -459,7 +468,8 @@ function renderProjects(repos, owner) {
     return;
   }
 
-  const activeRepos = repos.slice(0, 15);
+  const sortedRepos = sortReposByName(repos);
+  const activeRepos = sortedRepos.slice(0, 15);
   const html = renderMarqueeCards(activeRepos, (repo) => {
     const language = repo.language || "Repository";
     const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 3) : [];
@@ -469,7 +479,7 @@ function renderProjects(repos, owner) {
   if (html) {
     projectsTrack.innerHTML = html;
     setupAutoMarquee(projectsTrack, 35);
-    renderAllProjects(repos);
+    renderAllProjects(sortedRepos);
     return;
   }
 }

@@ -3,64 +3,64 @@
   "generated_at": "2026-09-19T20:42:49.311Z",
   "repos": [
     {
-      "name": "enPromote",
-      "description": "i wanna create a english training project like BaiCi, i also wanna be familiar  with creating a project . ",
-      "html_url": "https://github.com/CCSU-HorizonLab/enPromote",
-      "language": "Vue",
-      "topics": [],
-      "stargazers_count": 0,
+      "name": "Chrono_Trace",
+      "description": "镌刻对话年轮，丈量心动间距。面向微信聊天数据的本地深度分析与实时辅助桌面工具。",
+      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
+      "language": "Python",
+      "topics": ["桌面工具", "本地离线", "大模型辅助"],
+      "stargazers_count": 1,
       "forks_count": 0,
-      "updated_at": "2026-09-18T07:43:44Z"
-    },
-    {
-      "name": "tinc-ruoyi-manager",
-      "description": "Tinc内网穿透（若依框架）",
-      "html_url": "https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager",
-      "language": "Java",
-      "topics": [],
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "updated_at": "2026-09-17T11:23:36Z"
+      "updated_at": "2026-09-18T12:00:00Z"
     },
     {
       "name": "class-assitant-robot",
-      "description": null,
+      "description": "软硬件协同的课堂全景视频采集、边缘视觉行为分析与智能教学反馈平台。",
       "html_url": "https://github.com/CCSU-HorizonLab/class-assitant-robot",
       "language": "Python",
-      "topics": [],
+      "topics": ["边缘计算", "YOLO视觉", "智慧教学"],
       "stargazers_count": 0,
       "forks_count": 0,
       "updated_at": "2026-07-25T11:11:18Z"
     },
     {
-      "name": "Chrono_Trace",
-      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
-      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 1,
+      "name": "enPromote",
+      "description": "融合大语言模型与讯飞语音评测的场景互动式英语学习平台，打破传统死记硬背。",
+      "html_url": "https://github.com/CCSU-HorizonLab/enPromote",
+      "language": "Vue",
+      "topics": ["语言学习", "讯飞ISE", "AI对话"],
+      "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-06-26T10:03:57Z"
+      "updated_at": "2026-09-18T07:43:44Z"
     },
     {
       "name": "tinc-cli-gui",
-      "description": null,
+      "description": "为 Tinc 命令行穿透工具量身定制的跨平台轻量 GUI 客户端，大幅降低日常使用门槛。",
       "html_url": "https://github.com/CCSU-HorizonLab/tinc-cli-gui",
-      "language": null,
-      "topics": [],
+      "language": "C++",
+      "topics": ["GUI", "Qt", "效率工具"],
       "stargazers_count": 0,
       "forks_count": 0,
       "updated_at": "2026-06-10T03:59:14Z"
     },
     {
       "name": "tinc-cluster-manager",
-      "description": null,
+      "description": "面向 Tinc 网络的轻量级集群管理与调度系统，实现跨网段设备一站式集中管控。",
       "html_url": "https://github.com/CCSU-HorizonLab/tinc-cluster-manager",
       "language": "PHP",
-      "topics": [],
+      "topics": ["集群调度", "ThinkPHP", "网络管理"],
       "stargazers_count": 1,
       "forks_count": 0,
       "updated_at": "2026-06-10T03:59:12Z"
+    },
+    {
+      "name": "tinc-ruoyi-manager",
+      "description": "基于若依企业级框架打造的 Tinc 内网穿透可视化管理平台，轻松管理分布式节点与网络拓扑。",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager",
+      "language": "Java",
+      "topics": ["Spring Boot", "若依管理", "网络穿透"],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-09-17T11:23:36Z"
     }
   ],
   "members": [
