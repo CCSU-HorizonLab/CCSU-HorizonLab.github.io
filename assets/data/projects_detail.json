@@ -21,13 +21,13 @@
     "gallery": [
       {
         "id": "hero",
-        "title": "综合主看板",
+        "title": "ai分析看板",
         "image": "assets/img/projects/chrono-trace-hero.png",
         "tip": "推荐尺寸 1920×1080。展示软件启动后的数据总览与综合看板。"
       },
       {
         "id": "eval",
-        "title": "四维好感度评估",
+        "title": "多维好感度评估",
         "image": "assets/img/projects/chrono-trace-eval.png",
         "tip": "展示情感共振率、积极度与态度倾向的多维评分雷达图。"
       },
@@ -72,15 +72,39 @@
         "desc": "本地 SQLite 3 独立存储，集成 wx_key 密钥校验与 native_uia 自动化屏幕捕获。"
       }
     ],
-    "techStack": ["Python 3.8+", "Vue 3", "Vite", "PyWebView", "SQLite 3", "native_uia"],
-    "models": ["DeepSeek", "OpenAI (GPT-4o)", "智谱 GLM", "Kimi", "MiniMax", "Ollama (本地离线)", "LM Studio"],
+    "techStack": [
+      "Python 3.8+",
+      "Vue 3",
+      "Vite",
+      "PyWebView",
+      "SQLite 3",
+      "native_uia"
+    ],
+    "models": [
+      "DeepSeek",
+      "OpenAI (GPT-4o)",
+      "智谱 GLM",
+      "Kimi",
+      "MiniMax",
+      "Ollama (本地离线)",
+      "LM Studio"
+    ],
     "cmd": "# 1. 克隆项目仓库\ngit clone https://github.com/CCSU-HorizonLab/Chrono_Trace.git\ncd Chrono_Trace\n\n# 2. 安装依赖并启动\npip install -r requirements.txt\npython app_dev.py",
     "contributors": [
-      { "login": "Juitar", "role": "项目发起人 & 核心架构", "avatar": "assets/data/avatars/Juitar.png", "className": "23计科03" },
-      { "login": "ting0514", "role": "核心代码贡献者", "avatar": "assets/data/avatars/ting0514.png", "className": "23计科03" }
+      {
+        "login": "Juitar",
+        "role": "项目发起人 & 核心架构",
+        "avatar": "assets/data/avatars/Juitar.png",
+        "className": "23计科03"
+      },
+      {
+        "login": "ting0514",
+        "role": "核心代码贡献者",
+        "avatar": "assets/data/avatars/ting0514.png",
+        "className": "23计科03"
+      }
     ]
   },
-
   "enPromote": {
     "badge": "Vue 3 · Node.js · 科大讯飞 ISE · 英语学习",
     "slogan": "融合大语言模型与语音评测的场景互动式英语学习平台，打破传统死记硬背。",
@@ -103,13 +127,13 @@
     "gallery": [
       {
         "id": "hero",
-        "title": "关卡地图看板",
+        "title": "首页看板",
         "image": "assets/img/projects/enpromote-hero.png",
         "tip": "展示闯关地图、关卡进度与单词掌握度看板。"
       },
       {
         "id": "chat",
-        "title": "AI NPC 实战对话",
+        "title": "关卡地图看板",
         "image": "assets/img/projects/enpromote-chat.png",
         "tip": "展示与海关/酒店前台等 AI NPC 角色扮演及目标词校验界面。"
       },
@@ -154,15 +178,37 @@
         "desc": "聚合 DeepSeek 自适应出题、阿里百炼与科大讯飞 WebSocket 实时评测接口。"
       }
     ],
-    "techStack": ["Vue 3", "TypeScript", "Pinia", "Node.js", "Express", "MongoDB", "科大讯飞 ISE"],
-    "models": ["DeepSeek (自适应出题)", "阿里百炼", "科大讯飞 ISE (语音评测)", "Mock ISE (本地离线)"],
+    "techStack": [
+      "Vue 3",
+      "TypeScript",
+      "Pinia",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "科大讯飞 ISE"
+    ],
+    "models": [
+      "DeepSeek (自适应出题)",
+      "阿里百炼",
+      "科大讯飞 ISE (语音评测)",
+      "Mock ISE (本地离线)"
+    ],
     "cmd": "# 1. 克隆项目\ngit clone https://github.com/CCSU-HorizonLab/enPromote.git\ncd enPromote\n\n# 2. 配置后端环境变量并启动\ncp .env.example server/.env\ncd server && npm install && npm start\n\n# 3. 另开终端启动前端\ncd frontend && npm install && npm run dev",
     "contributors": [
-      { "login": "vegePeapa", "role": "核心开发 & 架构设计", "avatar": "assets/data/avatars/vegePeapa.png", "className": "24网络01" },
-      { "login": "shuguang-cmd", "role": "核心代码贡献者", "avatar": "assets/data/avatars/shuguang-cmd.png", "className": "24软件03" }
+      {
+        "login": "vegePeapa",
+        "role": "核心开发 & 架构设计",
+        "avatar": "assets/data/avatars/vegePeapa.png",
+        "className": "24网络01"
+      },
+      {
+        "login": "shuguang-cmd",
+        "role": "核心代码贡献者",
+        "avatar": "assets/data/avatars/shuguang-cmd.png",
+        "className": "24软件03"
+      }
     ]
   },
-
   "class-assitant-robot": {
     "badge": "Raspberry Pi · YOLO · FastAPI · 计算机设计大赛",
     "slogan": "软硬件协同的课堂全景视频采集、边缘视觉行为分析与智能教学反馈平台。",
@@ -230,15 +276,36 @@
         "desc": "汇聚分析结果入库 PostgreSQL，输出面向教师的课堂洞察与量化大屏。"
       }
     ],
-    "techStack": ["Python 3.9+", "Raspberry Pi", "YOLO", "FastAPI", "PostgreSQL", "Azure Speech", "Snowboy"],
-    "models": ["YOLO (学生行为视觉检测)", "Azure STT/TTS (语音助手)", "SiliconFlow DeepSeek-V3"],
+    "techStack": [
+      "Python 3.9+",
+      "Raspberry Pi",
+      "YOLO",
+      "FastAPI",
+      "PostgreSQL",
+      "Azure Speech",
+      "Snowboy"
+    ],
+    "models": [
+      "YOLO (学生行为视觉检测)",
+      "Azure STT/TTS (语音助手)",
+      "SiliconFlow DeepSeek-V3"
+    ],
     "cmd": "# 1. 克隆项目\ngit clone https://github.com/CCSU-HorizonLab/class-assitant-robot.git\ncd class-assitant-robot\n\n# 2. 启动本地分析守护进程\ncd local_analysis_client\n./run_local_pipeline_daemon.ps1\n\n# 3. 启动云端后端服务\ncd ../cloud_backend\nuvicorn app:app --host 0.0.0.0 --port 8011",
     "contributors": [
-      { "login": "Juitar", "role": "项目发起人 & 算法架构", "avatar": "assets/data/avatars/Juitar.png", "className": "23计科03" },
-      { "login": "shuguang-cmd", "role": "全栈系统开发", "avatar": "assets/data/avatars/shuguang-cmd.png", "className": "24软件03" }
+      {
+        "login": "Juitar",
+        "role": "项目发起人 & 算法架构",
+        "avatar": "assets/data/avatars/Juitar.png",
+        "className": "23计科03"
+      },
+      {
+        "login": "shuguang-cmd",
+        "role": "全栈系统开发",
+        "avatar": "assets/data/avatars/shuguang-cmd.png",
+        "className": "24软件03"
+      }
     ]
   },
-
   "tinc-ruoyi-manager": {
     "badge": "Java · Spring Boot · 若依",
     "slogan": "基于若依框架打造的 Tinc 内网穿透可视化管理系统，轻松管理分布式节点与网络拓扑。",
@@ -279,18 +346,43 @@
       }
     ],
     "flow": [
-      { "step": 1, "title": "Web 前端控制台", "desc": "基于 Vue.js 与 Element UI，提供直观的节点配置与拓扑看板。" },
-      { "step": 2, "title": "Spring Boot 核心后端", "desc": "负责节点配置集中管理、密钥派发与权限审计。" },
-      { "step": 3, "title": "Tinc 底层网络守护进程", "desc": "管理多网段点对点穿透通道与自动化组网。" }
+      {
+        "step": 1,
+        "title": "Web 前端控制台",
+        "desc": "基于 Vue.js 与 Element UI，提供直观的节点配置与拓扑看板。"
+      },
+      {
+        "step": 2,
+        "title": "Spring Boot 核心后端",
+        "desc": "负责节点配置集中管理、密钥派发与权限审计。"
+      },
+      {
+        "step": 3,
+        "title": "Tinc 底层网络守护进程",
+        "desc": "管理多网段点对点穿透通道与自动化组网。"
+      }
     ],
-    "techStack": ["Java 8", "Spring Boot", "RuoYi", "Tinc VPN", "MySQL", "Vue.js"],
-    "models": ["不涉及大模型调用"],
+    "techStack": [
+      "Java 8",
+      "Spring Boot",
+      "RuoYi",
+      "Tinc VPN",
+      "MySQL",
+      "Vue.js"
+    ],
+    "models": [
+      "不涉及大模型调用"
+    ],
     "cmd": "# 克隆并编译运行\ngit clone https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager.git\ncd tinc-ruoyi-manager\nmvn clean package\njava -jar target/tinc-ruoyi-manager.jar",
     "contributors": [
-      { "login": "shuguang-cmd", "role": "项目发起人 & 架构研发", "avatar": "assets/data/avatars/shuguang-cmd.png", "className": "24软件03" }
+      {
+        "login": "shuguang-cmd",
+        "role": "项目发起人 & 架构研发",
+        "avatar": "assets/data/avatars/shuguang-cmd.png",
+        "className": "24软件03"
+      }
     ]
   },
-
   "tinc-cluster-manager": {
     "badge": "PHP 8.x · MySQL · 集群调度",
     "slogan": "基于 PHP 打造的 Tinc 内网穿透集群管理系统，支持多节点管理与自动化集中调度。",
@@ -331,19 +423,47 @@
       }
     ],
     "flow": [
-      { "step": 1, "title": "Web 控制台", "desc": "提供轻量直观的集群节点管理视图与操作入口。" },
-      { "step": 2, "title": "PHP 业务中枢", "desc": "集中管理节点元数据、拓扑关系与路由下发。" },
-      { "step": 3, "title": "Tinc 组网服务", "desc": "跨网段打通点对点 VPN 隧道。" }
+      {
+        "step": 1,
+        "title": "Web 控制台",
+        "desc": "提供轻量直观的集群节点管理视图与操作入口。"
+      },
+      {
+        "step": 2,
+        "title": "PHP 业务中枢",
+        "desc": "集中管理节点元数据、拓扑关系与路由下发。"
+      },
+      {
+        "step": 3,
+        "title": "Tinc 组网服务",
+        "desc": "跨网段打通点对点 VPN 隧道。"
+      }
     ],
-    "techStack": ["PHP 8.x", "ThinkPHP", "Tinc VPN", "MySQL"],
-    "models": ["不涉及大模型调用"],
+    "techStack": [
+      "PHP 8.x",
+      "ThinkPHP",
+      "Tinc VPN",
+      "MySQL"
+    ],
+    "models": [
+      "不涉及大模型调用"
+    ],
     "cmd": "# 安装依赖并启动\ngit clone https://github.com/CCSU-HorizonLab/tinc-cluster-manager.git\ncd tinc-cluster-manager\ncomposer install\nphp -S localhost:8000 -t public",
     "contributors": [
-      { "login": "kevinfvcdsaf", "role": "项目发起人 & 后端开发", "avatar": "assets/data/avatars/kevinfvcdsaf.png", "className": "24软件03" },
-      { "login": "94jiuyang", "role": "核心代码贡献者", "avatar": "assets/data/avatars/94jiuyang.png", "className": "24软件03" }
+      {
+        "login": "kevinfvcdsaf",
+        "role": "项目发起人 & 后端开发",
+        "avatar": "assets/data/avatars/kevinfvcdsaf.png",
+        "className": "24软件03"
+      },
+      {
+        "login": "94jiuyang",
+        "role": "核心代码贡献者",
+        "avatar": "assets/data/avatars/94jiuyang.png",
+        "className": "24软件03"
+      }
     ]
   },
-
   "tinc-cli-gui": {
     "badge": "C++ · Qt · GUI 工具",
     "slogan": "为 Tinc 内网穿透提供直观图形界面，简化跨平台节点连接与网络管理。",
@@ -384,14 +504,33 @@
       }
     ],
     "flow": [
-      { "step": 1, "title": "GUI 客户端外壳", "desc": "轻量跨平台界面，提供直观的状态指示与托盘常驻。" },
-      { "step": 2, "title": "Native 进程守护", "desc": "调用系统底层接口安全调起与管控 Tinc 核心。" }
+      {
+        "step": 1,
+        "title": "GUI 客户端外壳",
+        "desc": "轻量跨平台界面，提供直观的状态指示与托盘常驻。"
+      },
+      {
+        "step": 2,
+        "title": "Native 进程守护",
+        "desc": "调用系统底层接口安全调起与管控 Tinc 核心。"
+      }
     ],
-    "techStack": ["C++", "Qt / CMake", "Tinc Daemon"],
-    "models": ["不涉及大模型调用"],
+    "techStack": [
+      "C++",
+      "Qt / CMake",
+      "Tinc Daemon"
+    ],
+    "models": [
+      "不涉及大模型调用"
+    ],
     "cmd": "# 克隆并构建\ngit clone https://github.com/CCSU-HorizonLab/tinc-cli-gui.git\ncd tinc-cli-gui\ncmake -B build && cmake --build build --config Release",
     "contributors": [
-      { "login": "zzhaoos", "role": "项目发起人 & GUI研发", "avatar": "assets/data/avatars/zzhaoos.png", "className": "24软件03" }
+      {
+        "login": "zzhaoos",
+        "role": "项目发起人 & GUI研发",
+        "avatar": "assets/data/avatars/zzhaoos.png",
+        "className": "24软件03"
+      }
     ]
   }
 }
