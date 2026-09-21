@@ -1,9 +1,10 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-09-19T20:42:49.311Z",
+  "generated_at": "2026-09-20T20:50:55.556Z",
   "repos": [
     {
       "name": "Chrono_Trace",
+<<<<<<< HEAD
       "description": "镌刻对话年轮，丈量心动间距。面向微信聊天数据的本地深度分析与实时辅助桌面工具。",
       "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
       "language": "Python",
@@ -11,6 +12,35 @@
       "stargazers_count": 1,
       "forks_count": 0,
       "updated_at": "2026-09-18T12:00:00Z"
+=======
+      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
+      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
+      "language": "Python",
+      "topics": [],
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "updated_at": "2026-09-20T15:22:54Z"
+    },
+    {
+      "name": "enPromote",
+      "description": "i wanna create a english training project like BaiCi, i also wanna be familiar  with creating a project . ",
+      "html_url": "https://github.com/CCSU-HorizonLab/enPromote",
+      "language": "Vue",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-09-20T13:08:08Z"
+    },
+    {
+      "name": "tinc-ruoyi-manager",
+      "description": "Tinc内网穿透（若依框架）",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager",
+      "language": "Java",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-09-17T11:23:36Z"
+>>>>>>> 9510b936dda875d21e073a4894c960f99ae5c3c4
     },
     {
       "name": "class-assitant-robot",
@@ -23,6 +53,7 @@
       "updated_at": "2026-07-25T11:11:18Z"
     },
     {
+<<<<<<< HEAD
       "name": "enPromote",
       "description": "融合大语言模型与讯飞语音评测的场景互动式英语学习平台，打破传统死记硬背。",
       "html_url": "https://github.com/CCSU-HorizonLab/enPromote",
@@ -33,6 +64,8 @@
       "updated_at": "2026-09-18T07:43:44Z"
     },
     {
+=======
+>>>>>>> 9510b936dda875d21e073a4894c960f99ae5c3c4
       "name": "tinc-cli-gui",
       "description": "为 Tinc 命令行穿透工具量身定制的跨平台轻量 GUI 客户端，大幅降低日常使用门槛。",
       "html_url": "https://github.com/CCSU-HorizonLab/tinc-cli-gui",
@@ -72,7 +105,7 @@
       "location": "China",
       "html_url": "https://github.com/Juitar",
       "avatar_url": "https://avatars.githubusercontent.com/u/138417175?v=4",
-      "contributions": 132,
+      "contributions": 178,
       "avatar_path": "assets/data/avatars/Juitar.png"
     },
     {
@@ -83,7 +116,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 118,
+      "contributions": 121,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
