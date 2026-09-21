@@ -101,7 +101,7 @@
         "login": "ting0514",
         "role": "核心代码贡献者",
         "avatar": "assets/data/avatars/ting0514.png",
-        "className": "23计科03"
+        "className": "23计科04"
       }
     ]
   },
@@ -197,15 +197,30 @@
     "contributors": [
       {
         "login": "vegePeapa",
-        "role": "核心开发 & 架构设计",
+        "role": "项目发起人 & 架构设计",
         "avatar": "assets/data/avatars/vegePeapa.png",
         "className": "24网络01"
       },
       {
-        "login": "shuguang-cmd",
+        "login": "hjfoerg235094",
         "role": "核心代码贡献者",
-        "avatar": "assets/data/avatars/shuguang-cmd.png",
-        "className": "24软件03"
+        "avatar": "https://github.com/hjfoerg235094.png"
+      },
+      {
+        "login": "yuannuoyi",
+        "role": "核心代码贡献者",
+        "avatar": "https://github.com/yuannuoyi.png"
+      },
+      {
+        "login": "VgetAble",
+        "role": "代码贡献者",
+        "avatar": "https://github.com/VgetAble.png"
+      },
+      {
+        "login": "smiling005",
+        "role": "代码贡献者",
+        "avatar": "assets/data/avatars/smiling005.png",
+        "className": "25计科02"
       }
     ]
   },
@@ -293,16 +308,16 @@
     "cmd": "# 1. 克隆项目\ngit clone https://github.com/CCSU-HorizonLab/class-assitant-robot.git\ncd class-assitant-robot\n\n# 2. 启动本地分析守护进程\ncd local_analysis_client\n./run_local_pipeline_daemon.ps1\n\n# 3. 启动云端后端服务\ncd ../cloud_backend\nuvicorn app:app --host 0.0.0.0 --port 8011",
     "contributors": [
       {
-        "login": "Juitar",
-        "role": "项目发起人 & 算法架构",
-        "avatar": "assets/data/avatars/Juitar.png",
-        "className": "23计科03"
-      },
-      {
         "login": "shuguang-cmd",
-        "role": "全栈系统开发",
+        "role": "项目发起人 & 边缘全栈开发",
         "avatar": "assets/data/avatars/shuguang-cmd.png",
         "className": "24软件03"
+      },
+      {
+        "login": "lyy169",
+        "role": "核心开发 & 视觉行为分析",
+        "avatar": "assets/data/avatars/lyy169.png",
+        "className": "22物联01"
       }
     ]
   },
@@ -452,15 +467,21 @@
     "contributors": [
       {
         "login": "kevinfvcdsaf",
-        "role": "项目发起人 & 后端开发",
+        "role": "项目发起人 & 集群后端开发",
         "avatar": "assets/data/avatars/kevinfvcdsaf.png",
-        "className": "24软件03"
+        "className": "21计科04"
       },
       {
         "login": "94jiuyang",
         "role": "核心代码贡献者",
         "avatar": "assets/data/avatars/94jiuyang.png",
-        "className": "24软件03"
+        "className": "21计科03"
+      },
+      {
+        "login": "kaihuang614",
+        "role": "核心代码贡献者",
+        "avatar": "assets/data/avatars/kaihuang614.png",
+        "className": "21计科03"
       }
     ]
   },
@@ -529,7 +550,7 @@
         "login": "zzhaoos",
         "role": "项目发起人 & GUI研发",
         "avatar": "assets/data/avatars/zzhaoos.png",
-        "className": "24软件03"
+        "className": "21计科03"
       }
     ]
   }

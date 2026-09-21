@@ -65,7 +65,7 @@ async function fetchPublicRepos() {
 
   return repos
     .filter((repo) => !repo.private && !isSiteRepository(repo))
-    .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    .sort((a, b) => String(a?.name || "").toLowerCase().localeCompare(String(b?.name || "").toLowerCase()));
 }
 
 function isSiteRepository(repo) {

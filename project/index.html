@@ -181,19 +181,31 @@ document.addEventListener("DOMContentLoaded", async () => {
       fetch(resolveSiteUrl("assets/data/projects_detail.json")).catch(() => null)
     ]);
     if (cacheRes && cacheRes.ok) {
-      const cacheData = await cacheRes.json();
-      repoInfo = (cacheData?.repos || []).find(r => r.name.toLowerCase() === repoName.toLowerCase());
-      cacheMembers = cacheData?.members || [];
+      try {
+        const cacheData = await cacheRes.json();
+        repoInfo = (cacheData?.repos || []).find(r => r.name.toLowerCase() === repoName.toLowerCase());
+        cacheMembers = cacheData?.members || [];
+      } catch (err) {
+        console.warn("Failed to parse github.json", err);
+      }
     }
     if (detailRes && detailRes.ok) {
-      allProjectsData = await detailRes.json();
+      try {
+        allProjectsData = await detailRes.json();
+      } catch (err) {
+        console.warn("Failed to parse projects_detail.json", err);
+      }
     }
   } catch (e) {
     console.info("Cache or project detail lookup failed", e);
   }
 
   const name = repoInfo?.name || repoName;
-  const matchedKey = Object.keys(allProjectsData).find(k => k.toLowerCase() === name.toLowerCase() || k.toLowerCase() === repoName.toLowerCase());
+  const matchedKey = Object.keys(allProjectsData).find(k =>
+    k.toLowerCase() === name.toLowerCase() ||
+    k.toLowerCase() === repoName.toLowerCase() ||
+    k.toLowerCase().replace(/[-_]/g, '') === repoName.toLowerCase().replace(/[-_]/g, '')
+  );
   const extra = (matchedKey ? allProjectsData[matchedKey] : null) || {
     badge: `${repoInfo?.language || '开源'} 项目`,
     slogan: repoInfo?.description || `${name} 开源项目，由长大 Horizon 全栈实验室成员维护。`,
@@ -231,9 +243,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     techStack: [repoInfo?.language || "Multi-Language", "Git"],
     models: ["通用环境支持"],
     cmd: `git clone https://github.com/${owner}/${name}.git\ncd ${name}`,
-    contributors: [
-      { login: "Juitar", role: "实验室核心成员", avatar: "assets/data/avatars/Juitar.png" }
-    ]
+    contributors: []
   };
 
   // 1. Meta & Title
@@ -375,17 +385,43 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 7. Contributors
   const contributorsGrid = document.getElementById("project-contributors-grid");
   if (contributorsGrid) {
-    const contribs = extra.contributors || [];
-    const fallbackAvatar = resolveSiteUrl('assets/data/avatars/shuguang-cmd.png');
+    let contribs = Array.isArray(extra.contributors) ? [...extra.contributors] : [];
+
+    // Fallback: If no predefined contributors, fetch live from GitHub API
+    if (contribs.length === 0) {
+      try {
+        const ghUrl = `https://api.github.com/repos/${owner}/${encodeURIComponent(name)}/contributors?per_page=12`;
+        const ghRes = await fetch(ghUrl);
+        if (ghRes.ok) {
+          const ghList = await ghRes.json();
+          if (Array.isArray(ghList)) {
+            contribs = ghList
+              .filter(u => u?.login && u.type !== 'Bot')
+              .map(u => ({
+                login: u.login,
+                role: '核心代码贡献者',
+                avatar: u.avatar_url || `https://github.com/${u.login}.png`
+              }));
+          }
+        }
+      } catch (err) {
+        console.warn("Dynamic contributors fetch failed:", err);
+      }
+    }
+
     contributorsGrid.innerHTML = contribs.map(c => {
-      const avatarPath = resolveSiteUrl(c.avatar || `assets/data/avatars/${c.login}.png`);
-      const metaText = c.className ? `<span class="contributor-class">${escapeHtml(c.className)}</span>` : '';
+      const memberInfo = cacheMembers.find(m => m.login?.toLowerCase() === c.login?.toLowerCase());
+      const displayClass = c.className || memberInfo?.class_name || '';
+      const metaText = displayClass ? `<span class="contributor-class">${escapeHtml(displayClass)}</span>` : '';
+      const avatarSrc = resolveSiteUrl(c.avatar || memberInfo?.avatar_path || memberInfo?.avatar_url || `assets/data/avatars/${c.login}.png`);
+      const ghAvatar = `https://github.com/${escapeHtml(c.login)}.png`;
+
       return `
         <div class="contributor-card">
-          <img src="${escapeHtml(avatarPath)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.onerror=null; this.src='${escapeHtml(fallbackAvatar)}';">
+          <img src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(c.login)}" class="contributor-avatar" loading="lazy" onerror="this.onerror=null; this.src='${escapeHtml(ghAvatar)}';">
           <div class="contributor-info">
             <a href="https://github.com/${escapeHtml(c.login)}" class="contributor-name" target="_blank" rel="noopener">@${escapeHtml(c.login)}</a>
-            <span class="contributor-role">${escapeHtml(c.role)}</span>
+            <span class="contributor-role">${escapeHtml(c.role || '贡献者')}</span>
             ${metaText}
           </div>
         </div>
