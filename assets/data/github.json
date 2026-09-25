@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-09-24T21:32:32.528Z",
+  "generated_at": "2026-09-25T21:36:55.600Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -8,9 +8,9 @@
       "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
       "language": "Python",
       "topics": [],
-      "stargazers_count": 6,
+      "stargazers_count": 7,
       "forks_count": 0,
-      "updated_at": "2026-09-24T17:29:53Z"
+      "updated_at": "2026-09-25T08:21:14Z"
     },
     {
       "name": "class-assitant-robot",
@@ -72,7 +72,7 @@
       "location": "China",
       "html_url": "https://github.com/Juitar",
       "avatar_url": "https://avatars.githubusercontent.com/u/138417175?v=4",
-      "contributions": 282,
+      "contributions": 300,
       "avatar_path": "assets/data/avatars/Juitar.png"
     },
     {
@@ -175,17 +175,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -195,6 +184,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "hcc-112",
