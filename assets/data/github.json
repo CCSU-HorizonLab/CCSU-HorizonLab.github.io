@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-03T21:18:51.459Z",
+  "generated_at": "2026-10-04T21:28:50.706Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -186,17 +186,6 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -206,6 +195,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "hjfoerg235094",
