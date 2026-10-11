@@ -1,16 +1,33 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-10T21:46:43.235Z",
+  "generated_at": "2026-10-11T21:59:40.901Z",
   "repos": [
     {
       "name": "Chrono_Trace",
-      "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
+      "description": "微信 PC 4.x 聊天数据本地分析桌面工具：聊天记录导入与导出（TXT/CSV/HTML）、情感与好感度分析、实时监听 + LLM 沟通建议、联系人长期记忆（RAG）。数据全程本地处理，隐私优先。WeChat 4.x local-first chat analyzer: export, sentiment scoring, LLM suggestions & RAG memory.",
       "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
       "language": "Python",
-      "topics": [],
+      "topics": [
+        "ai-assistants",
+        "desktop-app",
+        "llm",
+        "local-first",
+        "long-term-memory",
+        "privacy",
+        "python",
+        "pywebview",
+        "rag",
+        "sentiment-analysis",
+        "sqlchiper",
+        "vue3",
+        "wechat",
+        "wechat-chat",
+        "wechat-chat-analysis",
+        "wechat-chat-history"
+      ],
       "stargazers_count": 9,
       "forks_count": 0,
-      "updated_at": "2026-10-10T01:16:59Z"
+      "updated_at": "2026-10-11T12:39:24Z"
     },
     {
       "name": "class-assitant-robot",
@@ -30,7 +47,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-07T06:23:55Z"
+      "updated_at": "2026-10-11T09:14:24Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -60,7 +77,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-10T14:30:21Z"
+      "updated_at": "2026-10-11T11:49:40Z"
     }
   ],
   "members": [
@@ -94,7 +111,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 37,
+      "contributions": 39,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -127,7 +144,7 @@
       "location": "",
       "html_url": "https://github.com/smiling005",
       "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 5,
+      "contributions": 6,
       "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
@@ -175,6 +192,17 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
+      "location": "",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -195,17 +223,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
-      "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
       "login": "hjfoerg235094",
