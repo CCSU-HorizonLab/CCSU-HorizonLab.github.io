@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-11T21:59:40.901Z",
+  "generated_at": "2026-10-13T00:42:58.152Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -47,7 +47,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-11T09:14:24Z"
+      "updated_at": "2026-10-12T14:06:12Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -77,7 +77,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-11T11:49:40Z"
+      "updated_at": "2026-10-12T13:06:11Z"
     }
   ],
   "members": [
@@ -100,7 +100,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 121,
+      "contributions": 125,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
@@ -111,7 +111,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 39,
+      "contributions": 46,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -159,17 +159,6 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
-    },
-    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -190,6 +179,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/144028872?v=4",
       "contributions": 1,
       "avatar_path": "assets/data/avatars/kaihuang614.png"
+    },
+    {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
       "login": "seven006gogogo",
