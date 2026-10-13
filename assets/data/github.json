@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-13T00:42:58.152Z",
+  "generated_at": "2026-10-13T22:46:51.256Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -27,7 +27,7 @@
       ],
       "stargazers_count": 9,
       "forks_count": 0,
-      "updated_at": "2026-10-11T12:39:24Z"
+      "updated_at": "2026-10-13T08:06:41Z"
     },
     {
       "name": "class-assitant-robot",
@@ -192,17 +192,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
-      "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
-    },
-    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -223,6 +212,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+    },
+    {
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
+      "location": "",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
       "login": "hjfoerg235094",
