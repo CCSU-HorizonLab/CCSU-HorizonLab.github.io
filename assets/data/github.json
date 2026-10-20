@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-19T22:22:17.834Z",
+  "generated_at": "2026-10-20T21:38:39.732Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -25,9 +25,9 @@
         "wechat-chat-analysis",
         "wechat-chat-history"
       ],
-      "stargazers_count": 12,
+      "stargazers_count": 13,
       "forks_count": 2,
-      "updated_at": "2026-10-19T10:00:51Z"
+      "updated_at": "2026-10-20T07:04:53Z"
     },
     {
       "name": "class-assitant-robot",
@@ -192,6 +192,17 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "构建具有现实意义的产品",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -212,17 +223,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "构建具有现实意义的产品",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "hjfoerg235094",
