@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-20T21:38:39.732Z",
+  "generated_at": "2026-10-21T21:44:28.955Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -27,7 +27,7 @@
       ],
       "stargazers_count": 13,
       "forks_count": 2,
-      "updated_at": "2026-10-20T07:04:53Z"
+      "updated_at": "2026-10-21T17:04:29Z"
     },
     {
       "name": "class-assitant-robot",
@@ -47,7 +47,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-17T09:44:50Z"
+      "updated_at": "2026-10-21T08:45:42Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -100,7 +100,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 125,
+      "contributions": 127,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
@@ -159,6 +159,17 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -181,15 +192,15 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
       "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
       "login": "hcc-112",
@@ -201,17 +212,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
-      "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
       "login": "parrowormsby720-beep",
