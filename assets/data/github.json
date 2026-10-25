@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-24T20:52:12.998Z",
+  "generated_at": "2026-10-25T20:52:55.130Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -27,7 +27,7 @@
       ],
       "stargazers_count": 14,
       "forks_count": 2,
-      "updated_at": "2026-10-24T14:46:42Z"
+      "updated_at": "2026-10-25T05:59:50Z"
     },
     {
       "name": "class-assitant-robot",
@@ -47,7 +47,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-21T08:45:42Z"
+      "updated_at": "2026-10-25T06:37:07Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -126,6 +126,17 @@
       "avatar_path": "assets/data/avatars/kevinfvcdsaf.png"
     },
     {
+      "login": "smiling005",
+      "name": "smiling005",
+      "class_name": "25计科02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "contributions": 9,
+      "avatar_path": "assets/data/avatars/smiling005.png"
+    },
+    {
       "login": "lyy169",
       "name": "lyy169",
       "class_name": "22物联01",
@@ -135,17 +146,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/154583494?v=4",
       "contributions": 8,
       "avatar_path": "assets/data/avatars/lyy169.png"
-    },
-    {
-      "login": "smiling005",
-      "name": "smiling005",
-      "class_name": "25计科02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 7,
-      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "zzhaoos",
@@ -192,6 +192,17 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+    },
+    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -212,17 +223,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "hjfoerg235094",
