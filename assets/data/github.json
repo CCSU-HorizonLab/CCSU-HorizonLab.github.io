@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-10-26T22:41:44.186Z",
+  "generated_at": "2026-10-27T22:16:12.835Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -47,7 +47,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-10-25T06:37:07Z"
+      "updated_at": "2026-10-27T12:12:41Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -100,7 +100,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 127,
+      "contributions": 130,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
@@ -192,17 +192,6 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "构建具有现实意义的产品",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -212,6 +201,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "构建具有现实意义的产品",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "parrowormsby720-beep",
