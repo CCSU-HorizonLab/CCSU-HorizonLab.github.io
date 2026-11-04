@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-03T23:25:22.933Z",
+  "generated_at": "2026-11-04T23:41:38.546Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -159,6 +159,17 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -179,17 +190,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/144028872?v=4",
       "contributions": 1,
       "avatar_path": "assets/data/avatars/kaihuang614.png"
-    },
-    {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
       "login": "hcc-112",
