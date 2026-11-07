@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-06T23:11:09.033Z",
+  "generated_at": "2026-11-07T21:53:16.604Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -25,9 +25,9 @@
         "wechat-chat-analysis",
         "wechat-chat-history"
       ],
-      "stargazers_count": 17,
+      "stargazers_count": 18,
       "forks_count": 2,
-      "updated_at": "2026-11-05T15:49:03Z"
+      "updated_at": "2026-11-07T04:21:37Z"
     },
     {
       "name": "class-assitant-robot",
@@ -47,7 +47,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-05T11:52:53Z"
+      "updated_at": "2026-11-07T11:22:23Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -100,7 +100,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 132,
+      "contributions": 136,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
@@ -159,17 +159,6 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
-    },
-    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -190,6 +179,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/144028872?v=4",
       "contributions": 1,
       "avatar_path": "assets/data/avatars/kaihuang614.png"
+    },
+    {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
       "login": "seven006gogogo",
