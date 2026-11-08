@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-07T21:53:16.604Z",
+  "generated_at": "2026-11-08T22:08:21.497Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -25,9 +25,9 @@
         "wechat-chat-analysis",
         "wechat-chat-history"
       ],
-      "stargazers_count": 18,
+      "stargazers_count": 19,
       "forks_count": 2,
-      "updated_at": "2026-11-07T04:21:37Z"
+      "updated_at": "2026-11-08T12:31:15Z"
     },
     {
       "name": "class-assitant-robot",
@@ -48,6 +48,16 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "updated_at": "2026-11-07T11:22:23Z"
+    },
+    {
+      "name": "tinc_client",
+      "description": "新的tinc虚拟网络配置端",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc_client",
+      "language": "Rust",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-11-08T14:25:40Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -77,7 +87,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-05T14:42:03Z"
+      "updated_at": "2026-11-08T02:33:39Z"
     }
   ],
   "members": [
@@ -111,7 +121,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 60,
+      "contributions": 120,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -192,6 +202,17 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "构建具有现实意义的产品",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -212,17 +233,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "构建具有现实意义的产品",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "hjfoerg235094",
