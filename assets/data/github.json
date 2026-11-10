@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-08T22:08:21.497Z",
+  "generated_at": "2026-11-10T01:33:37.074Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -27,7 +27,7 @@
       ],
       "stargazers_count": 19,
       "forks_count": 2,
-      "updated_at": "2026-11-08T12:31:15Z"
+      "updated_at": "2026-11-09T07:46:32Z"
     },
     {
       "name": "class-assitant-robot",
@@ -57,7 +57,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-08T14:25:40Z"
+      "updated_at": "2026-11-09T16:03:52Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -121,7 +121,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 120,
+      "contributions": 125,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -202,6 +202,17 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+    },
+    {
       "login": "hcc-112",
       "name": "hcc",
       "class_name": "22计科01",
@@ -222,17 +233,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
-    },
-    {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "hjfoerg235094",
