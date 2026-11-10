@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-10T01:33:37.074Z",
+  "generated_at": "2026-11-10T23:24:38.902Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -26,7 +26,7 @@
         "wechat-chat-history"
       ],
       "stargazers_count": 19,
-      "forks_count": 2,
+      "forks_count": 3,
       "updated_at": "2026-11-09T07:46:32Z"
     },
     {
@@ -57,7 +57,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-09T16:03:52Z"
+      "updated_at": "2026-11-10T10:04:05Z"
     },
     {
       "name": "tinc-cli-gui",
@@ -121,7 +121,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 125,
+      "contributions": 128,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -169,6 +169,17 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
+      "location": "",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -189,17 +200,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/144028872?v=4",
       "contributions": 1,
       "avatar_path": "assets/data/avatars/kaihuang614.png"
-    },
-    {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
       "login": "parrowormsby720-beep",
