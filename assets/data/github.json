@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-12T00:45:19.340Z",
+  "generated_at": "2026-11-12T23:39:54.916Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -27,7 +27,7 @@
       ],
       "stargazers_count": 19,
       "forks_count": 3,
-      "updated_at": "2026-11-09T07:46:32Z"
+      "updated_at": "2026-11-12T15:23:15Z"
     },
     {
       "name": "class-assitant-robot",
@@ -40,14 +40,24 @@
       "updated_at": "2026-07-25T11:11:18Z"
     },
     {
-      "name": "Dake",
-      "description": null,
-      "html_url": "https://github.com/CCSU-HorizonLab/Dake",
+      "name": "DakeCert",
+      "description": "达证通 DakeCert — 高校教学质量管理与在线考试平台：题库组卷 · 在线考试 · Judge0 代码在线判题 · Word 模板编辑 · OBE 认证闭环，Docker 一键部署。DakeCert — University teaching-quality & online-exam platform (OBE closed loop): question bank, exam composing, Judge0 code judging, Word template editor. One-click Docker deployment.",
+      "html_url": "https://github.com/CCSU-HorizonLab/DakeCert",
       "language": "Python",
-      "topics": [],
-      "stargazers_count": 0,
+      "topics": [
+        "automated-grading",
+        "code-grading",
+        "dakecert",
+        "exam-platform",
+        "judge0",
+        "obe",
+        "online-exam",
+        "outcome-based-education",
+        "teaching-management"
+      ],
+      "stargazers_count": 1,
       "forks_count": 0,
-      "updated_at": "2026-11-11T03:55:38Z"
+      "updated_at": "2026-11-12T13:50:11Z"
     },
     {
       "name": "enPromote",
@@ -57,7 +67,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-07T11:22:23Z"
+      "updated_at": "2026-11-12T15:11:51Z"
     },
     {
       "name": "tinc_client",
@@ -120,7 +130,7 @@
       "location": "",
       "html_url": "https://github.com/vegePeapa",
       "avatar_url": "https://avatars.githubusercontent.com/u/200878270?v=4",
-      "contributions": 136,
+      "contributions": 140,
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
@@ -153,7 +163,7 @@
       "location": "",
       "html_url": "https://github.com/smiling005",
       "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
-      "contributions": 13,
+      "contributions": 14,
       "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
@@ -212,17 +222,6 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -243,6 +242,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/hcc-112.png"
+    },
+    {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "hjfoerg235094",
