@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-10T23:24:38.902Z",
+  "generated_at": "2026-11-12T00:45:19.340Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -38,6 +38,16 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "updated_at": "2026-07-25T11:11:18Z"
+    },
+    {
+      "name": "Dake",
+      "description": null,
+      "html_url": "https://github.com/CCSU-HorizonLab/Dake",
+      "language": "Python",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-11-11T03:55:38Z"
     },
     {
       "name": "enPromote",
@@ -87,7 +97,7 @@
       "topics": [],
       "stargazers_count": 0,
       "forks_count": 0,
-      "updated_at": "2026-11-08T02:33:39Z"
+      "updated_at": "2026-11-11T14:31:23Z"
     }
   ],
   "members": [
@@ -121,7 +131,7 @@
       "location": "",
       "html_url": "https://github.com/shuguang-cmd",
       "avatar_url": "https://avatars.githubusercontent.com/u/204503919?v=4",
-      "contributions": 128,
+      "contributions": 129,
       "avatar_path": "assets/data/avatars/shuguang-cmd.png"
     },
     {
@@ -213,17 +223,6 @@
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "构建具有现实意义的产品",
-      "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
-    },
-    {
       "login": "seven006gogogo",
       "name": "seven006gogogo",
       "class_name": "25制药04",
@@ -233,6 +232,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
+    },
+    {
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "构建具有现实意义的产品",
+      "location": "",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "hjfoerg235094",
