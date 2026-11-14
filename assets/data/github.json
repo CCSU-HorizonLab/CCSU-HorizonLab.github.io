@@ -1,6 +1,6 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-13T23:35:40.412Z",
+  "generated_at": "2026-11-14T22:27:07.814Z",
   "repos": [
     {
       "name": "Chrono_Trace",
@@ -25,9 +25,9 @@
         "wechat-chat-analysis",
         "wechat-chat-history"
       ],
-      "stargazers_count": 19,
+      "stargazers_count": 20,
       "forks_count": 3,
-      "updated_at": "2026-11-12T15:23:15Z"
+      "updated_at": "2026-11-14T14:19:48Z"
     },
     {
       "name": "class-assitant-robot",
@@ -222,15 +222,15 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "构建具有现实意义的产品",
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
       "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
       "login": "parrowormsby720-beep",
@@ -244,15 +244,15 @@
       "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "在学习中",
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "构建具有现实意义的产品",
       "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "hjfoerg235094",
