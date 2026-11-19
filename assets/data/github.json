@@ -1,10 +1,10 @@
 {
   "owner": "CCSU-HorizonLab",
-  "generated_at": "2026-11-18T00:58:24.373Z",
+  "generated_at": "2026-11-19T00:24:14.143Z",
   "repos": [
     {
       "name": "Chrono_Trace",
-      "description": "微信 PC 4.x 聊天数据本地分析桌面工具：聊天记录导入与导出（TXT/CSV/HTML）、情感与好感度分析、实时监听 + LLM 沟通建议、联系人长期记忆（RAG）。数据全程本地处理，隐私优先。WeChat 4.x local-first chat analyzer: export, sentiment scoring, LLM suggestions & RAG memory.",
+      "description": "微信 PC 4.x 聊天数据本地分析工具：聊天记录导出（TXT/CSV/HTML）、情感与好感度分析、实时监听 + LLM 沟通建议、联系人长期记忆（RAG）。数据全程本地处理，隐私优先。WeChat 4.x local-first chat analyzer: export, sentiment scoring, LLM suggestions & RAG memory.",
       "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
       "language": "Python",
       "topics": [
@@ -27,7 +27,7 @@
       ],
       "stargazers_count": 22,
       "forks_count": 3,
-      "updated_at": "2026-11-17T01:39:45Z"
+      "updated_at": "2026-11-18T07:05:34Z"
     },
     {
       "name": "class-assitant-robot",
@@ -189,17 +189,6 @@
       "avatar_path": "assets/data/avatars/zzhaoos.png"
     },
     {
-      "login": "ting0514",
-      "name": "ting0514",
-      "class_name": "23计科04",
-      "bio": "Loading......",
-      "location": "",
-      "html_url": "https://github.com/ting0514",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
-      "contributions": 1,
-      "avatar_path": "assets/data/avatars/ting0514.png"
-    },
-    {
       "login": "94jiuyang",
       "name": "94jiuyang",
       "class_name": "21计科03",
@@ -222,15 +211,26 @@
       "avatar_path": "assets/data/avatars/kaihuang614.png"
     },
     {
-      "login": "hcc-112",
-      "name": "hcc",
-      "class_name": "22计科01",
-      "bio": "构建具有现实意义的产品",
+      "login": "ting0514",
+      "name": "ting0514",
+      "class_name": "23计科04",
+      "bio": "Loading......",
       "location": "",
-      "html_url": "https://github.com/hcc-112",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
+      "html_url": "https://github.com/ting0514",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175179401?v=4",
+      "contributions": 1,
+      "avatar_path": "assets/data/avatars/ting0514.png"
+    },
+    {
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/hcc-112.png"
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
     },
     {
       "login": "seven006gogogo",
@@ -244,15 +244,15 @@
       "avatar_path": "assets/data/avatars/seven006gogogo.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
-      "bio": "",
+      "login": "hcc-112",
+      "name": "hcc",
+      "class_name": "22计科01",
+      "bio": "构建具有现实意义的产品",
       "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "html_url": "https://github.com/hcc-112",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134299392?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+      "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
       "login": "hjfoerg235094",
